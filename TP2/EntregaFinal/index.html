@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header-navbar">
+        <div class="hamburguesa nav-area" id="hamburguesa">
+            <button class="hamburger-menu" id="hamburger-menu">&#9776;</button>
+        </div>
+        <div class="logo nav-area">
+            <p>PlayTime</p>
+        </div>
+        <div class="nav-area-center nav-area">
+            <input class="inpt-buscar" type="text" placeholder="Buscar">
+        </div>
+        <div class="nav-area-right nav-area">
+            <input type="button" value="User" class="icon-btn">
+            <input type="button" value="Cart" class="icon-btn">
+        </div>
+    </header>
+
+    
+    <nav id="menu" class="menu">
+            <a href="login.html" class="menu-link">Iniciar sesión</a>
+            <hr class="menu-separator">
+
+            <div class="container-menu">
+                <div class="item-menu">
+                    <div class="menu-img-container"><img src="iconos/user-icon.png"/></div>
+                    <li><a>Perfil</a></li>
+                </div>
+                <div class="item-menu">
+                    <div class="menu-img-container"><img src="iconos/star-icon.png"/></div>
+                    <li><a>Recomendados</a></li>
+                </div>
+                <div class="item-menu">
+                    <div class="menu-img-container"><img src="iconos/clock-icon.png"/></div>
+                    <li><a>Recientes</a></li>
+                </div>
+                <div class="item-menu">
+                    <div class="menu-img-container"><img src="iconos/fire-icon.png"/></div>
+                    <li><a>Tendencias</a></li>
+                </div>
+            </div>
+
+            <hr class="menu-separator">
+            <div class="container-menu">
+                <div class="item-menu">
+                    <img src="iconos/all-games-icon.png"/>
+                    <li><a>Juegos</a></li>
+                </div>
+
+                <div class="item-menu">
+                    <img src="iconos/category-icon.png"/>
+                    <li><a>Categorías</a></li>
+                </div>
+
+            </div>
+            
+            <hr class="menu-separator">
+            <h3>Redes</h3>
+            <div class="social-icons">
+                <a href="#"><img src="iconos/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="iconos/instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="iconos/email-icon.png" alt="Email"></a>
+            </div>
+    </nav>
+
+
+
+    <div class="carousel-container">
+            <div>
+                <button class="carousel-button prev" id="prevButton">
+                    <img src="/iconos/flechaALaIzq.png" alt="flecha izquierda">
+                </button>
+            </div>
+            <div class="carousel-window">
+                <div class="categoria">
+                    <h3>Recomendados</h3>
+                </div>
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Cards del carrusel -->
+                    <div class="card">
+                        <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
+
+                        <div class="titulo-desc-card">
+                            <h3>Mario Bross</h3>
+                            <h5>Es tuyo</h5>
+                        </div>
+
+                        <button type="button" class="btn-card-jugar">
+                            <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                            <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        </button>
+                        
+                        <div class="hover-overlay">
+                            <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono"/> <!-- Cambia la ruta del ícono -->
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
+                        <div class="titulo-desc-card">
+                            <h3>Mario Bross El mundo de las marabillas</h3>
+                            <!--<h3>Mario Bross</h3>-->
+                            <h5>Gratis</h5>
+                        </div>
+                        <!--<div class="buttons-container-card">
+                            <button type="button" class="btn-card-jugar">
+                                <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                                <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                            </button>
+                        </div>-->
+                        <button type="button" class="btn-card-jugar">
+                            <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                            <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        </button>
+                    </div>
+                    <div class="card">
+
+                        <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
+                        <div class="titulo-desc-card">
+                            <h3>Mario Bross El mundo de las marabillas</h3>
+                            <h5>Gratis</h5>
+                        </div>
+                        <!--<div class="buttons-container-card">
+                            <button type="button" class="btn-card-jugar">
+                                <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                                <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                            </button>
+                        </div>-->
+                        <button type="button" class="btn-card-jugar">
+                            <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                            <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        </button>
+                    </div>
+                    <div class="card">
+
+                        <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
+                        <div class="titulo-desc-card">
+                            <h3>Mario Bross</h3>
+                            <h5>Gratis</h5>
+                        </div>
+                        <div class="buttons-container-card">
+                            <button type="button" class="btn-card-jugar">Jugar</button>
+
+                        </div>
+
+                    </div>
+                    <div class="card">
+
+                        <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
+                        <div class="titulo-desc-card">
+                            <h3>Mario Bross</h3>
+                            <h5>Gratis</h5>
+                        </div>
+                        <div class="buttons-container-card">
+                            <button type="button" class="btn-card-jugar">Jugar</button>
+
+                        </div>
+
+                    </div>
+                    <div class="card">
+
+                        <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
+                        <div class="titulo-desc-card">
+                            <h3>Mario Bross</h3>
+                            <h5>Gratis</h5>
+                        </div>
+                        <div class="buttons-container-card">
+                            <button type="button" class="btn-card-jugar">Jugar</button>
+
+                        </div>
+
+                    </div>
+                    <div class="card">
+
+                        <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
+                        <div class="titulo-desc-card">
+                            <h3>Mario Bross</h3>
+                            <h5>Gratis</h5>
+                        </div>
+                        <div class="buttons-container-card">
+                            <button type="button" class="btn-card-jugar">Jugar</button>
+
+                        </div>
+
+                    </div>
+                    <div class="card">
+
+                        <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
+                        <div class="titulo-desc-card">
+                            <h3>Mario Bross</h3>
+                            <h5>Gratis</h5>
+                        </div>
+                        <div class="buttons-container-card">
+                            <button type="button" class="btn-card-jugar">Jugar</button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button class="carousel-button next" id="nextButton">
+                    <img src="/iconos/flechaALaDer.png" alt="flecha derecha">
+                </button>
+            </div>
+    </div>
+
+
+    <!-- Footer -->
+    
+    <footer id="footer">
+        <div class="footer-links">
+            <div>
+                <button class="btn-footer">Sobre nosotros</button>
+                <ul class="footer-list">
+                    <li><a href="#">Empresa</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                    <li><a href="#">Desarrolladores</a></li>
+                    <li><a href="#">RSE</a></li>
+                </ul>
+            </div>
+            <div>
+                <button class="btn-footer">Accesos directos</button>
+                <ul class="footer-list">
+                    <li><a href="#">Pagina principal</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Destacados</a></li>
+                    <li><a href="#">Novedades</a></li>
+                </ul>
+            </div>
+            <div>
+                <button class="btn-footer">Comunidad</button>
+                <ul class="footer-list">
+                    <li><a href="#">Colaboraciones</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Guias y tutoriales</a></li>
+                    <li><a href="#">Foros</a></li>
+                </ul>
+            </div>
+            <div>
+                <button class="btn-footer">Contactos</button>
+                <ul class="footer-list">
+                    <li><a href="#">+549 2494010255</a></li>
+                    <li><a href="#">hola@playTime.com</a></li>
+                    <li><a href="#">PlayTimeGames</a></li>
+                    <li><a href="#">PlayTimeGames</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PlayTime Games</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+   
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header-navbar">
+        <div class="hamburguesa nav-area" id="hamburguesa">
+            <button class="hamburger-menu" id="hamburger-menu">&#9776;</button>
+        </div>
+        <div class="logo nav-area"><p>PlayTime</p></div>
+        <div class="nav-area-center nav-area">
+            <input class="inpt-buscar" type="text" placeholder="Buscar">
+        </div>
+        <div class="nav-area-right nav-area">
+            <input type="button" value="User" class="icon-btn">
+            <input type="button" value="Cart" class="icon-btn">
+        </div>
+    </header>
+
+    <nav id="menu" class="menu">
+        <ul>
+          <li class="centered"><a href="index.html" class="menu-link">Inicio</a></li>
+          <hr class="separator">
+          <li>Perfil</li>
+          <li>Recomendados</li>
+          <li>Recientes</li>
+          <li>Tendencias</li>
+          <hr class="separator">
+          <li>Todos los juegos</li>
+          <li>Categorías</li>
+          <hr class="separator">
+          <li>Redes</li>
+          <div class="social-icons">
+            <a href="#"><img src="" alt="Face"></a>
+            <a href="#"><img src="" alt="Inst"></a>
+            <a href="#"><img src="" alt="Email"></a>
+          </div>
+        </ul>
+    </nav>
+
+    <!-- Login Form -->
+    <div class="login-container" id="login">
+        <img src="" alt="Logo">
+
+        <div id="id-popover" popover="manual">
+            
+            <p>Usted ha sido registrado con exito</p>
+            <div class="button-container">
+                <button popovertarget="id-popover" class="btn-secundary">Cerrar</button>
+            </div>    
+        </div>
+
+        <h2 class="roboto-regular">Iniciar Sesión</h2>
+        <form>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <div class="buttons-container">
+                <button type="submit" class="btn-secundary btn-registro">Registrarse</button>
+                <button type="button" class="btn-primary" id="btn-ini-sesion">Iniciar sesion</button>
+            </div>
+            <div class="separator">
+                <hr>
+                <span>o</span>
+                <hr>
+            </div>
+            <button class="social-button google-btn">Conectarse con Google</button>
+            <button class="social-button facebook-btn">Conectarse con Facebook</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-links">
+            <div>
+                <h3>Sobre nosotros</h3>
+                <a href="#">Empresa</a>
+                <a href="#">Trabaja con nosotros</a>
+                <a href="#">Desarrolladores</a>
+                <a href="#">RSE</a>
+            </div>
+            <div>
+                <h3>Accesos directos</h3>
+                <a href="#">Pagina principal</a>
+                <a href="#">Categorias</a>
+                <a href="#">Destacados</a>
+                <a href="#">Novedades</a>
+            </div>
+            <div>
+                <h3>Comunidad</h3>
+                <a href="#">Colaboraciones</a>
+                <a href="#">Eventos</a>
+                <a href="#">Guias y tutoriales</a>
+                <a href="#">Foros</a>
+            </div>
+            <div>
+                <h3>Contactos</h3>
+                <a href="#">+549 2494010255</a>
+                <a href="#">hola@playTime.com</a>
+                <a href="#">PlayTimeGames</a>
+                <a href="#">PlayTimeGames</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PlayTime Games</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
