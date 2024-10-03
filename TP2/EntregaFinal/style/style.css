@@ -495,7 +495,15 @@ a.centered {
     
 }
 
-
+.bounce {
+    transition: transform 0.3s ease;
+    transform: translateX(-30px); /* Mueve ligeramente para el efecto de rebote */
+  }
+  
+  .bounce-back {
+    transition: transform 0.3s ease;
+    transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el otro extremo */
+  }
 
 .carousel-container  {
     position: relative;
@@ -520,6 +528,7 @@ a.centered {
     display: flex;
     transition: transform 0.5s ease-in-out;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
   
 .card {

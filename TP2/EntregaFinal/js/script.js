@@ -1,55 +1,150 @@
-/* Funcionalidad para el carousel */ 
-/*const carousels = document.querySelectorAll('.carousel-container');
-
-carousels.forEach(carrusel => {
-  const track = carrusel.querySelector('.carousel-track');
-  const cards = carrusel.querySelectorAll('.card');
-  const prevButton = carrusel.querySelector('.prev');
-  const nextButton = carrusel.querySelector('.next');
-  
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const menu = document.getElementById('menu');
+const popover = document.querySelector("#id-popover");
+const form = document.querySelector("form");
+const btnIniSesion = document.querySelector('#btn-ini-sesion');
+const btnFooter = document.querySelectorAll('.btn-footer');
 
 
+// Recorre cada botón
+btnFooter.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+      // Selecciona la lista de enlaces que corresponde al botón clicado
+      const links = btn.nextElementSibling; // Asumiendo que los enlaces están justo después del botón
 
-  const carouselInner = document.querySelector('.carousel-track');
-  let index = 0;
-
-  prevButton.addEventListener('click', () => {
-    moveToPreviousSlide();
+      // Alterna la clase 'show' en la lista
+      links.classList.toggle('show'); // Muestra u oculta la lista
   });
+});
 
-  nextButton.addEventListener('click', () => {
-    moveToNextSlide();
-  });
+/* ######## Funcionalidad menu ######### */
 
-  function moveToPreviousSlide() {
-    index = (index > 0) ? index - 1 : 0;
-    carouselInner.style.transform = `translateX(-${index * 100}%)`;
-  }
+hamburgerMenu.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});
 
-    function moveToNextSlide() {
-      index = (index < carouselInner.children.length - 1) ? index + 1 : carouselInner.children.length - 1;
-      const totalItems = carouselInner.children.length;
-      const offset = (index === totalItems - 1) ? -(totalItems - 1) * 100 : -index * 100;
-      carouselInner.style.transform = `translateX(${offset}%)`;
-    }
-  
-});*/
+/* ######## Fin - Funcionalidad menu ######### */
 
-  console.log("hola")
-  const track = document.querySelector('.carousel-track');
-  const cards = document.querySelectorAll('.card');
-  const prevButton = document.querySelector('.prev');
-  const nextButton = document.querySelector('.next');
-
-  console.log(nextButton)
-  console.log(track)
-  nextButton.addEventListener('click', () => {
-    console.log("adsad")
-    track.style.transform = `translateX(${-cards[0].getBoundingClientRect().width}px)`;
-    //track.scrollLeft += 125;
-    //track.scrollLeft += cards[0].getBoundingClientRect().width;
-    console.log(track.scrollLeft)
+if(form){
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if(popover){
+      popover.showPopover();
+    } 
   })
+}
+
+if(btnIniSesion){ // Esto no tendria que estar  o no?
+btnIniSesion.addEventListener('click',() =>{
+ window.location.href = "index.html";
+})}
 
 
+
+
+/* ######## Manejo del carousel ######### */
+const track = document.querySelector('.carousel-track');
+const cards = document.querySelectorAll('.card');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const cardWidth = document.querySelector('.card').getBoundingClientRect().width;
+ 
+
+let currentPosition = 0;
+
+nextButton.addEventListener('click', () => {
+  moveCardToNext();
+})
+
+prevButton.addEventListener('click', () => {
+  moveCardToPrevious();
+})
+
+function moveCardToNext() {
+  const maxScrollLeft = track.scrollWidth - track.clientWidth;
+  // Verifica si el scroll está en el final
+  if (track.scrollLeft + cardWidth >= maxScrollLeft) {
+
+    // Evita que la card se corte si es la ultima
+    if (track.scrollLeft < maxScrollLeft) {
+      track.scrollLeft = maxScrollLeft
+    }
+    // Si llegamos al final, aplicamos el efecto de rebote
+    track.classList.add('bounce');
+    setTimeout(() => {
+      // Remueve la clase después del rebote para volver a la normalidad
+      track.classList.remove('bounce');
+    }, 300);
+
+  } else {
+    track.scrollLeft += cardWidth + cards.length ;
+  }
+}
+
+function moveCardToPrevious() {
+  // Verifica si el scroll está en el inicio
+  if (track.scrollLeft <= 0) {
+    // Si estamos al inicio, aplicamos el efecto de rebote
+    track.classList.add('bounce-back');
+    
+    setTimeout(() => {
+      // Remueve la clase después del rebote para volver a la normalidad
+      track.classList.remove('bounce-back');
+    }, 300);
+
+  } else {
+    track.scrollLeft -= cardWidth + cards.length ;
+  }
+}
+
+/* ######## Fin - Manejo del carousel ######### */
+
+let isDragging = false, startPos = 0, currentTranslate = 0, prevTranslate = 0, animationID, currentIndex = 0;
+const carousel = document.querySelector('.carousel-track');
+        carousel.addEventListener('touchstart', touchStart);
+        carousel.addEventListener('touchend', touchEnd);
+        carousel.addEventListener('touchmove', touchMove);
+
+        function touchStart(event) {
+            console.log("tocuch star")
+            isDragging = true;
+            startPos = event.touches.clientX;
+            animationID = requestAnimationFrame(animation);
+        }
+
+        function touchEnd() {
+            console.log("end")
+            isDragging = false;
+            cancelAnimationFrame(animationID);
+            const movedBy = currentTranslate - prevTranslate;
+
+            if (movedBy < -100 && currentIndex < 2) currentIndex += 1;
+            if (movedBy > 100 && currentIndex > 0) currentIndex -= 1;
+
+            setPositionByIndex();
+        }
+
+        function touchMove(event) {
+          console.log("touch move")
+            if (isDragging) {
+                moveCardToNext();
+                const currentPosition = event.touches.clientX;
+                currentTranslate = prevTranslate + currentPosition - startPos;
+            }
+        }
+
+        function animation() {
+            setSliderPosition();
+            if (isDragging) requestAnimationFrame(animation);
+        }
+
+        function setSliderPosition() {
+            carousel.style.transform = `translateX(${currentTranslate}px)`;
+        }
+
+        function setPositionByIndex() {
+            currentTranslate = currentIndex * -window.innerWidth;
+            prevTranslate = currentTranslate;
+            setSliderPosition();
+        }
 
