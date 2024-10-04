@@ -529,6 +529,7 @@ a.centered {
     transition: transform 0.5s ease-in-out;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    overflow-y: hidden;
 }
   
 .card {
@@ -544,6 +545,7 @@ a.centered {
     position: relative; /* Necesario para que los elementos se posicionen correctamente */
     display: flex;
     flex-direction: column;
+    transition: transform 0.5s ease;
 
 }
 

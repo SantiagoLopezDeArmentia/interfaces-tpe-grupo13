@@ -54,6 +54,8 @@ let currentPosition = 0;
 
 nextButton.addEventListener('click', () => {
   moveCardToNext();
+  //track.scrollLeft += cardWidth;
+    //limitScroll();
 })
 
 prevButton.addEventListener('click', () => {
@@ -97,54 +99,71 @@ function moveCardToPrevious() {
   }
 }
 
-/* ######## Fin - Manejo del carousel ######### */
+/* Efecto de caroules para touch mobile*/
 
-let isDragging = false, startPos = 0, currentTranslate = 0, prevTranslate = 0, animationID, currentIndex = 0;
-const carousel = document.querySelector('.carousel-track');
-        carousel.addEventListener('touchstart', touchStart);
-        carousel.addEventListener('touchend', touchEnd);
-        carousel.addEventListener('touchmove', touchMove);
+const _track = document.querySelector('.carousel-track');
+let isDragging = false;
+let startX, startY, currentX, currentY;
+let startScrollLeft;
 
-        function touchStart(event) {
-            console.log("tocuch star")
-            isDragging = true;
-            startPos = event.touches.clientX;
-            animationID = requestAnimationFrame(animation);
-        }
+track.addEventListener('touchstart', (event) => {
+    isDragging = true;
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+    startScrollLeft = _track.scrollLeft;
+});
 
-        function touchEnd() {
-            console.log("end")
-            isDragging = false;
-            cancelAnimationFrame(animationID);
-            const movedBy = currentTranslate - prevTranslate;
+track.addEventListener('touchend', () => {
+    isDragging = false;
+});
 
-            if (movedBy < -100 && currentIndex < 2) currentIndex += 1;
-            if (movedBy > 100 && currentIndex > 0) currentIndex -= 1;
+track.addEventListener('touchmove', (event) => {
+    if (!isDragging) return;
+    event.preventDefault();
 
-            setPositionByIndex();
-        }
+    const currentX = event.touches[0].clientX;
+    const currentY = event.touches[0].clientY;
+    const diffX = startX - currentX;
+    const diffY = startY - currentY;
 
-        function touchMove(event) {
-          console.log("touch move")
-            if (isDragging) {
-                moveCardToNext();
-                const currentPosition = event.touches.clientX;
-                currentTranslate = prevTranslate + currentPosition - startPos;
-            }
-        }
+    // Verificar si el movimiento es principalmente horizontal
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+      _track.scrollLeft = startScrollLeft + diffX;
+      efectoRebote();
+      //let maxScrollLeft = _track.scrollWidth - _track.clientWidth;
+      console.log(_track.scrollWidth)
+      console.log(_track.clientWidth)
+      console.log(_track.scrollWidth - _track.clientWidth)
+      /*console.log("max scrooll: " + maxScrollLeft)
+      console.log("Math.min(maxScrollLeft, _track.scrollLeft): " + Math.min(maxScrollLeft, _track.scrollLeft))
+      console.log("Math.max(0, Math.min(maxScrollLeft, _track.scrollLeft)) " + Math.max(0, Math.min(maxScrollLeft, _track.scrollLeft)))*/
+    }
+});
 
-        function animation() {
-            setSliderPosition();
-            if (isDragging) requestAnimationFrame(animation);
-        }
+// Función para limitar el desplazamiento al inicio y al final del carrusel
 
-        function setSliderPosition() {
-            carousel.style.transform = `translateX(${currentTranslate}px)`;
-        }
+function efectoRebote() {
+  let maxScrollLeft = _track.scrollWidth - _track.clientWidth;
+  if (Math.max(0, Math.min(maxScrollLeft, _track.scrollLeft)) == maxScrollLeft) {
+    track.classList.add('bounce');
+    setTimeout(() => {
+      // Remueve la clase después del rebote para volver a la normalidad
+      track.classList.remove('bounce');
+    }, 300);
+  } else if (Math.max(0, Math.min(maxScrollLeft, _track.scrollLeft)) == 0) {
+    track.classList.add('bounce-back');
+    
+    setTimeout(() => {
+      // Remueve la clase después del rebote para volver a la normalidad
+      track.classList.remove('bounce-back');
+    }, 300);
+  }
+}
 
-        function setPositionByIndex() {
-            currentTranslate = currentIndex * -window.innerWidth;
-            prevTranslate = currentTranslate;
-            setSliderPosition();
-        }
+function limitScroll() {
+    const maxScrollLeft = _track.scrollWidth - _track.clientWidth;
+    console.log("max scrooll: " + maxScrollLeft)
+    _track.scrollLeft = Math.max(0, Math.min(maxScrollLeft, _track.scrollLeft));
+    console.log("track scrool limit scroll: " + _track.scrollLeft)
+  }
 
