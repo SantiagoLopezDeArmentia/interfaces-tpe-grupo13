@@ -55,7 +55,7 @@ let currentPosition = 0;
 nextButton.addEventListener('click', () => {
   moveCardToNext();
   //track.scrollLeft += cardWidth;
-    //limitScroll();
+  //limitScroll();
 })
 
 prevButton.addEventListener('click', () => {
