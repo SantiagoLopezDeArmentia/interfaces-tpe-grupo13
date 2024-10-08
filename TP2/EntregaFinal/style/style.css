@@ -177,7 +177,7 @@ header{
 }*/
 
 .inpt-buscar {
-    background-image: url('/iconos/search.png'); /* Imagen que quieres mostrar */
+    background-image: url('iconos/search.png'); /* Imagen que quieres mostrar */
     background-repeat: no-repeat;
     background-position:left 4px; /* Ajusta la posición de la imagen */
     background-size: 20px 20px; /* Ajusta el tamaño de la imagen */
@@ -621,15 +621,17 @@ a.centered {
     padding-left: 2%;
     padding-right: 2%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    /*flex-direction: row;
+    justify-content: space-between;*/
+    flex-direction: column;
     margin-top: 10%;
+    overflow: hidden;
 }
 
 .carousel-window {
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    /*display: flex;
+    flex-direction: column;*/
 }
   
 .carousel-track {
@@ -637,7 +639,6 @@ a.centered {
     transition: transform 0.5s ease-in-out;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    overflow-y: hidden;
 }
   
 .card {
@@ -649,21 +650,17 @@ a.centered {
     border-radius: 8px;
     color: #ffffff;
     width: 40%;
-    max-height: 80%;
+    max-height: 5%;
     position: relative; /* Necesario para que los elementos se posicionen correctamente */
     display: flex;
     flex-direction: column;
-    transition: transform 0.5s ease;
-}
-
-.card:hover{
-    transform: scale(1.05);      /* Aumenta ligeramente el tamaño */
+    transition: transform 0.5s ease, filter 0.3s;
 }
 
 .card img {
     max-width: 100% ; 
     height: auto; /* Mantener proporciones */
-    max-height: 70%;
+    max-height: 50%;
     border-top-left-radius: 8px; 
     border-top-right-radius: 8px;
 }
@@ -867,19 +864,19 @@ a.centered {
     }
 
     .card {
-        flex: 0 0 100%;
-        margin-right: 10px;
+        margin-right: 0.5%;
         padding: 0px;
         padding-bottom: 10px;
         background-color: #2c3e50;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align:left;
-        border-radius: 8px;
-        max-width: 215px;
+        border-radius: 8px;*/
+        max-width: 200px;
         height: 193px;
-        color: #ffffff;
+        max-height: 80%;
+        /*color: #ffffff;*/
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 0; 
     }
 
     .btn-card-jugar {
@@ -888,8 +885,7 @@ a.centered {
         position: absolute;
         bottom: 10px;
         right: 10px;
-        padding: 5px;
-        
+        padding: 5px;   
     }
 
     .buttons-container-card{
@@ -906,91 +902,69 @@ a.centered {
         justify-content: center;
     }
 
-    
-    /*.carousel-track{
-        display: flex;
-        flex-direction: row;
-        max-width: 100%;
-        max-height: 100%;
+    .carousel-track {
         align-items: center;
-    }
-        
-    
-    .carousel-container{
-        position: relative; 
-        overflow: hidden;
-        max-height: 8%; 
-        display: flex; 
-        justify-content: space-between; 
-        align-items: center;
-        justify-content: center;
-        width: 90%;
-        margin-top: 4%;
-    }*/
-
-
-    .carousel-window {
-        position: relative; /* Importante para que los botones se posicionen dentro del contenedor */
-        overflow: hidden;
+        max-width: 83%;
+        padding-right: 2%;
+        padding-left: 2%;
     }
 
     /* Botones [Flechas] Carrusel */
     .prev,.next{
         background-color: transparent;
-        color: #9bf00b;
         width:52.25px ;
         height:60px ;
-    }
-
-    .prev {
         display: block;
-        left: 0;
-    }
-    
-    .next {
-        display: block;
-        right: 0;
     }
 
     .prev img, .next img {
-        width:100% ;
+        max-width:100%;
         height: auto;
-        /*padding: 0;
-        margin: 0;*/
     }
 
-    /*.carousel-button img {
-        width:100%;
-        height: auto;
-        padding: 0;
-        margin: 0;
-    }*/
-
-
-    /*.carousel-button.prev {
-        left: 0;
+    .carousel-button.prev, .carousel-button.next {
         background: transparent;
     }
-
-    .carousel-button.next {
-        right: 0;
-        background: transparent;
-    }*/
-    /*.carousel-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        z-index: 1;
-        display: flex; 
-        justify-content: center;
-        align-items: center;
-    }*/
 
     .categoria h3{
         color: #ffffff;
+        margin-bottom: 0.5%;
+        padding-left: 7.7%;
+    }
+
+    .card:hover{
+        transform: scale(1.1);
+        z-index: 1;
+        /*margin: 0;*/
+    }
+    
+    .carousel-track:hover .card:not(:hover) {
+        filter:blur(0.8px);
+        overflow-y: visible;
+    }
+
+    /* probrando re ajuste de flechas*/
+    .carousel-container {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        padding: 0;
+    }
+
+    .carousel-window {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+    }
+    
+    .div-button-prev,.div-button-next {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .div-button-next {
+        padding-left: 2%;
     }
 }
 
