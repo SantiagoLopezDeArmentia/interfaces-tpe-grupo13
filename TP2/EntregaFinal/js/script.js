@@ -1,13 +1,14 @@
 const hamburgerMenu = document.getElementById('hamburger-menu');
 const menu = document.getElementById('menu');
 const popover = document.querySelector("#id-popover");
-const form = document.querySelector("form");
+const cerrarBtn = document.querySelector('.btn-popover');
+const form = document.querySelector(".form-register");
 const btnIniSesion = document.querySelector('#btn-ini-sesion');
-const btnFooter = document.querySelectorAll('.btn-footer');
+//const btnFooter = document.querySelectorAll('.btn-footer');
 
 
 // Recorre cada botón
-btnFooter.forEach(function (btn) {
+/*btnFooter.forEach(function (btn) {
   btn.addEventListener('click', function () {
       // Selecciona la lista de enlaces que corresponde al botón clicado
       const links = btn.nextElementSibling; // Asumiendo que los enlaces están justo después del botón
@@ -15,7 +16,7 @@ btnFooter.forEach(function (btn) {
       // Alterna la clase 'show' en la lista
       links.classList.toggle('show'); // Muestra u oculta la lista
   });
-});
+});*/
 
 /* ######## Funcionalidad menu ######### */
 
@@ -25,6 +26,7 @@ hamburgerMenu.addEventListener('click', () => {
 
 /* ######## Fin - Funcionalidad menu ######### */
 
+
 if(form){
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -32,6 +34,11 @@ if(form){
       popover.showPopover();
     } 
   })
+}
+if (cerrarBtn) {
+  cerrarBtn.addEventListener("click", () => {
+      window.location.href = 'index.html';  
+  });
 }
 
 if(btnIniSesion){ // Esto no tendria que estar  o no?
@@ -55,10 +62,11 @@ arrCarousels.forEach(carousel => {
   const prevButton = carousel.querySelector('.prev');
   const nextButton = carousel.querySelector('.next');
   const cardWidth = carousel.querySelector('.card').getBoundingClientRect().width;
-
+ 
   let isDragging = false;
   let startX, startY;
   let startScrollLeft;
+  let startScrollTop;
 
   nextButton.addEventListener('click', () => {
     moveCardToNext(track, cardWidth, cards);
@@ -166,3 +174,19 @@ function limitScroll(track) {
     console.log("track scrool limit scroll: " + track.scrollLeft)
 }
 
+ // barra de carga del home
+ document.addEventListener("DOMContentLoaded", function() {
+  const spinnerContainer = document.getElementById("loading-spinner-container");
+  const progressCircle = document.querySelector(".foreground");
+
+  // Iniciar la animación después de un breve retraso
+  setTimeout(() => {
+    progressCircle.style.strokeDashoffset = '0';
+  }, 100);
+
+  // Después de la animación (3 segundos), ocultar el círculo y mostrar el contenido
+  setTimeout(() => {
+    spinnerContainer.style.display = "none";
+    document.getElementById("home-content").style.display = "block";
+  }, 3100); // 3 segundos más un pequeño margen
+});

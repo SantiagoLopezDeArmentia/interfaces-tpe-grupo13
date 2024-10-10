@@ -8,10 +8,20 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
-<body class="body">
+<body>
+
+    <div id="loading-spinner-container">
+        <svg id="progress-circle" viewBox="0 0 100 100">
+            <circle class="background" cx="50" cy="50" r="45"></circle>
+            <circle class="foreground" cx="50" cy="50" r="45"></circle>
+        </svg>
+    </div>
+
     <!-- Header -->
     <header id="header-navbar">
         <div class="nav-area-left nav-area" id="hamburguesa">
@@ -37,51 +47,51 @@
         </div>
     </header>
 
-    
+
     <nav id="menu" class="menu">
-            <a href="login.html" class="menu-link">Iniciar sesión</a>
-            <hr class="menu-separator">
+        <a href="login.html" class="menu-link">Iniciar sesión</a>
+        <hr class="menu-separator">
 
-            <div class="container-menu">
-                <div class="item-menu">
-                    <div class="menu-img-container"><img src="iconos/user-icon.png"/></div>
-                    <li><a>Perfil</a></li>
-                </div>
-                <div class="item-menu">
-                    <div class="menu-img-container"><img src="iconos/star-icon.png"/></div>
-                    <li><a>Recomendados</a></li>
-                </div>
-                <div class="item-menu">
-                    <div class="menu-img-container"><img src="iconos/clock-icon.png"/></div>
-                    <li><a>Recientes</a></li>
-                </div>
-                <div class="item-menu">
-                    <div class="menu-img-container"><img src="iconos/fire-icon.png"/></div>
-                    <li><a>Tendencias</a></li>
-                </div>
+        <div class="container-menu">
+            <div class="item-menu">
+                <div class="menu-img-container"><img src="iconos/user-icon.png" /></div>
+                <li><a>Perfil</a></li>
+            </div>
+            <div class="item-menu">
+                <div class="menu-img-container"><img src="iconos/star-icon.png" /></div>
+                <li><a>Recomendados</a></li>
+            </div>
+            <div class="item-menu">
+                <div class="menu-img-container"><img src="iconos/clock-icon.png" /></div>
+                <li><a>Recientes</a></li>
+            </div>
+            <div class="item-menu">
+                <div class="menu-img-container"><img src="iconos/fire-icon.png" /></div>
+                <li><a>Tendencias</a></li>
+            </div>
+        </div>
+
+        <hr class="menu-separator">
+        <div class="container-menu">
+            <div class="item-menu">
+                <img src="iconos/all-games-icon.png" />
+                <li><a>Juegos</a></li>
             </div>
 
-            <hr class="menu-separator">
-            <div class="container-menu">
-                <div class="item-menu">
-                    <img src="iconos/all-games-icon.png"/>
-                    <li><a>Juegos</a></li>
-                </div>
-
-                <div class="item-menu">
-                    <img src="iconos/category-icon.png"/>
-                    <li><a>Categorías</a></li>
-                </div>
-
+            <div class="item-menu">
+                <img src="iconos/category-icon.png" />
+                <li><a>Categorías</a></li>
             </div>
-            
-            <hr class="menu-separator">
-            <h3>Redes</h3>
-            <div class="social-icons">
-                <a href="#"><img src="iconos/facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="iconos/instagram-icon.png" alt="Instagram"></a>
-                <a href="#"><img src="iconos/email-icon.png" alt="Email"></a>
-            </div>
+
+        </div>
+
+        <hr class="menu-separator">
+        <h3>Redes</h3>
+        <div class="social-icons">
+            <a href="#"><img src="iconos/facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="iconos/instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="iconos/email-icon.png" alt="Email"></a>
+        </div>
     </nav>
 
 
@@ -95,7 +105,7 @@
                     <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
                 </button>
             </div>
-            
+
             <div class="carousel-track" id="carouselTrack">
                 <div class="card">
                     <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
@@ -106,12 +116,12 @@
                     </div>
 
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
-                    
+
                     <div class="hover-overlay">
-                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono" />
                     </div>
                 </div>
                 <div class="card">
@@ -122,8 +132,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -134,8 +144,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -146,8 +156,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -158,8 +168,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -170,8 +180,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -182,8 +192,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -194,8 +204,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
             </div>
@@ -217,7 +227,7 @@
                     <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
                 </button>
             </div>
-            
+
             <div class="carousel-track" id="carouselTrack">
                 <div class="card">
                     <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
@@ -228,12 +238,12 @@
                     </div>
 
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
-                    
+
                     <div class="hover-overlay">
-                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono" />
                     </div>
                 </div>
                 <div class="card">
@@ -244,8 +254,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -256,8 +266,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -268,8 +278,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -280,8 +290,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -292,8 +302,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -304,8 +314,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -316,8 +326,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
             </div>
@@ -339,7 +349,7 @@
                     <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
                 </button>
             </div>
-            
+
             <div class="carousel-track" id="carouselTrack">
                 <div class="card">
                     <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
@@ -350,12 +360,12 @@
                     </div>
 
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
-                    
+
                     <div class="hover-overlay">
-                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono" />
                     </div>
                 </div>
                 <div class="card">
@@ -366,8 +376,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -378,8 +388,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -390,8 +400,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -402,8 +412,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -414,8 +424,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -426,8 +436,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -438,8 +448,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
             </div>
@@ -461,7 +471,7 @@
                     <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
                 </button>
             </div>
-            
+
             <div class="carousel-track" id="carouselTrack">
                 <div class="card">
                     <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
@@ -472,12 +482,12 @@
                     </div>
 
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
-                    
+
                     <div class="hover-overlay">
-                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono" />
                     </div>
                 </div>
                 <div class="card">
@@ -488,8 +498,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -500,8 +510,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -512,8 +522,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -524,8 +534,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -536,8 +546,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -548,8 +558,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -560,8 +570,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
             </div>
@@ -583,7 +593,7 @@
                     <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
                 </button>
             </div>
-            
+
             <div class="carousel-track" id="carouselTrack">
                 <div class="card">
                     <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
@@ -594,12 +604,12 @@
                     </div>
 
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
-                    
+
                     <div class="hover-overlay">
-                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono" />
                     </div>
                 </div>
                 <div class="card">
@@ -610,8 +620,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -622,8 +632,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -634,8 +644,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -646,8 +656,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -658,8 +668,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -670,8 +680,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -682,8 +692,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
             </div>
@@ -705,7 +715,7 @@
                     <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
                 </button>
             </div>
-            
+
             <div class="carousel-track" id="carouselTrack">
                 <div class="card">
                     <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
@@ -716,12 +726,12 @@
                     </div>
 
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
-                    
+
                     <div class="hover-overlay">
-                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono" />
                     </div>
                 </div>
                 <div class="card">
@@ -732,8 +742,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -744,8 +754,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -756,8 +766,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -768,8 +778,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -780,8 +790,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -792,8 +802,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
                 <div class="card">
@@ -804,8 +814,8 @@
                         <h5>Gratis</h5>
                     </div>
                     <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                     </button>
                 </div>
             </div>
@@ -819,7 +829,7 @@
     </div>
 
     <!-- Footer -->
-    
+
     <footer id="footer">
         <div class="footer-links">
             <div>
@@ -865,7 +875,7 @@
     </footer>
 
     <script src="js/script.js"></script>
-   
+
 </body>
 
 </html>
