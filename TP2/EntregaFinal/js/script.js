@@ -55,11 +55,10 @@ arrCarousels.forEach(carousel => {
   const prevButton = carousel.querySelector('.prev');
   const nextButton = carousel.querySelector('.next');
   const cardWidth = carousel.querySelector('.card').getBoundingClientRect().width;
- 
+
   let isDragging = false;
   let startX, startY;
   let startScrollLeft;
-  let startScrollTop;
 
   nextButton.addEventListener('click', () => {
     moveCardToNext(track, cardWidth, cards);
@@ -84,7 +83,6 @@ arrCarousels.forEach(carousel => {
 
   track.addEventListener('touchmove', (event) => {
       if (!isDragging) return;
-      //event.preventDefault();
 
       const currentX = event.touches[0].clientX;
       const currentY = event.touches[0].clientY;
@@ -96,9 +94,6 @@ arrCarousels.forEach(carousel => {
         event.preventDefault();
         track.scrollLeft = startScrollLeft + diffX;
         efectoRebote(track);
-      } else if (Math.abs(diffY) > Math.abs(diffX)) {
-        //else if (Math.abs(diffY) > Math.abs(diffX)) {
-        console.log("entro top")
       }
   });
 
