@@ -13,8 +13,8 @@
 
 <body>
     <!-- Header -->
-    <header id="header-navbar" class="header-grid-container">
-        <div class="nav-area-left hamburguesa nav-area" id="hamburguesa">
+    <header id="header-navbar">
+        <div class="nav-area-left nav-area" id="hamburguesa">
             <button class="hamburger-menu" id="hamburger-menu">&#9776;</button>
         </div>
         <div class="logo nav-area">
@@ -24,18 +24,11 @@
         <div class="nav-area-center nav-area">
             <input class="inpt-buscar" type="text" placeholder="Buscar">
         </div>
-        <!--<div class="nav-area-center mob-search-type"></div>
-            <input placeholder="PlayTime" class="mob-search-input">
-            <img src="iconos/lupa-icon.png" class="icon-lupa-search">
-        </div>-->
-        <!--<div class="nav-area-center nav-area">
-            <input class="inpt-buscar" type="text" placeholder="Buscar">
-        </div>-->
         <div class="nav-area-right nav-area">
-            <button class="logged-input"></button>
+            <button class="mob-search">
                 <img src="iconos/lupa-icon.png">
             </button>
-            <button class="icon-btn">
+            <button class="shop-btn">
                 <img src="iconos/shop-cart-icon.png">
             </button>
             <button class="logged-input">
@@ -92,133 +85,6 @@
     </nav>
 
 
-
-   <!-- <div class="carousel-container">
-            <div>
-                <button class="carousel-button prev" id="prevButton">
-                    <img src="/iconos/flechaALaIzq.png" alt="flecha izquierda">
-                </button>
-            </div>
-            <div class="carousel-window">
-                <div class="categoria">
-                    <h3>Recomendados</h3>
-                </div>
-                <div class="carousel-track" id="carouselTrack">
-                    <div class="card">
-                        <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
-
-                        <div class="titulo-desc-card">
-                            <h3>Mario Bross</h3>
-                            <h5>Es tuyo</h5>
-                        </div>
-
-                        <button type="button" class="btn-card-jugar">
-                            <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                            <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
-                        </button>
-                        
-                        <div class="hover-overlay">
-                            <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono"/>
-                        </div>
-                    </div>
-                    <div class="card">
-
-                        <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
-                        <div class="titulo-desc-card">
-                            <h3>Mario Bross El mundo de las marabillas</h3>
-                            <h5>Gratis</h5>
-                        </div>
-                        <button type="button" class="btn-card-jugar">
-                            <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                            <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
-                        </button>
-                    </div>
-                    <div class="card">
-
-                        <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
-                        <div class="titulo-desc-card">
-                            <h3>Mario Bross El mundo de las marabillas</h3>
-                            <h5>Gratis</h5>
-                        </div>
-                        <button type="button" class="btn-card-jugar">
-                            <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
-                            <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
-                        </button>
-                    </div>
-                    <div class="card">
-
-                        <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
-                        <div class="titulo-desc-card">
-                            <h3>Mario Bross</h3>
-                            <h5>Gratis</h5>
-                        </div>
-                        <div class="buttons-container-card">
-                            <button type="button" class="btn-card-jugar">Jugar</button>
-
-                        </div>
-
-                    </div>
-                    <div class="card">
-
-                        <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
-                        <div class="titulo-desc-card">
-                            <h3>Mario Bross</h3>
-                            <h5>Gratis</h5>
-                        </div>
-                        <div class="buttons-container-card">
-                            <button type="button" class="btn-card-jugar">Jugar</button>
-
-                        </div>
-
-                    </div>
-                    <div class="card">
-
-                        <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
-                        <div class="titulo-desc-card">
-                            <h3>Mario Bross</h3>
-                            <h5>Gratis</h5>
-                        </div>
-                        <div class="buttons-container-card">
-                            <button type="button" class="btn-card-jugar">Jugar</button>
-
-                        </div>
-
-                    </div>
-                    <div class="card">
-
-                        <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
-                        <div class="titulo-desc-card">
-                            <h3>Mario Bross</h3>
-                            <h5>Gratis</h5>
-                        </div>
-                        <div class="buttons-container-card">
-                            <button type="button" class="btn-card-jugar">Jugar</button>
-
-                        </div>
-
-                    </div>
-                    <div class="card">
-
-                        <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
-                        <div class="titulo-desc-card">
-                            <h3>Mario Bross</h3>
-                            <h5>Gratis</h5>
-                        </div>
-                        <div class="buttons-container-card">
-                            <button type="button" class="btn-card-jugar">Jugar</button>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div>
-                <button class="carousel-button next" id="nextButton">
-                    <img src="/iconos/flechaALaDer.png" alt="flecha derecha">
-                </button>
-            </div>
-    </div>-->
-
     <div class="carousel-container">
         <div class="categoria">
             <h3>Recomendados</h3>
@@ -232,7 +98,7 @@
             
             <div class="carousel-track" id="carouselTrack">
                 <div class="card">
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
 
                     <div class="titulo-desc-card">
                         <h3>Mario Bross</h3>
@@ -250,7 +116,7 @@
                 </div>
                 <div class="card">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
                         <h3>Mario Bross El mundo de las marabillas</h3>
                         <h5>Gratis</h5>
@@ -262,7 +128,7 @@
                 </div>
                 <div class="card">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
                         <h3>Mario Bross El mundo de las marabillas</h3>
                         <h5>Gratis</h5>
@@ -274,68 +140,63 @@
                 </div>
                 <div class="card">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross</h3>
+                        <h3>Mario Bross El mundo de las marabillas</h3>
                         <h5>Gratis</h5>
                     </div>
-                    <div class="buttons-container-card">
-                        <button type="button" class="btn-card-jugar">Jugar</button>
-
-                    </div>
-
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
                 </div>
                 <div class="card">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross</h3>
+                        <h3>Mario Bross El mundo de las marabillas</h3>
                         <h5>Gratis</h5>
                     </div>
-                    <div class="buttons-container-card">
-                        <button type="button" class="btn-card-jugar">Jugar</button>
-
-                    </div>
-
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
                 </div>
                 <div class="card">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross</h3>
+                        <h3>Mario Bross El mundo de las marabillas</h3>
                         <h5>Gratis</h5>
                     </div>
-                    <div class="buttons-container-card">
-                        <button type="button" class="btn-card-jugar">Jugar</button>
-
-                    </div>
-
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
                 </div>
                 <div class="card">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross</h3>
+                        <h3>Mario Bross El mundo de las marabillas</h3>
                         <h5>Gratis</h5>
                     </div>
-                    <div class="buttons-container-card">
-                        <button type="button" class="btn-card-jugar">Jugar</button>
-
-                    </div>
-
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
                 </div>
                 <div class="card">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1">
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross</h3>
+                        <h3>Mario Bross El mundo de las marabillas</h3>
                         <h5>Gratis</h5>
                     </div>
-                    <div class="buttons-container-card">
-                        <button type="button" class="btn-card-jugar">Jugar</button>
-
-                    </div>
-
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
                 </div>
             </div>
 
@@ -345,7 +206,617 @@
                 </button>
             </div>
         </div>
-</div>
+    </div>
+    <div class="carousel-container">
+        <div class="categoria">
+            <h3>Recomendados</h3>
+        </div>
+        <div class="carousel-window">
+            <div class="div-button-prev">
+                <button class="carousel-button prev" id="prevButton">
+                    <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
+                </button>
+            </div>
+            
+            <div class="carousel-track" id="carouselTrack">
+                <div class="card">
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross</h3>
+                        <h5>Es tuyo</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                    
+                    <div class="hover-overlay">
+                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono"/>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+            </div>
+
+            <div class="div-button-next">
+                <button class="carousel-button next" id="nextButton">
+                    <img src="iconos/carousel-row-next.png" alt="flecha derecha">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-container">
+        <div class="categoria">
+            <h3>Recomendados</h3>
+        </div>
+        <div class="carousel-window">
+            <div class="div-button-prev">
+                <button class="carousel-button prev" id="prevButton">
+                    <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
+                </button>
+            </div>
+            
+            <div class="carousel-track" id="carouselTrack">
+                <div class="card">
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross</h3>
+                        <h5>Es tuyo</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                    
+                    <div class="hover-overlay">
+                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono"/>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+            </div>
+
+            <div class="div-button-next">
+                <button class="carousel-button next" id="nextButton">
+                    <img src="iconos/carousel-row-next.png" alt="flecha derecha">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-container">
+        <div class="categoria">
+            <h3>Recomendados</h3>
+        </div>
+        <div class="carousel-window">
+            <div class="div-button-prev">
+                <button class="carousel-button prev" id="prevButton">
+                    <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
+                </button>
+            </div>
+            
+            <div class="carousel-track" id="carouselTrack">
+                <div class="card">
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross</h3>
+                        <h5>Es tuyo</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                    
+                    <div class="hover-overlay">
+                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono"/>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+            </div>
+
+            <div class="div-button-next">
+                <button class="carousel-button next" id="nextButton">
+                    <img src="iconos/carousel-row-next.png" alt="flecha derecha">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-container">
+        <div class="categoria">
+            <h3>Recomendados</h3>
+        </div>
+        <div class="carousel-window">
+            <div class="div-button-prev">
+                <button class="carousel-button prev" id="prevButton">
+                    <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
+                </button>
+            </div>
+            
+            <div class="carousel-track" id="carouselTrack">
+                <div class="card">
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross</h3>
+                        <h5>Es tuyo</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                    
+                    <div class="hover-overlay">
+                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono"/>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+            </div>
+
+            <div class="div-button-next">
+                <button class="carousel-button next" id="nextButton">
+                    <img src="iconos/carousel-row-next.png" alt="flecha derecha">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-container">
+        <div class="categoria">
+            <h3>Recomendados</h3>
+        </div>
+        <div class="carousel-window">
+            <div class="div-button-prev">
+                <button class="carousel-button prev" id="prevButton">
+                    <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
+                </button>
+            </div>
+            
+            <div class="carousel-track" id="carouselTrack">
+                <div class="card">
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross</h3>
+                        <h5>Es tuyo</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                    
+                    <div class="hover-overlay">
+                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono"/>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+                <div class="card">
+
+                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h5>Gratis</h5>
+                    </div>
+                    <button type="button" class="btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original"/>
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover"/>
+                    </button>
+                </div>
+            </div>
+
+            <div class="div-button-next">
+                <button class="carousel-button next" id="nextButton">
+                    <img src="iconos/carousel-row-next.png" alt="flecha derecha">
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     

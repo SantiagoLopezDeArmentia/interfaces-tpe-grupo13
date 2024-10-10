@@ -43,71 +43,26 @@ btnIniSesion.addEventListener('click',() =>{
 
 
 /* ######## Manejo del carousel ######### */
+const track = document.querySelector('.carousel-track');
+const cards = document.querySelectorAll('.card');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const cardWidth = document.querySelector('.card').getBoundingClientRect().width;
+ 
 
 let currentPosition = 0;
 
-const arrCarousels = document.querySelectorAll('.carousel-container');
+nextButton.addEventListener('click', () => {
+  moveCardToNext();
+  //track.scrollLeft += cardWidth;
+  //limitScroll();
+})
 
-arrCarousels.forEach(carousel => {
-  console.log("ando")
-  const track = carousel.querySelector('.carousel-track');
-  const cards = carousel.querySelectorAll('.card');
-  const prevButton = carousel.querySelector('.prev');
-  const nextButton = carousel.querySelector('.next');
-  const cardWidth = carousel.querySelector('.card').getBoundingClientRect().width;
- 
-  let isDragging = false;
-  let startX, startY;
-  let startScrollLeft;
-  let startScrollTop;
+prevButton.addEventListener('click', () => {
+  moveCardToPrevious();
+})
 
-  nextButton.addEventListener('click', () => {
-    moveCardToNext(track, cardWidth, cards);
-  })
-
-  prevButton.addEventListener('click', () => {
-    moveCardToPrevious(track, cardWidth, cards);
-  })
-
-  /* Efecto de caroules para touch mobile*/
-
-  track.addEventListener('touchstart', (event) => {
-    isDragging = true;
-    startX = event.touches[0].clientX;
-    startY = event.touches[0].clientY;
-    startScrollLeft = track.scrollLeft;
-  });
-
-  track.addEventListener('touchend', () => {
-      isDragging = false;
-  });
-
-  track.addEventListener('touchmove', (event) => {
-      if (!isDragging) return;
-      //event.preventDefault();
-
-      const currentX = event.touches[0].clientX;
-      const currentY = event.touches[0].clientY;
-      const diffX = startX - currentX;
-      const diffY = startY - currentY;
-
-      // Verificar si el movimiento es principalmente horizontal
-      if (Math.abs(diffX) > Math.abs(diffY)) {
-        event.preventDefault();
-        track.scrollLeft = startScrollLeft + diffX;
-        efectoRebote(track);
-      } else if (Math.abs(diffY) > Math.abs(diffX)) {
-        //else if (Math.abs(diffY) > Math.abs(diffX)) {
-        console.log("entro top")
-      }
-  });
-
-});
-
-/* Funcionalidades del carousel */
-
-function moveCardToNext(track, cardWidth, cards) {
-  console.log("tonext")
+function moveCardToNext() {
   const maxScrollLeft = track.scrollWidth - track.clientWidth;
   // Verifica si el scroll está en el final
   if (track.scrollLeft + cardWidth >= maxScrollLeft) {
@@ -128,7 +83,7 @@ function moveCardToNext(track, cardWidth, cards) {
   }
 }
 
-function moveCardToPrevious(track, cardWidth, cards) {
+function moveCardToPrevious() {
   // Verifica si el scroll está en el inicio
   if (track.scrollLeft <= 0) {
     // Si estamos al inicio, aplicamos el efecto de rebote
@@ -144,17 +99,58 @@ function moveCardToPrevious(track, cardWidth, cards) {
   }
 }
 
+/* Efecto de caroules para touch mobile*/
+
+const _track = document.querySelector('.carousel-track');
+let isDragging = false;
+let startX, startY, currentX, currentY;
+let startScrollLeft;
+
+track.addEventListener('touchstart', (event) => {
+    isDragging = true;
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+    startScrollLeft = _track.scrollLeft;
+});
+
+track.addEventListener('touchend', () => {
+    isDragging = false;
+});
+
+track.addEventListener('touchmove', (event) => {
+    if (!isDragging) return;
+    event.preventDefault();
+
+    const currentX = event.touches[0].clientX;
+    const currentY = event.touches[0].clientY;
+    const diffX = startX - currentX;
+    const diffY = startY - currentY;
+
+    // Verificar si el movimiento es principalmente horizontal
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+      _track.scrollLeft = startScrollLeft + diffX;
+      efectoRebote();
+      //let maxScrollLeft = _track.scrollWidth - _track.clientWidth;
+      console.log(_track.scrollWidth)
+      console.log(_track.clientWidth)
+      console.log(_track.scrollWidth - _track.clientWidth)
+      /*console.log("max scrooll: " + maxScrollLeft)
+      console.log("Math.min(maxScrollLeft, _track.scrollLeft): " + Math.min(maxScrollLeft, _track.scrollLeft))
+      console.log("Math.max(0, Math.min(maxScrollLeft, _track.scrollLeft)) " + Math.max(0, Math.min(maxScrollLeft, _track.scrollLeft)))*/
+    }
+});
+
 // Función para limitar el desplazamiento al inicio y al final del carrusel
 
-function efectoRebote(track) {
-  let maxScrollLeft = track.scrollWidth - track.clientWidth;
-  if (Math.max(0, Math.min(maxScrollLeft, track.scrollLeft)) == maxScrollLeft) {
+function efectoRebote() {
+  let maxScrollLeft = _track.scrollWidth - _track.clientWidth;
+  if (Math.max(0, Math.min(maxScrollLeft, _track.scrollLeft)) == maxScrollLeft) {
     track.classList.add('bounce');
     setTimeout(() => {
       // Remueve la clase después del rebote para volver a la normalidad
       track.classList.remove('bounce');
     }, 300);
-  } else if (Math.max(0, Math.min(maxScrollLeft, track.scrollLeft)) == 0) {
+  } else if (Math.max(0, Math.min(maxScrollLeft, _track.scrollLeft)) == 0) {
     track.classList.add('bounce-back');
     
     setTimeout(() => {
@@ -164,10 +160,10 @@ function efectoRebote(track) {
   }
 }
 
-function limitScroll(track) {
-    const maxScrollLeft = track.scrollWidth - track.clientWidth;
+function limitScroll() {
+    const maxScrollLeft = _track.scrollWidth - _track.clientWidth;
     console.log("max scrooll: " + maxScrollLeft)
-    track.scrollLeft = Math.max(0, Math.min(maxScrollLeft, track.scrollLeft));
-    console.log("track scrool limit scroll: " + track.scrollLeft)
+    _track.scrollLeft = Math.max(0, Math.min(maxScrollLeft, _track.scrollLeft));
+    console.log("track scrool limit scroll: " + _track.scrollLeft)
 }
 

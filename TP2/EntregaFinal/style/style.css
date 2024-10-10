@@ -49,20 +49,15 @@ html, body {
     padding: 0;
     width: 100%;
     min-height: 100vh; 
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
 }
 body {
     font-family: Arial, sans-serif;
-    
     background-color: var(--background-color-1);
     display: flex;
     flex-direction: column;
-    
-    /*min-height: 100vh;*/ /* Para que el footer esté al final */
     justify-content: center;
-    overflow: hidden;
-    
-    /*max-height: 100vh;*/
+    /*overflow: hidden;*/
 }
 
 /* Header */
@@ -73,22 +68,11 @@ header{
 }
 #header-navbar {
     display: flex;
-    justify-content: space-evenly;
-    /*align-items: center;*/
-    /*padding-left: 2%;
-    padding-right: 2%;*/
-    /*width: 100%;*/
+    justify-content: space-between;
     background-color: #2c3e50;
     color: white;
     height: var(--header-height-mobile);
 }
-
-
-/*.header-grid-container {
-    display: grid;
-    grid-template-columns: 20% 50% 30%;
-    grid-template-areas: "header header header";
-}*/
 
 #hamburger-menu{
     background: none; 
@@ -96,122 +80,70 @@ header{
     color: #ffffff; 
     cursor: pointer;
     font-size: x-large;
-}
-.nav-area {
-    display: flex;
-    align-items: center;
-}
-
-.hamburguesa {
-    padding-left: 2%;
-    padding-right: 2%;
-    cursor: pointer;
+    padding-left: 5%;
 }
 
 .logo {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-right: 0; /* Para empujar el logo hacia el centro */
-    padding-left: 5%;
-    padding-right: 10%;
+    width: 33%;
 }
 
 .logo img {
-    max-width: 50%;
-    max-height: 50%;
-    padding-right: 10%;
+    max-width: 60%;
+    max-height: 60%;
+    margin-right: 10%;
+}
+
+.nav-area-left {
+    width: 33%;
+}
+
+.nav-area {
+    display: flex;
+    align-items: center;
 }
 
 .nav-area-center {
-    /*flex-grow: 1;
-    float: right;
-   /* display: flex;
-    align-items:center;
-    justify-content: flex-end;*/
     max-width: 100%;
-}
-
-.logged-input {
-    display: block;
-    max-width: 30%;
-    max-height: auto;
-    margin: 0;
-    padding: 0;
-    background: none;
-    background-color: inherit;
-    border: none;
-    color: transparent;
-    cursor: pointer;
-    appearance: none;  
-}
-
-.logged-input img {
-    max-width: 90%;
-    max-height: 90%;
-    padding: 0;
-    margin: 0;
-}
-
-.icon-btn img {
-    width: 110%;
-    height: 110%;
-    padding: 0;
-    margin: 0;
-}
-
-
-.nav-area-right button{
-    max-width: 30%;
-    justify-content: end;
-    max-width: auto;
-    padding: 4%;
-}
-
-/*.inpt-buscar {
-    padding: 0;
-    width: max-content;
-    border-radius: 20px;
-    position:absolute;
-    opacity: 0;
-}*/
-
-.inpt-buscar {
-    background-image: url('iconos/search.png'); /* Imagen que quieres mostrar */
-    background-repeat: no-repeat;
-    background-position:left 4px; /* Ajusta la posición de la imagen */
-    background-size: 20px 20px; /* Ajusta el tamaño de la imagen */
-    padding-left: 13%;
-    width: 70%;
-    height:15%;
-    border-radius: 20px;
+    display: none;
 }
 
 .nav-area-right{
     margin: 0;
     padding:0;
     justify-content: end;
-    max-width: 100%;
+    max-width: 33%;
+    box-sizing: border-box;
 }
 
-.nav-area-right img{
-    margin: 0;
-    padding:0;
-    justify-content: end;
-    max-width: auto;
+
+.logged-input {
+    display: block;
+    max-width: 30%;
     max-height: auto;
+    background: none;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logged-input img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .nav-area-right button{
-    margin: 0;
-    padding:2%;
-    max-width: 30%;
-    max-height: auto;
+    margin: 3%;
+    padding: 2%;
 }
 
-.icon-btn {
+.shop-btn {
     background: none;
-    background-color: inherit;
     border: none;
     color: transparent;
     cursor: pointer;
@@ -219,36 +151,17 @@ header{
     appearance: none;
 }
 
-.mob-search-type {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #5d6d7e;
-    border-radius: 20px;
-    margin: 0;
-    padding: 0;
+.shop-btn img {
     max-width: 100%;
-    max-height: fit-content;
-    align-self: center;
-}
-
-.mob-search-input {
-    border:none;
-    background: none;
-    max-width: 100%;
+    min-width: 50%;
     max-height: 100%;
-    padding: 2%;
-    margin: 0;
-    /*box-sizing: border-box;*/
-    /*display: inline-block;*/
+    min-height: 50%;
 }
 
-/*.icon-lupa-search {
-    padding: 2%;
-    margin: 0;
-    max-width: 40%;
-    max-height: 40%;
-}*/
+.mob-search {
+    background: transparent;
+    border: none;
+}
 
 /* Login Form Styles */
 
@@ -616,33 +529,32 @@ a.centered {
 .carousel-container  {
     position: relative;
     max-width: 100%;
-    max-height: 100%;
+    /*max-height: 1%;*/
     padding: 0%;
     padding-left: 2%;
     padding-right: 2%;
     display: flex;
-    /*flex-direction: row;
-    justify-content: space-between;*/
     flex-direction: column;
-    margin-top: 10%;
-    overflow: hidden;
+    margin-top: 2%;
+    overflow-x: hidden;
 }
 
 .carousel-window {
-    overflow: hidden;
-    /*display: flex;
-    flex-direction: column;*/
+    /*overflow: hidden;*/
+    overflow-x: hidden;
 }
   
 .carousel-track {
     display: flex;
+    /*transition: transform 0.5s ease-in-out;*/
     transition: transform 0.5s ease-in-out;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    /*max-height: 50%;*/
 }
   
 .card {
-    flex: 0 0 48%; /* Mostrar 3 cards en móvil */
+    flex: 0 0 40%; /* Mostrar 3 cards en móvil */
     margin: 4px;
     background-color: #2c3e50;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -650,17 +562,17 @@ a.centered {
     border-radius: 8px;
     color: #ffffff;
     width: 40%;
-    max-height: 5%;
+    max-height: 80%;
     position: relative; /* Necesario para que los elementos se posicionen correctamente */
     display: flex;
     flex-direction: column;
-    transition: transform 0.5s ease, filter 0.3s;
+    transition: scroll 0.5s ease, filter 0.3s;
 }
 
-.card img {
+.img-game {
     max-width: 100% ; 
     height: auto; /* Mantener proporciones */
-    max-height: 50%;
+    max-height: 70%;
     border-top-left-radius: 8px; 
     border-top-right-radius: 8px;
 }
@@ -699,11 +611,10 @@ a.centered {
 .carousel-button:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
- 
 
 .titulo-desc-card {
     padding: 3%;
-    height: 20%;
+    height: 0%;
 }
 
 .titulo-desc-card h3 {
@@ -712,31 +623,18 @@ a.centered {
     text-overflow: ellipsis;
 }
 
-  /*.buttons-container-card {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    padding-right: 10%;
-    padding-bottom: 10%;
-    position: relative;
-    align-self: center;
-  }*/
-
 .btn-card-jugar{
     background-color: #2c3e50;
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    /*padding: 10%;*/
 }
 
 .btn-card-jugar-test{
     background-image: url('iconos/gamepad-icon-verde.png');
-    /*background-color: #2c3e50;*/
     background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
     background-position: center; /* Centra la imagen */
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    /*padding: 10%;*/
     bottom: 0;
     right: 0;
 }
@@ -868,13 +766,9 @@ a.centered {
         padding: 0px;
         padding-bottom: 10px;
         background-color: #2c3e50;
-        /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align:left;
-        border-radius: 8px;*/
         max-width: 200px;
         height: 193px;
         max-height: 80%;
-        /*color: #ffffff;*/
         margin-top: 0;
         margin-bottom: 0; 
     }
@@ -935,7 +829,6 @@ a.centered {
     .card:hover{
         transform: scale(1.1);
         z-index: 1;
-        /*margin: 0;*/
     }
     
     .carousel-track:hover .card:not(:hover) {
@@ -956,6 +849,12 @@ a.centered {
         flex-direction: row;
         justify-content: space-around;
         position: relative;
+    }
+
+    .img-game {
+        max-width: 100% ; 
+        height: min-content; /* Mantener proporciones */
+        max-height: 70%;
     }
     
     .div-button-prev,.div-button-next {
