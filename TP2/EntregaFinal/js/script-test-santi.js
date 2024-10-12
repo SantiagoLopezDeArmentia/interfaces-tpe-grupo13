@@ -132,6 +132,34 @@ arrCarousels.forEach(carousel => {
     }
   });
 
+  /* Manejo de los botones agregar/quitar del carrito */
+
+  
+
+  const cards2 = carousel.querySelectorAll('.card');
+  cards2.forEach(card => {
+    const btnAddGame = card.querySelector(".btn-card-add");
+    const bntRemoveGame = card.querySelector(".btn-card-remove-game");
+    const divAddedProd = card.querySelector(".added-product");
+
+    if (btnAddGame) {
+      btnAddGame.addEventListener('click', () => {
+        btnAddGame.style.display = "none";
+        bntRemoveGame.style.display = "flex";
+        divAddedProd.style.display = "flex";
+      });
+    }
+    
+    if(bntRemoveGame) {
+      bntRemoveGame.addEventListener('click', () => {
+        bntRemoveGame.style.display = "none";
+        btnAddGame.style.display = "flex";
+        divAddedProd.style.display = "none";
+      });
+    }
+  });
+
+  /*
   const btnAddGame = document.querySelector(".btn-card-add");
   const bntRemoveGame = document.querySelector(".btn-card-remove-game");
   
@@ -143,8 +171,7 @@ arrCarousels.forEach(carousel => {
   bntRemoveGame.addEventListener('click', () => {
     bntRemoveGame.style.display = "none";
     btnAddGame.style.display = "flex";
-    
-  });
+  });*/
 
 });
 
@@ -249,4 +276,4 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("home-content").style.display = "block";
   }, 3100); // 3 segundos más un pequeño margen
 
-})
+});

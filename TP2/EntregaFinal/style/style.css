@@ -768,6 +768,20 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     display: none;
 }*/
 
+.added-product {
+    display: none;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+    position: absolute;
+    border-top-left-radius: 8px; 
+    border-bottom-right-radius: 8px;
+    background-color: var(--third-color-light-1);
+    max-width: 44px;
+    max-height: 42px;
+    width: 44px;
+    height: 42px;
+}
+
 .btn-card-game{
     background-color: var(--background-color-1);
     border: none;
