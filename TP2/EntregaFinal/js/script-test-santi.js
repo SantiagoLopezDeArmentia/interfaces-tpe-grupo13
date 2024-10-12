@@ -65,76 +65,48 @@ let currentPosition = 0;
 const arrCarousels = document.querySelectorAll('.carousel-container');
 
 arrCarousels.forEach(carousel => {
-  console.log("ando")
   const track = carousel.querySelector('.carousel-track');
   const cards = carousel.querySelectorAll('.card');
   const prevButton = carousel.querySelector('.prev');
   const nextButton = carousel.querySelector('.next');
   const cardWidth = carousel.querySelector('.card').getBoundingClientRect().width;
+
  
+
   let isDragging = false;
   let startX, startY;
   let startScrollLeft;
-  let startScrollTop;
   
-
+  // Evento de click en el botón "next"
   nextButton.addEventListener('click', () => {
     moveCardToNext(track, cardWidth, cards);
-  })
+    applySkewEffect(cards, 25); // Aplica el skew hacia la derecha
+    resetSkewEffectWithDelay(cards); // Resetea después de un pequeño retraso
+  });
 
+  // Evento de click en el botón "prev"
   prevButton.addEventListener('click', () => {
     moveCardToPrevious(track, cardWidth, cards);
-  })
+    applySkewEffect(cards, -25); // Aplica el skew hacia la izquierda
+    resetSkewEffectWithDelay(cards); // Resetea después de un pequeño retraso
+  });
 
-  /* Efecto de caroules para touch mobile*/
-
- /* track.addEventListener('touchstart', (event) => {
+  // Evento al iniciar el touch
+  track.addEventListener('touchstart', (event) => {
     isDragging = true;
     startX = event.touches[0].clientX;
     startY = event.touches[0].clientY;
     startScrollLeft = track.scrollLeft;
   });
 
+  // Evento al finalizar el touch
   track.addEventListener('touchend', () => {
-      isDragging = false;
-  });
-
-  track.addEventListener('touchmove', (event) => {
-      if (!isDragging) return;
-
-      const currentX = event.touches[0].clientX;
-      const currentY = event.touches[0].clientY;
-      const diffX = startX - currentX;
-      const diffY = startY - currentY;
-
-      // Verificar si el movimiento es principalmente horizontal
-      if (Math.abs(diffX) > Math.abs(diffY)) {
-        event.preventDefault();
-        track.scrollLeft = startScrollLeft + diffX;
-        efectoRebote(track);
-      }
-  });
-
-});*/
-
-
-// Asegúrate de tener el elemento correcto
-
-// Evento al iniciar el touch
-track.addEventListener('touchstart', (event) => {
-    isDragging = true;
-    startX = event.touches[0].clientX;
-    startY = event.touches[0].clientY;
-    startScrollLeft = track.scrollLeft;
-});
-
-// Evento al finalizar el touch
-track.addEventListener('touchend', () => {
     isDragging = false;
-});
+    resetSkewEffectWithDelay(cards); // Resetea después de un pequeño retraso
+  });
 
-// Evento al mover el touch
-track.addEventListener('touchmove', (event) => {
+  // Evento al mover el touch
+  track.addEventListener('touchmove', (event) => {
     if (!isDragging) return;
 
     const currentX = event.touches[0].clientX;
@@ -144,21 +116,60 @@ track.addEventListener('touchmove', (event) => {
 
     // Verificar si el movimiento es principalmente horizontal
     if (Math.abs(diffX) > Math.abs(diffY)) {
-        // Desplazamiento horizontal: mover el carrusel
-        event.preventDefault(); // Prevenir el scroll vertical de la página
-        track.scrollLeft = startScrollLeft + diffX;
-        efectoRebote(track); // Aquí tu lógica de rebote
+      event.preventDefault(); // Prevenir el scroll vertical de la página
+      track.scrollLeft = startScrollLeft + diffX;
+
+      // Aplica el efecto de skew mientras se desplaza
+      if (diffX > 0) {
+        applySkewEffect(cards, 25); // Mover hacia la derecha
+      } else {
+        applySkewEffect(cards, -25); // Mover hacia la izquierda
+      }
+
+      efectoRebote(track); // Aquí tu lógica de rebote
     } else {
-        // Desplazamiento vertical: permitir el scroll en la página
-        isDragging = false; // Finalizar el dragging horizontal
+      isDragging = false; // Finalizar el dragging horizontal
     }
+  });
+
+  const btnAddGame = document.querySelector(".btn-card-add");
+  const bntRemoveGame = document.querySelector(".btn-card-remove-game");
+  
+  btnAddGame.addEventListener('click', () => {
+    btnAddGame.style.display = "none";
+    bntRemoveGame.style.display = "flex";
+  });
+
+  bntRemoveGame.addEventListener('click', () => {
+    bntRemoveGame.style.display = "none";
+    btnAddGame.style.display = "flex";
+    
+  });
+
 });
-});
+
+/* Función para aplicar el efecto skew */
+function applySkewEffect(cards, angle) {
+  cards.forEach(card => {
+    card.style.transition = 'transform 0.3s ease'; // Añade una transición suave
+    card.style.transform = `skewX(${angle}deg)`;
+  });
+}
+
+/* Función para resetear el efecto skew al valor original después de un retraso */
+function resetSkewEffectWithDelay(cards) {
+  setTimeout(() => {
+    cards.forEach(card => {
+      card.style.transition = 'transform 0.5s ease'; // Añade una transición suave al volver
+      card.style.transform = 'skewX(0deg)'; // Vuelve al estado original
+    });
+  }, 200); // Resetea después de 200 ms
+}
+
 
 /* Funcionalidades del carousel */
 
 function moveCardToNext(track, cardWidth, cards) {
-  console.log("tonext")
   const maxScrollLeft = track.scrollWidth - track.clientWidth;
   // Verifica si el scroll está en el final
   if (track.scrollLeft + cardWidth >= maxScrollLeft) {
@@ -178,7 +189,7 @@ function moveCardToNext(track, cardWidth, cards) {
     track.scrollLeft += cardWidth + cards.length ;
   }
 }
-
+  
 function moveCardToPrevious(track, cardWidth, cards) {
   // Verifica si el scroll está en el inicio
   if (track.scrollLeft <= 0) {
@@ -194,9 +205,9 @@ function moveCardToPrevious(track, cardWidth, cards) {
     track.scrollLeft -= cardWidth + cards.length ;
   }
 }
-
+  
 // Función para limitar el desplazamiento al inicio y al final del carrusel
-
+  
 function efectoRebote(track) {
   let maxScrollLeft = track.scrollWidth - track.clientWidth;
   if (Math.max(0, Math.min(maxScrollLeft, track.scrollLeft)) == maxScrollLeft) {
@@ -214,16 +225,16 @@ function efectoRebote(track) {
     }, 300);
   }
 }
-
+  
 function limitScroll(track) {
-    const maxScrollLeft = track.scrollWidth - track.clientWidth;
-    console.log("max scrooll: " + maxScrollLeft)
-    track.scrollLeft = Math.max(0, Math.min(maxScrollLeft, track.scrollLeft));
-    console.log("track scrool limit scroll: " + track.scrollLeft)
+  const maxScrollLeft = track.scrollWidth - track.clientWidth;
+  console.log("max scrooll: " + maxScrollLeft)
+  track.scrollLeft = Math.max(0, Math.min(maxScrollLeft, track.scrollLeft));
+  console.log("track scrool limit scroll: " + track.scrollLeft)
 }
-
- // barra de carga del home
- document.addEventListener("DOMContentLoaded", function() {
+  
+  // barra de carga del home
+document.addEventListener("DOMContentLoaded", function() {
   const spinnerContainer = document.getElementById("loading-spinner-container");
   const progressCircle = document.querySelector(".foreground");
 
@@ -237,5 +248,5 @@ function limitScroll(track) {
     spinnerContainer.style.display = "none";
     document.getElementById("home-content").style.display = "block";
   }, 3100); // 3 segundos más un pequeño margen
- 
- })
+
+})

@@ -132,18 +132,25 @@ header{
 
 .logo {
     display: flex;
-    justify-content: center;
-    width: 33%;
+    justify-content: space-between;
+    align-items: center;
+    /*width: 33%;*/
 }
 
 .logo img {
-    max-width: 60%;
+    width: 40px;
+    height: 40px;
+   /* max-width: 100px;
     max-height: 60%;
-    margin-right: 10%;
+    margin-right: 10%;*/
+    margin-left: 20px;
+}
+.logo p{
+    margin-left: 10px;
 }
 
 .nav-area-left {
-    width: 33%;
+   width: 50%;
 }
 
 .nav-area {
@@ -158,9 +165,10 @@ header{
 
 .nav-area-right{
     margin: 0;
-    padding:0;
+    padding:20px;
+    display: flex;
     justify-content: end;
-    max-width: 33%;
+   width: 50%;
     box-sizing: border-box;
 }
 
@@ -180,35 +188,70 @@ header{
 }
 
 .logged-input img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 32px;
+    height: 32px;
 }
 
-.nav-area-right button{
-    margin: 3%;
-    padding: 2%;
-}
 
 .shop-btn {
     background: none;
     border: none;
     color: transparent;
     cursor: pointer;
-    margin-left: 0;
+    margin-left: 10px;
+    margin-right: 10px;
     appearance: none;
 }
 
 .shop-btn img {
     max-width: 100%;
     min-width: 50%;
-    max-height: 100%;
-    min-height: 50%;
+   width: 18px;
+   height: 18px;
+   min-width: 18px;
+   min-height: 18px;
 }
 
 .mob-search {
+    
     background: transparent;
     border: none;
 }
+.mob-search img {
+  width: 18px;
+  height: 18px;
+}
+
+/*----------------------------barra de busqueda-------------------------------------------*/
+.search{
+    display: none;
+    top: var(--header-height-mobile);
+    width: 100%;
+    height: fit-content;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    position: absolute;
+    z-index: 500;
+    top: var(--header-height-mobile);
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    color: #ffffff;
+    padding: 0;
+    
+    
+}
+.search input {
+    color: #ffffff;
+    
+}
+.search.show-search{
+    transform: translateY(0);
+    display: flex;
+    justify-content: center;
+}
+
 
 /* Login Form Styles */
 
@@ -256,7 +299,7 @@ input::placeholder{
 .buttons-container {
     display: flex;
     justify-content: space-between;
-    margin: 20px ;
+   
 }
 
 .buttons-container button {
@@ -271,6 +314,7 @@ input::placeholder{
     border-radius: 20px;
     width: 48%;
     padding: 10px;
+    border: 2px solid #9bf00b;
 
 }
 
@@ -405,7 +449,11 @@ input::placeholder{
 }
 
 .footer-links {
+    display: flex; 
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center; 
+
     margin-bottom: 20px;
     text-decoration: none;
 }
@@ -415,7 +463,11 @@ input::placeholder{
 }
 
 .footer-links div {
-    text-align: center;
+    width: 32%;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
 }
 
 .footer-links h3 {
@@ -424,7 +476,6 @@ input::placeholder{
 }
 
 .footer-list {
-   /* display: none;*/ /* Por defecto, las listas están ocultas */
     color: white;
     text-decoration: none;
     margin-bottom: 5px;
@@ -432,20 +483,19 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
    
 }
 .footer-list li{
-    width: 27%;
-    display: flex;
-    justify-content: start;
+    width: 100%;
+   
 }
 .footer-list a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
-    width: auto;
-    text-align: left;
-    margin-bottom: 2%;
+    font-size: 18px;
+    width: 100%;
+   
 }
 
 .footer-list a:hover {
@@ -456,14 +506,14 @@ input::placeholder{
 }
 
 .btn-footer {
-    width: 27%;
+    width: 100%;
     background: none; 
     border: none;
     color: var(--secondary-color-light-2);
     font-size: 16px;
     padding: 0; 
     cursor: pointer;
-    text-align: left;
+    text-align: start;                   
     margin-bottom: 2%;
     margin-top: 4%;
 }
@@ -473,8 +523,13 @@ input::placeholder{
     display: block; 
 }
 
+.footer-bottom p {
+    margin: 0;
+    color: var(--background-color-2);
+}
+
 .menu {
-    position: absolute;
+    position: relative;
     top: var(--header-height-mobile);
     left: 0;
     bottom: 0;
@@ -484,12 +539,13 @@ input::placeholder{
     transition: transform 0.3s ease;
     padding-top: 0px;
     padding-right: 0px;
-    z-index: 1000;
+    z-index: 999;
     height: 100%;
     width: auto;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    position: fixed;
 }
 
 .menu-separator {
@@ -601,12 +657,12 @@ a.centered {
 .bounce {
     transition: transform 0.3s ease;
     transform: translateX(-30px); /* Mueve ligeramente para el efecto de rebote */
-  }
-  
-  .bounce-back {
-    transition: transform 0.3s ease;
-    transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el otro extremo */
-  }
+}
+
+.bounce-back {
+transition: transform 0.3s ease;
+transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el otro extremo */
+}
 
 .carousel-container  {
     position: relative;
@@ -701,23 +757,28 @@ a.centered {
     text-overflow: ellipsis;
 }
 
+/*
 .btn-card-jugar{
     background-color: var(--background-color-1);
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn-card-jugar-test{
-    background-image: url('iconos/gamepad-icon-verde.png');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el botón */
-    background-position: center; /* Centra la imagen */
+.btn-card-jugar p {
+    display: none;
+}*/
+
+.btn-card-game{
+    background-color: var(--background-color-1);
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    bottom: 0;
-    right: 0;
 }
 
-.btn-card-jugar img {
+.btn-card-game p {
+    display: none;
+}
+
+.btn-card-game img {
     border-radius: 0%;
     padding:5%;
     padding-left: 2%;
@@ -732,6 +793,33 @@ a.centered {
     right: 0;
 }
 
+/*
+.btn-card-jugar-test{
+    background-image: url('iconos/gamepad-icon-verde.png');
+    background-size: cover; 
+    background-position: center; 
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    bottom: 0;
+    right: 0;
+}*/
+/*
+.btn-card-jugar img {
+    border-radius: 0%;
+    padding:5%;
+    padding-left: 2%;
+    max-width: 100%;
+    max-height: 100%;
+    scale: 150%;
+    position: absolute;
+    transition: opacity 0.5 ease;
+    object-fit: cover;
+    align-self: flex-end;
+    bottom: 0;
+    right: 0;
+}*/
+
+/*
 .btn-card-jugar img.gamepad-hover {
     opacity: 0;
 }
@@ -743,7 +831,41 @@ a.centered {
  
 .btn-card-jugar:hover img.gamepad-hover {
     opacity: 1;
+    
 }
+
+.btn-card-jugar:hover{
+    color: var(--secondary-color);
+    border-color: none;
+    background-color: var(--primary-color);
+}*/
+
+.btn-card-game img.gamepad-hover {
+    opacity: 0;
+}
+
+  
+.btn-card-game:hover img.gamepad-original {
+    opacity: 0;
+}
+ 
+.btn-card-game:hover img.gamepad-hover {
+    opacity: 1;
+    
+}
+
+.btn-card-jugar:hover{
+    color: var(--secondary-color);
+    border-color: none;
+    background-color: var(--primary-color);
+}
+
+/*
+.btn-card-remove-game {
+    display: none;
+}*/
+
+
 
 /* Overlay para el hover */
 .hover-overlay {
@@ -1060,7 +1182,7 @@ a.centered {
     background-color: var(--background-color-1);
     border-radius: 20px;
     padding: 2%;
-    width: 60%;
+    width: 95%;
 }
 .form-register input{
     box-sizing: border-box;
@@ -1069,6 +1191,12 @@ a.centered {
     max-width: 100%;
     color: #ffffff;
     
+}
+
+.form-register .edad{
+    width: 99.28px;
+    align-self: flex-start;
+    margin-left: 4.8%;
 }
 .form-register label, input{
     display: block;
@@ -1086,10 +1214,18 @@ a.centered {
 }
 
 .inpt-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 60%;
     color:#ffffff ;
     margin-bottom: 4%;
     padding: 2%;
+}
+.inpt-form label{                       
+    width: 100%;
+    padding-left: 10%;
+    text-align: left;
 }
 
 .captcha{
@@ -1135,16 +1271,45 @@ a.centered {
         justify-content: center;
 
     }
-    .footer-links {
-        flex-direction: row;
-        align-items: center;
+
+    .search.show-search{ 
+        display: none;
+    }    
+
+    .form-register{
+        width: 60%;
+    }    
+
+    .logged-input {
+        margin-left: 20px;
+    }
+   
+
+    .nav-area-center {
+        
+        display: flex;
+        width: 33%;
+    }
+
+    .nav-area-left{
+        width: 33%;
+    }
+
+    .nav-area-right{
+        width: 33%;
+    }
+
+    .mob-search{
+        display: none;
     }
 
     .footer-links div {
+        width: fit-content;
         margin-bottom: 20px;
+       
         
     }
-
+     
 
     #footer {
         
@@ -1159,19 +1324,20 @@ a.centered {
     }
 
     .footer-links {
+        flex-direction: row;
+        width: 100%;
         display: flex;
         justify-content: space-around;
         margin-bottom: 20px;
     }
 
-    .footer-links div {
-        text-align: left;
-    }
+ 
 
-
+    
 
     .footer-links a {
-        display: block;
+       width: 100%;
+       text-align: center;
         color: white;
         text-decoration: none;
         margin-bottom: 5px;
@@ -1182,42 +1348,80 @@ a.centered {
     }
 
     .btn-footer {
-        font-size: 16px;
+        width: 100%;
+        text-align: start;
+        font-size: 26px;
         padding-bottom: 10px;
     
     }
 
-    .footer-bottom p {
-        margin: 0;
-        color: var(--background-color-2);
-    }
-
     .footer-list {
-        display: block; 
+       width: 100%;
         color:var(--secondary-color-light-2);
         text-decoration: none;
         margin-bottom: 5px;
     }
 
+    .footer-list li{
+        width: 100%;
+        text-align: start;
+        margin-bottom: 10%;
+        
+    }
+
     .card {
         margin-right: 0.5%;
         padding: 0px;
-        padding-bottom: 10px;
+        /*padding-bottom: 10px;*/
         background-color: var(--background-color-1);
-        max-width: 200px;
-        height: 193px;
-        max-height: 80%;
+        max-width: 215px;
+        max-height: 193px;
+        height: 100%;
         margin-top: 0;
         margin-bottom: 0; 
     }
 
-    .btn-card-jugar {
+    .img-game {
+        height: 120px;
+        max-width: 100% ; 
+        max-height: 120px;
+        border-top-left-radius: 8px; 
+        border-top-right-radius: 8px;
+    }
+
+    .btn-card-game {
+        display: flex; /* Hace que el contenido del botón sea horizontal */
+        flex-direction: row-reverse; /* Alinea los elementos verticalmente en el centro */
+        justify-content: space-between;
+        align-items: center;
         background-color: transparent;
-        border: none;
+        border: solid 1px var(--primary-color);
+        border-radius: 82px;
         position: absolute;
         bottom: 10px;
         right: 10px;
-        padding: 5px;   
+        padding: 2%;   
+        width: 40%;
+        color: var(--primary-color);
+    }
+
+    .btn-card-game img {
+        position: absolute;
+        left: 8%;
+        scale: 100%;
+        object-fit: none;
+        align-self: center;
+        bottom: auto;
+    }
+
+    .btn-card-game p {
+        display: block;
+        font-size: 16px;
+        color: inherit;
+        width: 50%;
+        text-align: end;
+        margin-right: 3%;
+        padding-right: 5%;
     }
 
     .buttons-container-card{
@@ -1236,9 +1440,8 @@ a.centered {
 
     .carousel-track {
         align-items: center;
-        max-width: 83%;
-        padding-right: 2%;
-        padding-left: 2%;
+        max-width: 100%;
+        padding: 2%;
     }
 
     /* Botones [Flechas] Carrusel */
@@ -1269,11 +1472,18 @@ a.centered {
         z-index: 1;
     }
     
+    
     .carousel-track:hover .card:not(:hover) {
         filter:blur(0.8px);
         overflow-y: visible;
+        box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2);
+        transition: filter 0.3s ease, box-shadow 0.3s ease;
     }
 
+    
+
+
+ /* ####################### */
     /* probrando re ajuste de flechas*/
     .carousel-container {
         display: flex;
@@ -1288,12 +1498,6 @@ a.centered {
         justify-content: space-around;
         position: relative;
     }
-
-    .img-game {
-        max-width: 100% ; 
-        height: min-content; /* Mantener proporciones */
-        max-height: 70%;
-    }
     
     .div-button-prev,.div-button-next {
         margin: 0;
@@ -1303,6 +1507,52 @@ a.centered {
     .div-button-next {
         padding-left: 2%;
     }
+
+    
+    .titulo-desc-card {
+        padding: 0;
+        padding-top: 3%;
+        padding-left: 3%;
+        height: 73px;
+        max-height: 73px;
+    }
+
+    .btn-card-add {
+        border: none;
+        color: var(--primary-color-light-2);
+        align-self: flex-start;
+    }
+
+    .btn-card-add p{
+        text-decoration: underline;
+        margin-right: 6%;
+    }
+
+    .btn-card-add:hover {
+        color:var(--secondary-color-light-1)
+    }
+
+    .btn-card-remove-game {
+        border: none;
+        color: var(--primary-color-light-2);
+        align-self: flex-start;
+    }
+
+    .btn-card-remove-game p{
+        text-decoration: underline;
+        margin-right: 3%;
+    }
+
+    .btn-card-remove-game:hover {
+        color:var(--secondary-color-light-1)
+    }
+
+    
+    .btn-card-remove-game {
+        display: none;
+    }
+
+    
 }
 
 

@@ -22,31 +22,38 @@
         </svg>
     </div>
 
-    <!-- Header -->
-    <header id="header-navbar">
+     <!-- Header -->
+     <header id="header-navbar">
         <div class="nav-area-left nav-area" id="hamburguesa">
             <button class="hamburger-menu" id="hamburger-menu">&#9776;</button>
-        </div>
-        <div class="logo nav-area">
-            <img src="iconos/site-playtime-icon.png" alt="playtime-icon">
-            <p>PlayTime</p>
+            <div class="logo nav-area">
+                <img src="iconos/site-playtime-icon.png" alt="playtime-icon">
+                <p>PlayTime</p>
+            </div>
         </div>
         <div class="nav-area-center nav-area">
             <input class="inpt-buscar" type="text" placeholder="Buscar">
         </div>
         <div class="nav-area-right nav-area">
-            <button class="mob-search">
-                <img src="iconos/lupa-icon.png">
-            </button>
-            <button class="shop-btn">
-                <img src="iconos/shop-cart-icon.png">
-            </button>
+           
+                <button class="mob-search">
+                    <img src="iconos/lupa-icon.png">
+                </button>
+                <button class="shop-btn">
+                    <img src="iconos/shop-cart-icon.png">
+                </button>
+            
             <button class="logged-input">
                 <img src="iconos/avatar-pika-login.png">
             </button>
         </div>
     </header>
+    
+    
+   <div class="search">
+        <input type="text" placeholder="Buscar">
 
+    </div>
 
     <nav id="menu" class="menu">
         <a href="login.html" class="menu-link">Iniciar sesión</a>
@@ -115,14 +122,15 @@
                         <h5>Es tuyo</h5>
                     </div>
 
-                    <button type="button" class="btn-card-jugar">
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
-
+                    <!--
                     <div class="hover-overlay">
                         <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono" />
-                    </div>
+                    </div>-->
                 </div>
                 <div class="card">
 
@@ -131,9 +139,17 @@
                         <h3>Mario Bross El mundo de las marabillas</h3>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
                     </button>
                 </div>
                 <div class="card">
@@ -143,9 +159,10 @@
                         <h3>Mario Bross El mundo de las marabillas</h3>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
                     </button>
                 </div>
                 <div class="card">
@@ -874,7 +891,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script-test-santi.js"></script>
 
 </body>
 
