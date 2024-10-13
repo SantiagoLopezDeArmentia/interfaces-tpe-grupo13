@@ -39,8 +39,13 @@
                 <button class="mob-search">
                     <img src="iconos/lupa-icon.png">
                 </button>
-                <button class="shop-btn">
+                <!--<button class="shop-btn">
                     <img src="iconos/shop-cart-icon.png">
+                    <span class="cart-count" id="cartCount"></span>
+                </button>-->
+                <button class="shop-btn">
+                    <img src="iconos/shop.png">
+                    <span class="cart-count" id="cartCount"></span>                 <!-------------probando------------------------>
                 </button>
             
             <button class="logged-input">
@@ -104,7 +109,7 @@
 
     <div class="carousel-container">
         <div class="categoria">
-            <h3>Recomendados</h3>
+            <h3>Podrian gustarte</h3>
         </div>
         <div class="carousel-window">
             <div class="div-button-prev">
@@ -115,10 +120,91 @@
 
             <div class="carousel-track" id="carouselTrack">
                 <div class="card">
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <img src="image/caratulas-juegos/sonic.png" alt="Card 1" class="img-game">
 
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross</h3>
+                        <h4>Sonic: Shadow Generations</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/crash.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Crash Team Racing: Nitro-F</h4>
+                        <h5>$2340</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/tower.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Tower Defense Clash</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/assasin.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Assasin’s Creed: Origin</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/gt7.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Gran Turismo 7</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/mariokart64.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Mario Kart 64</h4>
                         <h5>Es tuyo</h5>
                     </div>
 
@@ -127,19 +213,16 @@
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                         <p class="roboto-medium">Jugar</p>
                     </button>
-                    <!--
-                    <div class="hover-overlay">
-                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono" />
-                    </div>-->
+                   
                 </div>
                 <div class="card">
                     <div class="added-product">
                         <img src="iconos/cart-added-product.png">
                     </div>
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <img src="image/caratulas-juegos/ghostsn-globlins-game.png" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
+                        <h4>Ghosts'n Globlins</h4>
+                        <h5>$20</h5>
                     </div>
                     <button type="button" class="btn-card-game btn-card-add">
                         <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
@@ -158,16 +241,18 @@
                     <div class="added-product">
                         <img src="iconos/cart-added-product.png">
                     </div>
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <img src="image/caratulas-juegos/towefactory.png" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
+                        <h4>Tower Factory</h4>
+                        <h5>$3300</h5>
                     </div>
                     <button type="button" class="btn-card-game btn-card-add">
                         <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
                         <p class="roboto-bold">Agregar</p>
                     </button>
+
+                    
                     <button type="button" class="btn-card-game btn-card-remove-game">
                         <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
@@ -175,63 +260,229 @@
                     </button>
                 </div>
                 <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
                     </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                    <img src="image/caratulas-juegos/thecallisto.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>The Callisto Protocol </h4>
+                        <h5>$9000</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
                     </button>
                 </div>
                 <div class="card">
+                    <img src="image/caratulas-juegos/burnout-3-game.png" alt="Card 1" class="img-game">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h4>Burnout 3</h4>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+            </div>
+
+            <div class="div-button-next">
+                <button class="carousel-button next" id="nextButton">
+                    <img src="iconos/carousel-row-next.png" alt="flecha derecha">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-container">
+        <div class="categoria">
+            <h3>Estrategia</h3>
+        </div>
+        <div class="carousel-window">
+            <div class="div-button-prev">
+                <button class="carousel-button prev" id="prevButton">
+                    <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
+                </button>
+            </div>
+
+            <div class="carousel-track" id="carouselTrack">
+                <div class="card">
+                    <img src="image/caratulas-juegos/4-en-uno.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>4 en linea: Dragones elementales</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" onclick="window.location.href='4enLinea.html'" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                    
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/monopoly.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Monopoly</h4>
+                        <h5>$9000</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
                     </button>
                 </div>
                 <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
                     </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                    <img src="image/caratulas-juegos/ajedrez.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Ajedrez</h4>
+                        <h5>2500</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
                     </button>
                 </div>
                 <div class="card">
+                    <img src="image/caratulas-juegos/dados.png" alt="Card 1" class="img-game">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h4>Dados</h4>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/towefactory.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Tower Factory</h4>
+                        <h5>$3300</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
                     </button>
                 </div>
                 <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <img src="image/caratulas-juegos/akinator-game.png" alt="Card 1" class="img-game">
+                
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h4>Akinator</h4>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/kingdom-rush-game.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Kingdom Rush</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/bloons-tds-game.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Bloons TDS</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/tower-defence-protect-your-gold.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Tower Defence: Protect Your Gold</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/trolls-vs-vikings-game.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Trolls VS Vikings</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
                 </div>
             </div>
@@ -245,7 +496,7 @@
     </div>
     <div class="carousel-container">
         <div class="categoria">
-            <h3>Recomendados</h3>
+            <h3>Arcade</h3>
         </div>
         <div class="carousel-window">
             <div class="div-button-prev">
@@ -256,104 +507,159 @@
 
             <div class="carousel-track" id="carouselTrack">
                 <div class="card">
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <img src="image/caratulas-juegos/mariokart64.png" alt="Card 1" class="img-game">
 
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross</h3>
+                        <h4>Mario Kart 64</h4>
                         <h5>Es tuyo</h5>
                     </div>
 
-                    <button type="button" class="btn-card-jugar">
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
-
-                    <div class="hover-overlay">
-                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono" />
-                    </div>
+                   
                 </div>
                 <div class="card">
+                    <img src="image/caratulas-juegos/streetF.png" alt="Card 1" class="img-game">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h4>Street Fighter</h4>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/sonicTheHedge.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Sonic: The Hedgehog</h4>
+                        <h5>Es tuyo</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/sonic.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Sonic: Shadow Generations</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/carzytaxi.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Crazy Taxi</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/golden-axe-game.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Golden Axe</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/sonic-2.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Sonic 2</h4>
+                        <h5>Es tuyo</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/street-fighter.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Street Fighter</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
                 </div>
                 <div class="card">
+                    <img src="image/caratulas-juegos/cobra-combar-game.png" alt="Card 1" class="img-game">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
+                        <h4>Cobra Combar</h4>
+                        <h5>Es tuyo</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
+                   
                 </div>
                 <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
                     </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                    <img src="image/caratulas-juegos/ghostsn-globlins-game.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Ghosts'n Globlins</h4>
+                        <h5>$20</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
                     </button>
-                </div>
-                <div class="card">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
                     </button>
                 </div>
             </div>
@@ -367,7 +673,7 @@
     </div>
     <div class="carousel-container">
         <div class="categoria">
-            <h3>Recomendados</h3>
+            <h3>Accion</h3>
         </div>
         <div class="carousel-window">
             <div class="div-button-prev">
@@ -378,104 +684,171 @@
 
             <div class="carousel-track" id="carouselTrack">
                 <div class="card">
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/doom.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Doom</h4>
+                        <h5>$15000</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/uncharted4.png" alt="Card 1" class="img-game">
 
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross</h3>
+                        <h4>Uncharted 4: A Thief´s End</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/fortnite.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Fortnite</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/assassinscreed.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Assasins´s Creed Unity </h4>
+                        <h5>$3340</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/thecallisto.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>The Callisto Protocol </h4>
+                        <h5>$9000</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/call-of-duty-warzone.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Call of Duty Warzone</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/ever-space-2.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Ever Space 2</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/hypercharge-unboxed-game.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>HyperCharge Unboxed</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/the-last-of-us.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>The Last of Us</h4>
                         <h5>Es tuyo</h5>
                     </div>
 
-                    <button type="button" class="btn-card-jugar">
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
-
-                    <div class="hover-overlay">
-                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono" />
-                    </div>
+                   
                 </div>
                 <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <img src="image/caratulas-juegos/other-skin.png" alt="Card 1" class="img-game">
+                
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h4>Other Skin</h4>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
                 </div>
             </div>
@@ -489,7 +862,7 @@
     </div>
     <div class="carousel-container">
         <div class="categoria">
-            <h3>Recomendados</h3>
+            <h3>Carreras</h3>
         </div>
         <div class="carousel-window">
             <div class="div-button-prev">
@@ -500,104 +873,164 @@
 
             <div class="carousel-track" id="carouselTrack">
                 <div class="card">
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <img src="image/caratulas-juegos/wrc.png" alt="Card 1" class="img-game">
 
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross</h3>
-                        <h5>Es tuyo</h5>
-                    </div>
-
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-
-                    <div class="hover-overlay">
-                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono" />
-                    </div>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h4>WRC</h4>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
+                   
                 </div>
                 <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
                     </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                    <img src="image/caratulas-juegos/dirt5.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Dirt 5</h4>
+                        <h5>$5000</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
                     </button>
                 </div>
                 <div class="card">
+                    <img src="image/caratulas-juegos/horizonchase2.png" alt="Card 1" class="img-game">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h4>Horizon Chase 2</h4>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/f124.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>F1 24</h4>
+                        <h5>$20000</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
                     </button>
                 </div>
                 <div class="card">
+                    <img src="image/caratulas-juegos/pacer.png" alt="Card 1" class="img-game">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h4>Pacer</h4>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/forza-horizon-motosport-game.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Forza Horizon: MotoSport</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
                 </div>
                 <div class="card">
+                    <img src="image/caratulas-juegos/burnout-3-game.png" alt="Card 1" class="img-game">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h4>Burnout 3</h4>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/hotwheels-unleashed-2-turbo-charged.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Hot Wheels: Unleashed 2 Turbo Charged</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
                 </div>
                 <div class="card">
+                    <img src="image/caratulas-juegos/gt7.png" alt="Card 1" class="img-game">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h4>Gran Turismo 7</h4>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
+                   
                 </div>
                 <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <img src="image/caratulas-juegos/hotshot-racing.png" alt="Card 1" class="img-game">
+                
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h4>Hot Shot Racing</h4>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
                 </div>
             </div>
@@ -611,7 +1044,7 @@
     </div>
     <div class="carousel-container">
         <div class="categoria">
-            <h3>Recomendados</h3>
+            <h3>Deportes</h3>
         </div>
         <div class="carousel-window">
             <div class="div-button-prev">
@@ -622,104 +1055,164 @@
 
             <div class="carousel-track" id="carouselTrack">
                 <div class="card">
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <img src="image/caratulas-juegos/soccerfriends.png" alt="Card 1" class="img-game">
 
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross</h3>
+                        <h4>Soccer Friends</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/2k2025.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>2K 2025</h4>
+                        <h5>$20000</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/fc25.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Futbol Club 25</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/f123.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Formula 1 2023</h4>
+                        <h5>$4500</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/fifa22.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Fifa 22</h4>
                         <h5>Es tuyo</h5>
                     </div>
 
-                    <button type="button" class="btn-card-jugar">
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
-
-                    <div class="hover-overlay">
-                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono" />
-                    </div>
+                   
                 </div>
                 <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <img src="image/caratulas-juegos/harry-potter-quidditch-world-cup.png" alt="Card 1" class="img-game">
+                
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h4>Harry Potter Quidditch World Cup</h4>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
                 </div>
                 <div class="card">
+                    <img src="image/caratulas-juegos/superstar-soccer.png" alt="Card 1" class="img-game">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h4>Mario Bross</h4>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/the-show-24.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>The Show 24</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
                 </div>
                 <div class="card">
+                    <img src="image/caratulas-juegos/basketball-stars.png" alt="Card 1" class="img-game">
 
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h4>Basketball Stars</h4>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
+                   
                 </div>
                 <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
+                    <img src="image/caratulas-juegos/football-champ.png" alt="Card 1" class="img-game">
+                
                     <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
+                        <h4>Football Champ</h4>
                         <h5>Gratis</h5>
                     </div>
-                    <button type="button" class="btn-card-jugar">
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
                         <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
                         <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
                     </button>
                 </div>
             </div>
@@ -731,128 +1224,7 @@
             </div>
         </div>
     </div>
-    <div class="carousel-container">
-        <div class="categoria">
-            <h3>Recomendados</h3>
-        </div>
-        <div class="carousel-window">
-            <div class="div-button-prev">
-                <button class="carousel-button prev" id="prevButton">
-                    <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
-                </button>
-            </div>
-
-            <div class="carousel-track" id="carouselTrack">
-                <div class="card">
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross</h3>
-                        <h5>Es tuyo</h5>
-                    </div>
-
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-
-                    <div class="hover-overlay">
-                        <img src="iconos/gamepad-icon-verde.png" alt="Icono" class="icono" />
-                    </div>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-                <div class="card">
-
-                    <img src="image/caratulas-juegos/mario.jfif" alt="Card 1" class="img-game">
-                    <div class="titulo-desc-card">
-                        <h3>Mario Bross El mundo de las marabillas</h3>
-                        <h5>Gratis</h5>
-                    </div>
-                    <button type="button" class="btn-card-jugar">
-                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
-                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
-                    </button>
-                </div>
-            </div>
-
-            <div class="div-button-next">
-                <button class="carousel-button next" id="nextButton">
-                    <img src="iconos/carousel-row-next.png" alt="flecha derecha">
-                </button>
-            </div>
-        </div>
-    </div>
+   
 
     <!-- Footer -->
 

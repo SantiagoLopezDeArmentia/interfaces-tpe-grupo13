@@ -134,6 +134,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
     /*width: 33%;*/
 }
 
@@ -144,6 +145,7 @@ header{
     max-height: 60%;
     margin-right: 10%;*/
     margin-left: 20px;
+    
 }
 .logo p{
     margin-left: 10px;
@@ -194,6 +196,9 @@ header{
 
 
 .shop-btn {
+    
+    position: relative;                    /*probando*/
+    display: inline;                       /*probando*/  
     background: none;
     border: none;
     color: transparent;
@@ -203,13 +208,28 @@ header{
     appearance: none;
 }
 
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: transparent;
+    color: white;
+    border-radius: 50%;
+    padding: 6px 16.5px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 .shop-btn img {
     max-width: 100%;
     min-width: 50%;
-   width: 18px;
-   height: 18px;
-   min-width: 18px;
-   min-height: 18px;
+    width: 22px;
+    height: 24px;
+    min-width: 18px;
+    min-height: 18px;
 }
 
 .mob-search {
@@ -257,7 +277,7 @@ header{
 
 .login-container {
     background-color: var(--background-color-1);
-    padding: 30px;
+    padding: 50px;
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -286,7 +306,7 @@ h2 {
 input {
     width: 90%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 5px 0;
     margin-left: 0;
     border: 1px solid var(--background-color-2);
     border-radius: 20px;
@@ -303,9 +323,10 @@ input::placeholder{
 }
 
 .buttons-container button {
-    width: 48%;
-    padding: 10px;
+    width: 45%;
+    padding: 7px;
     cursor: pointer;
+    margin-top: 3%;
 }
 .btn-primary{
 
@@ -388,8 +409,9 @@ input::placeholder{
 
 .social-button {
     width: 80%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 5px;
+    padding-left: 10px;
+    margin: 5px 0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -693,7 +715,7 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     background-color: var(--background-color-1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    border-radius: 8px;
+    border-radius: 15px;
     color: #ffffff;
     width: 40%;
     max-height: 80%;
@@ -705,10 +727,10 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 
 .img-game {
     max-width: 100% ; 
-    height: auto; /* Mantener proporciones */
+    height: 70%; /* Mantener proporciones */
     max-height: 70%;
-    border-top-left-radius: 8px; 
-    border-top-right-radius: 8px;
+    border-top-left-radius: 15px; 
+    border-top-right-radius: 15px;
 }
 
 .categoria{
@@ -751,10 +773,11 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     height: 0%;
 }
 
-.titulo-desc-card h3 {
+.titulo-desc-card h4 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    
 }
 
 /*
@@ -899,9 +922,79 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 
 .card:hover .hover-overlay {
     opacity: 1; /* Muestra el overlay en hover */
+    
 }
 
 /* ---------------------------------------------------4 en 1 -----------------------------------------------------*/
+
+#id-popover-compartir{
+
+    top: 35%;
+    left: 23%;
+    width: 55%;
+    height:40%;
+    background:var(--secondary-color-dark-4);
+    padding: 5px;
+    color: #ffffff;  
+    overflow: hidden;
+    border-radius: 15px;
+    border-color: var(--secondary-color-dark-4);
+}
+#id-popover-compartir::backdrop{
+    background-color:rgba(0, 0, 0, 0.5) ;
+}
+
+
+#id-popover-compartir div{
+    margin-top: 4%;
+    max-width: 100%;
+
+}
+
+#id-popover-compartir h1{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.icn-redes{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#id-popover-compartir .enlace{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    
+    
+}
+
+.enlace h1{
+    max-width: 75%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} 
+
+#id-popover-compartir .button-container{
+        width:15% ;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin-top: 0;
+}
+
+.btn-popover-compartir.btn-secundary{
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+
+}
+
+
 .container-titulo-juego{
     display: flex;
     justify-content: space-around;
@@ -1211,6 +1304,7 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     width: 99.28px;
     align-self: flex-start;
     margin-left: 4.8%;
+    
 }
 .form-register label, input{
     display: block;
@@ -1274,6 +1368,10 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 .register{
     width: auto;
     margin-bottom: 2%;
+}
+
+.register.btn-primary:hover{
+    border: solid 2px;
 }
 
 /* Responsive */
@@ -1384,6 +1482,7 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     }
 
     .card {
+        
         margin-right: 0.5%;
         padding: 0px;
         /*padding-bottom: 10px;*/
@@ -1393,14 +1492,17 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
         height: 100%;
         margin-top: 0;
         margin-bottom: 0; 
+        transition: transform 0.3s ease, box-shadow 0,3s ease;  
+                                              /*----------------probando-------------------*/
+                                             
     }
 
     .img-game {
         height: 120px;
         max-width: 100% ; 
         max-height: 120px;
-        border-top-left-radius: 8px; 
-        border-top-right-radius: 8px;
+        border-top-left-radius: 15px; 
+        border-top-right-radius: 15px;
     }
 
     .btn-card-game {
@@ -1456,6 +1558,7 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
         align-items: center;
         max-width: 100%;
         padding: 2%;
+        
     }
 
     /* Botones [Flechas] Carrusel */
@@ -1478,21 +1581,26 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     .categoria h3{
         color: #ffffff;
         margin-bottom: 0.5%;
-        padding-left: 7.7%;
+        padding-left: 6.5%;
     }
 
     .card:hover{
-        transform: scale(1.1);
-        z-index: 1;
+        transform: scale(1.1) skew(0deg);
+        z-index: 10;
+        border: 2px solid var(--third-color);                                       /*------------------------probandoooooo-------------------------*/
+        box-shadow: 0 0 15px 5px var(--third-color-light-1) ;                           /*----------------probando-------------------*/
+        
     }
     
     
-    .carousel-track:hover .card:not(:hover) {
+  /*  .carousel-track:hover .card:not(:hover) {
         filter:blur(0.8px);
         overflow-y: visible;
         box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2);
         transition: filter 0.3s ease, box-shadow 0.3s ease;
-    }
+    }*/
+
+   
 
     
 
@@ -1504,13 +1612,22 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
         flex-direction: column;
         justify-items: center;
         padding: 0;
+       
+        
+    
+       
     }
+    .carousel-track::-webkit-scrollbar {
+        display: none; /* Para Chrome, Safari y Opera */
+      }
 
     .carousel-window {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         position: relative;
+        max-width: 1341px ;
+        max-height: 274px;
     }
     
     .div-button-prev,.div-button-next {
@@ -1530,6 +1647,9 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
         height: 73px;
         max-height: 73px;
     }
+    
+   
+    
 
     .btn-card-add {
         border: none;
@@ -1569,8 +1689,98 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     
 }
 
+.btn-card-jugar{
+    transition: color 0.3s ease-in-out;
+}
+.btn-card-jugar::before {
+    content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 52px;
+  border: 2px solid transparent; /* Inicialmente el borde es transparente */
+  box-sizing: border-box; /* Para incluir el borde en el tamaño del botón */
+  pointer-events: none; /* Evitar que el pseudo-elemento interfiera con los eventos del botón */
+  }
+  
+  .btn-card-jugar:hover::before {
+    opacity: 1;
+    animation: drawLineAround 2s linear forwards; /* Cambiar el nombre de la animación y su duración */
+  }
 
+  @keyframes drawLineAround {
+    0% {
+        border-color: transparent;
+        clip-path: polygon(0 0, 0 0, 0 0, 0 0); /* Comienza vacío */
+    }
+    25% {
+        border-color: var(--secondary-color); /* Color de la línea */
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Parte superior */
+    }
+    50% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%); /* Lateral derecho */
+    }
+    75% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Parte inferior */
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Completo */
+    }
+}
 
+.btn-card-jugar:hover::after {
+    animation: disappearLine 1s linear forwards 2s; /* Añade delay para que espere a que termine drawLineAround */
+}
+
+@keyframes disappearLine {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Completo */
+    }
+    100% {
+        clip-path: polygon(0 0, 0 0, 0 0, 0 0); /* Termina vacío */
+    }
+}
+.register.btn-primary {
+    position: relative; /* Necesario para el pseudo-elemento */
+    overflow: hidden; /* Oculta cualquier contenido que salga del botón */
+   
+}
+
+.register.btn-primary::before {
+    content: 'Registrarse'; /* Contenido del pseudo-elemento */
+    position: absolute;
+    left: -100%; /* Comienza fuera de la vista a la izquierda */
+    white-space: nowrap; /* Evitar que el texto se envuelva */
+    transition: left 1s ease; /* Transición suave para el desplazamiento */
+    color: var(--primary-color); /* Color del texto al hover */
+}
+
+.register.btn-primary:hover::before {
+    left: 50%; /* Mueve el texto hacia el centro al hacer hover */
+    transform: translateX(-50%); /* Ajusta la posición para centrarlo */
+    
+}
+
+.register.btn-primary:hover {
+    border-color: var(--primary-color); /* Color del borde al pasar el ratón */
+    color: transparent; /* Hacer el texto original transparente */
+}
+
+.register.btn-primary::after {
+    content: 'Registrarse'; /* Contenido del texto que vuelve al centro */
+    position: absolute;
+    left: 50%; /* Centrado horizontalmente */
+    transform: translateX(-50%); /* Ajuste para centrarlo correctamente */
+    transition: color 1s ease; /* Transición suave para el color del texto */
+    color: transparent;
+   
+}
+
+.register.btn-primary:hover::after {
+    color: transparent; /* Hacer el texto que vuelve al centro transparente */
+}
 
 
 .roboto-thin {

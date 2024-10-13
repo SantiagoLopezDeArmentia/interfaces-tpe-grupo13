@@ -223,6 +223,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Después de la animación (3 segundos), ocultar el círculo y mostrar el contenido
     setTimeout(() => {
         spinnerContainer.style.display = "none";
-        document.getElementById("home-content").style.display = "block";
+       /* document.getElementById("home-content").style.display = "block";
     }, 3100); // 3 segundos más un pequeño margen
 });
