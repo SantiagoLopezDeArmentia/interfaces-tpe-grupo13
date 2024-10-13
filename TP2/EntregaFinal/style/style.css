@@ -135,17 +135,12 @@ header{
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    /*width: 33%;*/
 }
 
 .logo img {
     width: 40px;
     height: 40px;
-   /* max-width: 100px;
-    max-height: 60%;
-    margin-right: 10%;*/
-    margin-left: 20px;
-    
+    margin-left: 20px;   
 }
 .logo p{
     margin-left: 10px;
@@ -196,7 +191,6 @@ header{
 
 
 .shop-btn {
-    
     position: relative;                    /*probando*/
     display: inline;                       /*probando*/  
     background: none;
@@ -259,13 +253,12 @@ header{
     margin: 0;
     color: #ffffff;
     padding: 0;
-    
-    
 }
+
 .search input {
     color: #ffffff;
-    
 }
+
 .search.show-search{
     transform: translateY(0);
     display: flex;
@@ -287,8 +280,8 @@ header{
 
 .login-container img {
     max-width: 100px;
-    
 }
+
 h2 {
     margin-bottom: 20px;
     font-size: 26px;
@@ -312,6 +305,7 @@ input {
     border-radius: 20px;
     background-color:var(--background-color-2);
 }
+
 input::placeholder{
     color:#ffffff ;
 }
@@ -319,7 +313,6 @@ input::placeholder{
 .buttons-container {
     display: flex;
     justify-content: space-between;
-   
 }
 
 .buttons-container button {
@@ -328,15 +321,14 @@ input::placeholder{
     cursor: pointer;
     margin-top: 3%;
 }
-.btn-primary{
 
+.btn-primary{
     background-color: var(--primary-color); 
     color: black;
     border-radius: 20px;
     width: 48%;
     padding: 10px;
     border: 2px solid #9bf00b;
-
 }
 
 .btn-primary:hover{
@@ -379,21 +371,18 @@ input::placeholder{
     background-color:var(--secondary-color); 
     color:var(--primary-color);
     border-color:var(--secondary-color);
-    
 }
 
 .separator {
     display: flex;
     align-items: center;
     margin: 20px 0;
-    
 }
 
 .separator hr {
     flex-grow: 1;
     border: none;
     border-top: 1px solid #ccc;
-    
 }
 
 .separator span {
@@ -474,8 +463,7 @@ input::placeholder{
     display: flex; 
     flex-direction: column;
     justify-content: space-around;
-    align-items: center; 
-
+    align-items: center;
     margin-bottom: 20px;
     text-decoration: none;
 }
@@ -506,18 +494,17 @@ input::placeholder{
     flex-direction: column;
     align-items: center;
     width: 100%;
-   
 }
+
 .footer-list li{
     width: 100%;
-   
 }
+
 .footer-list a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     width: 100%;
-   
 }
 
 .footer-list a:hover {
@@ -629,8 +616,8 @@ input::placeholder{
 a.centered {
     text-align: center;
     font-size: 26px;
-    
 }
+
 .menu-link{
     text-decoration: none;
     color: var(--secondary-color-dark-4) !important;
@@ -751,12 +738,10 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
   
 .prev {
     display: none; /* Mientras este en mobile no van a existir las flechas*/
-    /*left: 0;*/
 }
 
 .next {
     display: none; /* Mientras este en mobile no van a existir las flechas*/
-    /*right: 0;*/
 }
 
 .carousel-button img {
@@ -779,17 +764,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     text-overflow: ellipsis;
     
 }
-
-/*
-.btn-card-jugar{
-    background-color: var(--background-color-1);
-    border: none;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-card-jugar p {
-    display: none;
-}*/
 
 .added-product {
     display: none;
@@ -830,57 +804,9 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     right: 0;
 }
 
-/*
-.btn-card-jugar-test{
-    background-image: url('iconos/gamepad-icon-verde.png');
-    background-size: cover; 
-    background-position: center; 
-    border: none;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    bottom: 0;
-    right: 0;
-}*/
-/*
-.btn-card-jugar img {
-    border-radius: 0%;
-    padding:5%;
-    padding-left: 2%;
-    max-width: 100%;
-    max-height: 100%;
-    scale: 150%;
-    position: absolute;
-    transition: opacity 0.5 ease;
-    object-fit: cover;
-    align-self: flex-end;
-    bottom: 0;
-    right: 0;
-}*/
-
-/*
-.btn-card-jugar img.gamepad-hover {
-    opacity: 0;
-}
-
-  
-.btn-card-jugar:hover img.gamepad-original {
-    opacity: 0;
-}
- 
-.btn-card-jugar:hover img.gamepad-hover {
-    opacity: 1;
-    
-}
-
-.btn-card-jugar:hover{
-    color: var(--secondary-color);
-    border-color: none;
-    background-color: var(--primary-color);
-}*/
-
 .btn-card-game img.gamepad-hover {
     opacity: 0;
 }
-
   
 .btn-card-game:hover img.gamepad-original {
     opacity: 0;
@@ -888,7 +814,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
  
 .btn-card-game:hover img.gamepad-hover {
     opacity: 1;
-    
 }
 
 .btn-card-jugar:hover{
@@ -896,13 +821,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     border-color: none;
     background-color: var(--primary-color);
 }
-
-/*
-.btn-card-remove-game {
-    display: none;
-}*/
-
-
 
 /* Overlay para el hover */
 .hover-overlay {
@@ -928,7 +846,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 /* ---------------------------------------------------4 en 1 -----------------------------------------------------*/
 
 #id-popover-compartir{
-
     top: 35%;
     left: 23%;
     width: 55%;
@@ -940,6 +857,7 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     border-radius: 15px;
     border-color: var(--secondary-color-dark-4);
 }
+
 #id-popover-compartir::backdrop{
     background-color:rgba(0, 0, 0, 0.5) ;
 }
@@ -948,7 +866,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 #id-popover-compartir div{
     margin-top: 4%;
     max-width: 100%;
-
 }
 
 #id-popover-compartir h1{
@@ -968,8 +885,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    
-    
 }
 
 .enlace h1{
@@ -980,18 +895,17 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 } 
 
 #id-popover-compartir .button-container{
-        width:15% ;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        margin-top: 0;
+    width:15% ;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 0;
 }
 
 .btn-popover-compartir.btn-secundary{
     width: 100%;
     font-size: 16px;
     padding: 5px;
-
 }
 
 
@@ -1001,14 +915,14 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     width: 100%;
     padding-top: 20px;
 }
+
 .banner{
     width: 20%;
 }
+
 .titulo-juego{
-    
     max-width: 70%;
     width: 920px;
-  
 }
 
 .titulo-juego h1{
@@ -1055,7 +969,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 .jugar:hover{
     transform: scale(1.1);      /* Aumenta ligeramente el tamaño */
 }
-    
 
 .descripcion{
     width: 20%;
@@ -1072,7 +985,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 .descripcion p{
     color: #ffffff;
     text-align: justify;
-    
 }
 
 .medio{
@@ -1085,8 +997,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     width: 100%;
     padding-top: 20px;
 }
-
-
 
 .left{
     width: 920px;
@@ -1143,9 +1053,8 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     flex-direction: column;
     align-items: flex-end;
     margin-top: 5%;
-    
-    
 }
+
 .container-nuevo-comentario div{
     display: flex;
     justify-content: center;
@@ -1209,7 +1118,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     padding-left: 1%;
     align-items: center;
     padding-bottom:2% ;
-    
 }
 
 .container-comentarios::-webkit-scrollbar{
@@ -1218,15 +1126,14 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     scrollbar-width: none;  /* Para Firefox */
 }
 
-
 .comentario{
     width: 95%;
     overflow-wrap: break-word;
     background-color: #3f4b5b;
    border-radius: 5px;
-   color: #ffffff;
-   
+   color: #ffffff; 
 }
+
 .user-comentario{
     width: 100%;
     display: flex;
@@ -1234,9 +1141,8 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     align-items: center;
     padding: 1%;
     padding-left: 0;
-    
-
 }
+
 .comentario p{
     padding: 10px;
 }
@@ -1249,7 +1155,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     width: 10%;
     margin-left: 3%;
     margin-right: 1%;
-   
 }
 
 
@@ -1269,6 +1174,7 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 #id-popover::backdrop{
     background-color:rgba(0, 0, 0, 0.5) ;
 }
+
 .button-container button{
     width: 50%;
     margin:0;
@@ -1297,7 +1203,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     border: 0;
     max-width: 100%;
     color: #ffffff;
-    
 }
 
 .form-register .edad{
@@ -1351,7 +1256,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     align-items: center;
     justify-content: center;
     width: 70%;
-
 }
 .captcha input{
     width: 20%;
@@ -1378,10 +1282,8 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 @media (min-width: 480px) {
 
     body{
-        
         align-items: center;
         justify-content: center;
-
     }
 
     .search.show-search{ 
@@ -1398,7 +1300,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
    
 
     .nav-area-center {
-        
         display: flex;
         width: 33%;
     }
@@ -1418,13 +1319,10 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     .footer-links div {
         width: fit-content;
         margin-bottom: 20px;
-       
-        
     }
      
 
     #footer {
-        
         background: linear-gradient(to top, #2b3846, transparent);
         position: relative;
         width: 100%;
@@ -1432,7 +1330,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
         padding: 20px 0;
         text-align: center;
         margin-top: auto; /* Empuja el footer al fondo */
-        
     }
 
     .footer-links {
@@ -1443,13 +1340,9 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
         margin-bottom: 20px;
     }
 
- 
-
-    
-
     .footer-links a {
-       width: 100%;
-       text-align: center;
+        width: 100%;
+        text-align: center;
         color: white;
         text-decoration: none;
         margin-bottom: 5px;
@@ -1464,11 +1357,10 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
         text-align: start;
         font-size: 26px;
         padding-bottom: 10px;
-    
     }
 
     .footer-list {
-       width: 100%;
+        width: 100%;
         color:var(--secondary-color-light-2);
         text-decoration: none;
         margin-bottom: 5px;
@@ -1478,23 +1370,18 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
         width: 100%;
         text-align: start;
         margin-bottom: 10%;
-        
     }
 
     .card {
-        
         margin-right: 0.5%;
         padding: 0px;
-        /*padding-bottom: 10px;*/
         background-color: var(--background-color-1);
         max-width: 215px;
         max-height: 193px;
         height: 100%;
         margin-top: 0;
         margin-bottom: 0; 
-        transition: transform 0.3s ease, box-shadow 0,3s ease;  
-                                              /*----------------probando-------------------*/
-                                             
+        transition: transform 0.3s ease, box-shadow 0,3s ease;                                             
     }
 
     .img-game {
@@ -1587,39 +1474,22 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     .card:hover{
         transform: scale(1.1) skew(0deg);
         z-index: 10;
-        border: 2px solid var(--third-color);                                       /*------------------------probandoooooo-------------------------*/
-        box-shadow: 0 0 15px 5px var(--third-color-light-1) ;                           /*----------------probando-------------------*/
+        border: 2px solid var(--third-color);
+        box-shadow: 0 0 15px 5px var(--third-color-light-1);
         
     }
-    
-    
-  /*  .carousel-track:hover .card:not(:hover) {
-        filter:blur(0.8px);
-        overflow-y: visible;
-        box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2);
-        transition: filter 0.3s ease, box-shadow 0.3s ease;
-    }*/
 
-   
-
-    
-
-
- /* ####################### */
     /* probrando re ajuste de flechas*/
     .carousel-container {
         display: flex;
         flex-direction: column;
         justify-items: center;
         padding: 0;
-       
-        
-    
-       
     }
+
     .carousel-track::-webkit-scrollbar {
         display: none; /* Para Chrome, Safari y Opera */
-      }
+    }
 
     .carousel-window {
         display: flex;
@@ -1638,7 +1508,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     .div-button-next {
         padding-left: 2%;
     }
-
     
     .titulo-desc-card {
         padding: 0;
@@ -1647,9 +1516,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
         height: 73px;
         max-height: 73px;
     }
-    
-   
-    
 
     .btn-card-add {
         border: none;
@@ -1681,12 +1547,9 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
         color:var(--secondary-color-light-1)
     }
 
-    
     .btn-card-remove-game {
         display: none;
     }
-
-    
 }
 
 .btn-card-jugar{
@@ -1694,23 +1557,23 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 }
 .btn-card-jugar::before {
     content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 52px;
-  border: 2px solid transparent; /* Inicialmente el borde es transparente */
-  box-sizing: border-box; /* Para incluir el borde en el tamaño del botón */
-  pointer-events: none; /* Evitar que el pseudo-elemento interfiera con los eventos del botón */
-  }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 52px;
+    border: 2px solid transparent; /* Inicialmente el borde es transparente */
+    box-sizing: border-box; /* Para incluir el borde en el tamaño del botón */
+    pointer-events: none; /* Evitar que el pseudo-elemento interfiera con los eventos del botón */
+}
   
-  .btn-card-jugar:hover::before {
+.btn-card-jugar:hover::before {
     opacity: 1;
     animation: drawLineAround 2s linear forwards; /* Cambiar el nombre de la animación y su duración */
-  }
+}
 
-  @keyframes drawLineAround {
+@keyframes drawLineAround {
     0% {
         border-color: transparent;
         clip-path: polygon(0 0, 0 0, 0 0, 0 0); /* Comienza vacío */
@@ -1775,7 +1638,6 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     transform: translateX(-50%); /* Ajuste para centrarlo correctamente */
     transition: color 1s ease; /* Transición suave para el color del texto */
     color: transparent;
-   
 }
 
 .register.btn-primary:hover::after {
