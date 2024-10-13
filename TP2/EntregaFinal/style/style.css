@@ -523,8 +523,8 @@ input::placeholder{
     padding: 0; 
     cursor: pointer;
     text-align: start;                   
-    margin-bottom: 2%;
-    margin-top: 4%;
+    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 /* Clase para mostrar las listas */
@@ -975,7 +975,7 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding:10px ;
+    padding:10px;
 }
 
 .descripcion h2{
@@ -985,6 +985,7 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 .descripcion p{
     color: #ffffff;
     text-align: justify;
+    font-size: 18px;
 }
 
 .medio{
@@ -1024,6 +1025,10 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     font-size: 16px;
     margin-bottom: 5%;
 }
+
+.compartir p {
+    margin-left: 10px;
+}
 .informacion p{
     color: #ffffff;
     margin-bottom: 4%;
@@ -1044,6 +1049,10 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 
 .titulo-comentario h2{
     margin: 0;
+}
+
+.titulo-comentario h2 {
+    margin-left: 15px;
 }
 
 .container-nuevo-comentario{
@@ -1149,6 +1158,7 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 
 .user-comentario h2{
     margin: 0;
+    margin-left: 15px;
 }
 
 .user-comentario img{
@@ -1328,6 +1338,7 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
         width: 100%;
         color: white;
         padding: 20px 0;
+        padding-top: 30px;
         text-align: center;
         margin-top: auto; /* Empuja el footer al fondo */
     }
@@ -1369,7 +1380,7 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     .footer-list li{
         width: 100%;
         text-align: start;
-        margin-bottom: 10%;
+        margin-bottom: 15px;
     }
 
     .card {
@@ -1382,6 +1393,13 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
         margin-top: 0;
         margin-bottom: 0; 
         transition: transform 0.3s ease, box-shadow 0,3s ease;                                             
+    }
+
+    .card h4 {
+        font-size: 18px;
+    }
+    .card h5 {
+        font-size: 18px;
     }
 
     .img-game {
@@ -1467,13 +1485,14 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 
     .categoria h3{
         color: #ffffff;
-        margin-bottom: 0.5%;
+        margin-bottom: 0;
         padding-left: 6.5%;
+        font-size: 22px;
     }
 
     .card:hover{
         transform: scale(1.1) skew(0deg);
-        z-index: 10;
+        z-index: 1000;
         border: 2px solid var(--third-color);
         box-shadow: 0 0 15px 5px var(--third-color-light-1);
         
@@ -1549,6 +1568,22 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 
     .btn-card-remove-game {
         display: none;
+    }
+
+    .logo p{
+        font-size: 22px;
+    }
+
+    .form-register h2, .login-container h2 {
+        margin-top: 10px;
+    }
+
+    .buttons-container {
+        margin-top: 5px;
+    }
+
+    .informacion a {
+        color: rgb(0, 0, 253);
     }
 }
 
@@ -1651,25 +1686,48 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     font-style: normal;
   }
   
-  .roboto-light {
+  .roboto-light, .titulo-juego h3 {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
   }
   
-  .roboto-regular {
+  .roboto-regular,
+  .card h4,
+  .footer-bottom p  {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
   
-  .roboto-medium {
+  .roboto-medium, .inpt-form-login input,
+  .buttons-container button, .btn-card-game p,
+  .menu a, .footer-links a, .logo p,
+  .titulo-juego h1,
+  .descripcion p,
+  .descripcion h2,
+  .container-margen p,
+  .container-nuevo-comentario,
+  .container-nuevo-comentario input,
+  .container-nuevo-comentario textarea,
+  .comentario p,
+  .form-register label,
+  .form-register h3 {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
   }
+
+
   
-  .roboto-bold {
+  .roboto-bold,
+  .container-btn-login span,
+  .carousel-container h3,
+  .card h5, .footer-links button,
+  .titulo-comentario h2,
+  .user-comentario h2,
+  .form-register h2 
+   {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
