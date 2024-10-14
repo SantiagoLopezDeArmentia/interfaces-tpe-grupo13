@@ -10,33 +10,34 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
 </head>
-
- <!-- Header -->
- <header id="header-navbar">
-    <div class="nav-area-left nav-area" id="hamburguesa">
-        <button class="hamburger-menu" id="hamburger-menu">&#9776;</button>
-        <div class="logo nav-area">
-            <img src="iconos/site-playtime-icon.png" alt="playtime-icon">
-            <p>PlayTime</p>
+<body>
+    <!-- Header -->
+    <header id="header-navbar">
+        <div class="nav-area-left nav-area" id="hamburguesa">
+            <button class="hamburger-menu" id="hamburger-menu">&#9776;</button>
+            <div onclick="window.location.href='index.html'" class="logo nav-area">
+                <img src="iconos/site-playtime-icon.png" alt="playtime-icon">
+                <p>PlayTime</p>
+            </div>
         </div>
-    </div>
-    <div class="nav-area-center nav-area">
-        <input class="inpt-buscar" type="text" placeholder="Buscar">
-    </div>
-    <div class="nav-area-right nav-area">
-       
-            <button class="mob-search">
-                <img src="iconos/lupa-icon.png">
+        <div class="nav-area-center nav-area">
+            <input class="inpt-buscar" type="text" placeholder="Buscar">
+        </div>
+        <div class="nav-area-right nav-area">
+           
+                <button class="mob-search">
+                    <img src="iconos/lupa-icon.png">
+                </button>
+                <button class="shop-btn">
+                    <img src="iconos/shop.png">
+                    <span class="cart-count" id="cartCount"></span>
+                </button>
+            
+            <button class="logged-input">
+                <img src="iconos/avatar-pika-login.png">
             </button>
-            <button class="shop-btn">
-                <img src="iconos/shop-cart-icon.png">
-            </button>
-        
-        <button class="logged-input">
-            <img src="iconos/avatar-pika-login.png">
-        </button>
-    </div>
-</header>
+        </div>
+    </header>
 
 
     <nav id="menu" class="menu">

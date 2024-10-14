@@ -35,7 +35,9 @@ btnSearch.addEventListener('click', () =>{
 
 /* ######## Funcionalidad menu ######### */
 
+
 hamburgerMenu.addEventListener('click', () => {
+  
   menu.classList.toggle('show');
 });
 
