@@ -20,9 +20,6 @@
                 <p>PlayTime</p>
             </div>
         </div>
-        <div class="nav-area-center nav-area">
-            <input class="inpt-buscar" type="text" placeholder="Buscar">
-        </div>
         <div class="nav-area-right nav-area">
            
                 <button class="mob-search">
@@ -101,23 +98,23 @@
         <h2>Registrarse</h2>
         <h3>Datos personales</h3>
         <div class="inpt-form">
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre">
-            <label for="apellido">Apellido</label>
+            <label for="nombre">Nombre*</label>
+            <input type="text" name="nombre" required>
+            <label for="apellido">Apellido*</label>
             <input type="text" name="apellido">
-            <label for="edad">Edad</label>
-            <input class="edad" type="number" name="edad">
+            <label for="edad">Edad*</label>
+            <input class="edad" type="number" name="edad" required>
         </div>
         <h3>Perfil de usuario</h3>
         <div class="inpt-form">
             <label for="name_user">Nombre de usuario</label>
             <input type="text" name="name_user">
-            <label for="email">Email</label>
+            <label for="email">Email*</label>
             <input type="email" name="email" required>
-            <label for="password">Contraseña</label>
-            <input type="password" name="password">
-            <label for="password">Repetir contraseña</label>
-            <input type="password" name="password">
+            <label for="password">Contraseña*</label>
+            <input type="password" name="password" required>
+            <label for="password">Repetir contraseña*</label>
+            <input type="password" name="password" required>
         </div>
         <div class="captcha">
             <div class="check">
@@ -169,13 +166,13 @@
                     <li><a href="#">Foros</a></li>
                 </ul>
             </div>
-            <div>
+            <div class="social-footer-div">
                 <button class="btn-footer">Contactos</button>
-                <ul class="footer-list">
-                    <li><a href="#">+549 2494010255</a></li>
-                    <li><a href="#">hola@playTime.com</a></li>
-                    <li><a href="#">PlayTimeGames</a></li>
-                    <li><a href="#">PlayTimeGames</a></li>
+                <ul class="footer-list social-footer">
+                    <li><img src="iconos/telephone-icon.png"><a class="telephone-footer" href="#">+549 2494010255</a></li>
+                    <li><img src="iconos/email-icon.png"><a class="email-footer" href="#">hola@playTime.com</a></li>
+                    <li><img src="iconos/facebook-icon.png"><a href="#">PlayTimeGames</a></li>
+                    <li><img src="iconos/instagram-icon.png"><a href="#">PlayTimeGames</a></li>
                 </ul>
             </div>
         </div>
@@ -184,7 +181,6 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
 
 </body>
 

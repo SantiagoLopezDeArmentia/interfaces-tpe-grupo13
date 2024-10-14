@@ -108,11 +108,16 @@ body {
   }
 
 /* Header */
-header{
+
+header {
+    position: sticky;
     width: 100%;
     padding: 0;
     margin: 0;
+    top: 0;
+    z-index: 1000;
 }
+
 #header-navbar {
     display: flex;
     justify-content: space-between;
@@ -127,7 +132,8 @@ header{
     color: #ffffff; 
     cursor: pointer;
     font-size: x-large;
-    padding-left: 5%;
+    padding-left: 3%;
+    padding-right: 2.5%;
 }
 
 .logo {
@@ -535,6 +541,30 @@ input::placeholder{
 .footer-bottom p {
     margin: 0;
     color: var(--background-color-2);
+}
+.footer-list.social-footer li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-footer img{
+    width: 18px;
+    height: 18px;
+    margin-bottom: 5px;
+}
+
+.social-footer-div  a{
+    width: auto;
+}
+
+.email-footer {
+    padding-left: 21px;
+}
+
+.telephone-footer {
+    padding-left: 20px;
+    white-space: nowrap;
 }
 
 .menu {
@@ -1413,6 +1443,8 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
         margin-bottom: 15px;
     }
 
+    
+
     .card {
         margin-right: 0.5%;
         padding: 0px;
@@ -1628,7 +1660,13 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
         font-style: normal;
     }
 
+    .email-footer {
+        padding-left: 25px;
+    }
 
+    .telephone-footer {
+        padding-left: 0;
+    }
 }
 
 .btn-card-jugar{
