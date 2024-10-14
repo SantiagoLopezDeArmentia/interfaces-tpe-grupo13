@@ -246,5 +246,5 @@ document.addEventListener("DOMContentLoaded", function() {
   setTimeout(() => {
     spinnerContainer.style.display = "none";
     document.getElementById("home-content").style.display = "block";
-  }, 3100); // 3 segundos más un pequeño margen
+  }, 5300); // 3 segundos más un pequeño margen
 });
