@@ -115,7 +115,7 @@ header {
     padding: 0;
     margin: 0;
     top: 0;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 #header-navbar {
@@ -1554,7 +1554,7 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 
     .card:hover{
         transform: scale(1.1) skew(0deg);
-        z-index: 11000;
+        z-index: 1000;
         border: 2px solid var(--third-color);
         box-shadow: 0 0 15px 5px var(--third-color-light-1);
         
