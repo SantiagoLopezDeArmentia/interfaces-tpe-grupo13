@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="loading-spinner-container">
+        <svg id="progress-circle" viewBox="0 0 100 100">
+            <circle class="background" cx="50" cy="50" r="45"></circle>
+            <circle class="foreground" cx="50" cy="50" r="45"></circle>
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header id="header-navbar">
+        <div class="nav-area-left nav-area" id="hamburguesa">
+            <button class="hamburger-menu" id="hamburger-menu">&#9776;</button>
+            <div onclick="window.location.href='index.html'" class="logo nav-area">
+                <img src="iconos/site-playtime-icon.png" alt="playtime-icon">
+                <p>PlayTime</p>
+            </div>
+        </div>
+        <div class="nav-area-center nav-area">
+            <input class="inpt-buscar" type="text" placeholder="Buscar">
+        </div>
+        <div class="nav-area-right nav-area">
+           
+                <button class="mob-search">
+                    <img src="iconos/lupa-icon.png">
+                </button>
+                <button class="shop-btn">
+                    <img src="iconos/shop.png">
+                    <span class="cart-count" id="cartCount"></span>
+                </button>
+            
+            <button class="logged-input">
+                <img src="iconos/avatar-pika-login.png">
+            </button>
+        </div>
+    </header>
+    
+    
+   <div class="search">
+        <input type="text" placeholder="Buscar">
+
+    </div>
+
+    <nav id="menu" class="menu">
+        <a href="login.html" class="menu-link">Iniciar sesión</a>
+        <hr class="menu-separator">
+
+        <div class="container-menu">
+            <div class="item-menu">
+                <div class="menu-img-container"><img src="iconos/user-icon.png" /></div>
+                <li><a>Perfil</a></li>
+            </div>
+            <div class="item-menu">
+                <div class="menu-img-container"><img src="iconos/star-icon.png" /></div>
+                <li><a>Recomendados</a></li>
+            </div>
+            <div class="item-menu">
+                <div class="menu-img-container"><img src="iconos/clock-icon.png" /></div>
+                <li><a>Recientes</a></li>
+            </div>
+            <div class="item-menu">
+                <div class="menu-img-container"><img src="iconos/fire-icon.png" /></div>
+                <li><a>Tendencias</a></li>
+            </div>
+        </div>
+
+        <hr class="menu-separator">
+        <div class="container-menu">
+            <div class="item-menu">
+                <img src="iconos/all-games-icon.png" />
+                <li><a>Juegos</a></li>
+            </div>
+
+            <div class="item-menu">
+                <img src="iconos/category-icon.png" />
+                <li><a>Categorías</a></li>
+            </div>
+
+        </div>
+
+        <hr class="menu-separator">
+        <h3>Redes</h3>
+        <div class="social-icons">
+            <a href="#"><img src="iconos/facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="iconos/instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="iconos/email-icon.png" alt="Email"></a>
+        </div>
+    </nav>
+
+
+    <div class="carousel-container">
+        <div class="categoria">
+            <h3>Podrian gustarte</h3>
+        </div>
+        <div class="carousel-window">
+            <div class="div-button-prev">
+                <button class="carousel-button prev" id="prevButton">
+                    <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
+                </button>
+            </div>
+
+            <div class="carousel-track" id="carouselTrack">
+                <div class="card">
+                    <img src="image/caratulas-juegos/sonic.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Sonic: Shadow Generations</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/crash.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Crash Team Racing: Nitro-F</h4>
+                        <h5>$2340</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/tower.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Tower Defense Clash</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/assasin.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Assasin’s Creed: Origin</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/gt7.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Gran Turismo 7</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/mariokart64.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Mario Kart 64</h4>
+                        <h5>Es tuyo</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/ghostsn-globlins-game.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Ghosts'n Globlins</h4>
+                        <h5>$20</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/towefactory.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Tower Factory</h4>
+                        <h5>$3300</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/thecallisto.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>The Callisto Protocol </h4>
+                        <h5>$9000</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/burnout-3-game.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Burnout 3</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+            </div>
+
+            <div class="div-button-next">
+                <button class="carousel-button next" id="nextButton">
+                    <img src="iconos/carousel-row-next.png" alt="flecha derecha">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-container">
+        <div class="categoria">
+            <h3 id="estrategia">Estrategia</h3>
+        </div>
+        <div class="carousel-window">
+            <div class="div-button-prev">
+                <button class="carousel-button prev" id="prevButton">
+                    <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
+                </button>
+            </div>
+
+            <div class="carousel-track" id="carouselTrack">
+                <div class="card">
+                    <img src="image/caratulas-juegos/4-en-uno.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>4 en linea: Dragones elementales</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" onclick="window.location.href='4enLinea.html'" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                    
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/monopoly.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Monopoly</h4>
+                        <h5>$9000</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/ajedrez.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Ajedrez</h4>
+                        <h5>2500</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/dados.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Dados</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/towefactory.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Tower Factory</h4>
+                        <h5>$3300</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/akinator-game.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Akinator</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/kingdom-rush-game.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Kingdom Rush</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/bloons-tds-game.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Bloons TDS</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/tower-defence-protect-your-gold.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Tower Defence: Protect Your Gold</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/trolls-vs-vikings-game.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Trolls VS Vikings</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="div-button-next">
+                <button class="carousel-button next" id="nextButton">
+                    <img src="iconos/carousel-row-next.png" alt="flecha derecha">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-container">
+        <div class="categoria">
+            <h3>Arcade</h3>
+        </div>
+        <div class="carousel-window">
+            <div class="div-button-prev">
+                <button class="carousel-button prev" id="prevButton">
+                    <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
+                </button>
+            </div>
+
+            <div class="carousel-track" id="carouselTrack">
+                <div class="card">
+                    <img src="image/caratulas-juegos/mariokart64.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Mario Kart 64</h4>
+                        <h5>Es tuyo</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/streetF.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Street Fighter</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/sonicTheHedge.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Sonic: The Hedgehog</h4>
+                        <h5>Es tuyo</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/sonic.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Sonic: Shadow Generations</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/carzytaxi.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Crazy Taxi</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/golden-axe-game.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Golden Axe</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/sonic-2.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Sonic 2</h4>
+                        <h5>Es tuyo</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/street-fighter.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Street Fighter</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/cobra-combar-game.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Cobra Combar</h4>
+                        <h5>Es tuyo</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/ghostsn-globlins-game.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Ghosts'n Globlins</h4>
+                        <h5>$20</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="div-button-next">
+                <button class="carousel-button next" id="nextButton">
+                    <img src="iconos/carousel-row-next.png" alt="flecha derecha">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-container">
+        <div class="categoria">
+            <h3>Accion</h3>
+        </div>
+        <div class="carousel-window">
+            <div class="div-button-prev">
+                <button class="carousel-button prev" id="prevButton">
+                    <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
+                </button>
+            </div>
+
+            <div class="carousel-track" id="carouselTrack">
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/doom.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Doom</h4>
+                        <h5>$15000</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/uncharted4.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Uncharted 4: A Thief´s End</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/fortnite.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Fortnite</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/assassinscreed.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Assasins´s Creed Unity </h4>
+                        <h5>$3340</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/thecallisto.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>The Callisto Protocol </h4>
+                        <h5>$9000</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/call-of-duty-warzone.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Call of Duty Warzone</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/ever-space-2.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Ever Space 2</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/hypercharge-unboxed-game.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>HyperCharge Unboxed</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/the-last-of-us.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>The Last of Us</h4>
+                        <h5>Es tuyo</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/other-skin.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Other Skin</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="div-button-next">
+                <button class="carousel-button next" id="nextButton">
+                    <img src="iconos/carousel-row-next.png" alt="flecha derecha">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-container">
+        <div class="categoria">
+            <h3>Carreras</h3>
+        </div>
+        <div class="carousel-window">
+            <div class="div-button-prev">
+                <button class="carousel-button prev" id="prevButton">
+                    <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
+                </button>
+            </div>
+
+            <div class="carousel-track" id="carouselTrack">
+                <div class="card">
+                    <img src="image/caratulas-juegos/wrc.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>WRC</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/dirt5.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Dirt 5</h4>
+                        <h5>$5000</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/horizonchase2.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Horizon Chase 2</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/f124.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>F1 24</h4>
+                        <h5>$20000</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/pacer.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Pacer</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/forza-horizon-motosport-game.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Forza Horizon: MotoSport</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/burnout-3-game.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Burnout 3</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/hotwheels-unleashed-2-turbo-charged.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Hot Wheels: Unleashed 2 Turbo Charged</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/gt7.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Gran Turismo 7</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/hotshot-racing.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Hot Shot Racing</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="div-button-next">
+                <button class="carousel-button next" id="nextButton">
+                    <img src="iconos/carousel-row-next.png" alt="flecha derecha">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-container">
+        <div class="categoria">
+            <h3>Deportes</h3>
+        </div>
+        <div class="carousel-window">
+            <div class="div-button-prev">
+                <button class="carousel-button prev" id="prevButton">
+                    <img src="iconos/carousel-row-prev.png" alt="flecha izquierda">
+                </button>
+            </div>
+
+            <div class="carousel-track" id="carouselTrack">
+                <div class="card">
+                    <img src="image/caratulas-juegos/soccerfriends.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Soccer Friends</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/2k2025.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>2K 2025</h4>
+                        <h5>$20000</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/fc25.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Futbol Club 25</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <div class="added-product">
+                        <img src="iconos/cart-added-product.png">
+                    </div>
+                    <img src="image/caratulas-juegos/f123.png" alt="Card 1" class="img-game">
+                    <div class="titulo-desc-card">
+                        <h4>Formula 1 2023</h4>
+                        <h5>$4500</h5>
+                    </div>
+                    <button type="button" class="btn-card-game btn-card-add">
+                        <img src="iconos/shop-cart-add-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-add-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-bold">Agregar</p>
+                    </button>
+
+                    
+                    <button type="button" class="btn-card-game btn-card-remove-game">
+                        <img src="iconos/shop-cart-remove-icon-green.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/shop-cart-remove-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Quitar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/fifa22.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Fifa 22</h4>
+                        <h5>Es tuyo</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/harry-potter-quidditch-world-cup.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Harry Potter Quidditch World Cup</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/superstar-soccer.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Mario Bross</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/the-show-24.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>The Show 24</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/basketball-stars.png" alt="Card 1" class="img-game">
+
+                    <div class="titulo-desc-card">
+                        <h4>Basketball Stars</h4>
+                        <h5>Gratis</h5>
+                    </div>
+
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                   
+                </div>
+                <div class="card">
+                    <img src="image/caratulas-juegos/football-champ.png" alt="Card 1" class="img-game">
+                
+                    <div class="titulo-desc-card">
+                        <h4>Football Champ</h4>
+                        <h5>Gratis</h5>
+                    </div>
+                
+                    <button type="button" class="btn-card-game btn-card-jugar">
+                        <img src="iconos/gamepad-icon-verde.png" alt="gamepad-icon" class="gamepad-original" />
+                        <img src="iconos/gamepad-icon-violet.png" alt="gamepad-icon" class="gamepad-hover" />
+                        <p class="roboto-medium">Jugar</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class="div-button-next">
+                <button class="carousel-button next" id="nextButton">
+                    <img src="iconos/carousel-row-next.png" alt="flecha derecha">
+                </button>
+            </div>
+        </div>
+    </div>
+   
+
+    <!-- Footer -->
+
+    <footer id="footer">
+        <div class="footer-links">
+            <div>
+                <button class="btn-footer">Sobre nosotros</button>
+                <ul class="footer-list">
+                    <li><a href="#">Empresa</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                    <li><a href="#">Desarrolladores</a></li>
+                    <li><a href="#">RSE</a></li>
+                </ul>
+            </div>
+            <div>
+                <button class="btn-footer">Accesos directos</button>
+                <ul class="footer-list">
+                    <li><a href="#">Pagina principal</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Destacados</a></li>
+                    <li><a href="#">Novedades</a></li>
+                </ul>
+            </div>
+            <div>
+                <button class="btn-footer">Comunidad</button>
+                <ul class="footer-list">
+                    <li><a href="#">Colaboraciones</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Guias y tutoriales</a></li>
+                    <li><a href="#">Foros</a></li>
+                </ul>
+            </div>
+            <div class="social-footer-div">
+                <button class="btn-footer">Contactos</button>
+                <ul class="footer-list social-footer">
+                    <li><img src="iconos/telephone-icon.png"><a class="telephone-footer" href="#">+549 2494010255</a></li>
+                    <li><img src="iconos/email-icon.png"><a class="email-footer" href="#">hola@playTime.com</a></li>
+                    <li><img src="iconos/facebook-icon.png"><a href="#">PlayTimeGames</a></li>
+                    <li><img src="iconos/instagram-icon.png"><a href="#">PlayTimeGames</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2024 PlayTime Games</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
