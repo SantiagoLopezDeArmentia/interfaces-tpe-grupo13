@@ -1,0 +1,69 @@
+:root {
+
+    --primary-color: #9BF00B;
+    --primary-color-light-1: #ADF239;
+    --primary-color-light-2: #BFF564;
+    --primary-color-light-3: #D0F98B;
+    --primary-color-light-4: #E5FDBB;
+    --primary-color-dark-1: #85D300;
+    --primary-color-dark-2: #68A500;
+    --primary-color-dark-3: #548500;
+    --primary-color-dark-4: #3B5D00;
+
+    --secondary-color: #6C30BB;
+    --secondary-color-light-1: #834FC9;
+    --secondary-color-light-2: #A278DA;
+    --secondary-color-light-3: #C3A3EC;
+    --secondary-color-light-4: #E5D5FA;
+    --secondary-color-dark-1: #540EB0;
+    --secondary-color-dark-2: #3E0A83;
+    --secondary-color-dark-3: #31066B;
+    --secondary-color-dark-4: #23034D;
+
+    --third-color: #FF6F00;
+    --third-color-light-1: #FF8C33;
+    --third-color-light-2: #FF9A4D;
+    --third-color-light-3: #FFB066;
+    --third-color-light-4: #FFD1A1;
+    --third-color-dark-1: #E65C00;
+    --third-color-dark-2: #CC4C00;
+    --third-color-dark-3: #B34300;
+    --third-color-dark-4: #993F00;
+
+    /*--background-color-1: #2a2d34;*/
+    --background-color-1: #2C3E50;
+    --background-color-1-light-1: #4A5D6C;
+    --background-color-1-light-2: #6C7A8A;
+
+    --background-color-2: #5D6D7E;
+    --background-color-2-light-1: #8A9BB6;
+    --background-color-2-light-2: #BDC9D3;
+    
+    --background-color-3: #2A2D34;
+    --background-color-3-light-1: #4A4D56;
+    --background-color-3-light-2: #6C6F77;
+
+
+    --header-height-mobile: 65px;
+}
+
+
+
+
+
+
+.turno-jugador {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    margin-right: 700px;
+    margin-top: 50px;
+    font-size: 48px;
+    border-color: var(--primary-color-dark-1);
+    color: var(--third-color); /* Color del texto */
+            text-shadow: 
+                2px 2px 0 var(--secondary-color), /* Sombra negra abajo a la derecha */
+                -2px -2px 0 var(--secondary-color), /* Sombra negra arriba a la izquierda */
+                -2px 2px 0 var(--secondary-color), /* Sombra negra abajo a la izquierda */
+                2px -2px 0 var(--secondary-color); /* Sombra negra arriba a la derecha */
+}

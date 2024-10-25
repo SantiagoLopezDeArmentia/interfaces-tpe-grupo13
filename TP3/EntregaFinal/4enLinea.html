@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/4enlinea.css">
     <title>4 en Linea</title>
 </head>
 
@@ -117,11 +118,14 @@
         </div>
     </div>
     <div class="container">
-        <div class="juego">
+        <canvas class="canvas"></canvas>
+        <h4 class="turno-jugador" id="nombre-jugador"></h4>
+        <span class="turno-jugador" id="nombre-jugador"></span>
+        <!--<div class="juego">
             <button class="jugar">
                 <img src="image/4-en-uno/play-button.png" alt="btn-jugar">
             </button>
-        </div>
+        </div>-->
 
         <div class="descripcion">
             <h2>Historia</h2>
@@ -334,6 +338,18 @@
         </div>
     </footer>
 
+    <script src="js/4enlinea/configurations/config.js"></script>
+    <script src="js/4enlinea/helpers/Helper.js"></script>
+
+    <script src="js/4enlinea/figure/Figure.js"></script>
+    <script src="js/4enlinea/figure/Rect.js"></script>
+    <script src="js/4enlinea/figure/Circle.js"></script>
+    <script src="js/4enlinea/game/Ficha.js"></script>
+    <script src="js/4enlinea/game/Drop.js"></script>
+    <script src="js/4enlinea/game/Casillero.js" ></script>
+    <script src="js/4enlinea/game/Tablero.js"></script>
+    <script src="js/4enlinea/game/Juego.js"></script>
+    <script src="js/4enlinea/ControladorJuego.js" ></script>
     <script src="js/script.js"></script>
 </body>
 
