@@ -93,6 +93,19 @@ class Helper {
             }
         });
     }
+
+    static fillText(font, fillStyle, strokeStyle, text, posX, posY) {
+        // Configuración del texto
+        context.font = font;
+        context.fillStyle = fillStyle;
+        context.textAlign = 'center';
+        context.textBaseline = 'middle';
+        context.strokeStyle = strokeStyle; // Color del borde
+        context.lineWidth = 3; // Grosor del borde
+        // Escribir texto en el canvas
+        context.fillText(text, posX, posY);
+        context.strokeText(text, posX, posY);
+    }
 }
 
 

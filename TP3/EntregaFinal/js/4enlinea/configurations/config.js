@@ -21,7 +21,11 @@ configurationsData = {
 }
 
 images =  {
-    fondoCanvas: 'js/4enlinea/image/Designer4.jpeg'
+    fondoCanvas: 'js/4enlinea/image/Designer4.jpeg',
+    imagenFichaFuego: 'js/4enlinea/image/fire.png',
+    imagenFichaAgua: 'js/4enlinea/image/water.png',
+    imagenFichaTierra: 'js/4enlinea/image/earth.png',
+    imagenFichaAire: 'js/4enlinea/image/wind.png'
 }
 
 colors = {

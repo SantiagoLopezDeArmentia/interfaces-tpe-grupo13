@@ -118,9 +118,82 @@
         </div>
     </div>
     <div class="container">
-        <canvas class="canvas"></canvas>
-        <h4 class="turno-jugador" id="nombre-jugador"></h4>
-        <span class="turno-jugador" id="nombre-jugador"></span>
+        <div class="juego-sel">
+            <div class="juego-menu">
+                <div class="juego-types">
+                    <div class="juego-option-panel" id="data-jugador1">
+                        <div>
+                            <h4>Jugador 1</h4>
+                        </div>
+                        
+                        <div>
+                            <label for="">Nombre</label>
+                            <input type="text">
+                            <label for="">Seleccion la ficha</label>
+                            <div class="radio-group">
+                                <div>
+                                    <input type="radio" id="opcion1" name="opciones" value="opcion1">
+                                    <!--<label for="opcion1" class="radio-label">Opción 1</label>-->
+                                    <img src='js/4enlinea/image/fire.png' alt="" class="radio-img" >
+                                </div>
+                                
+                                <div>
+                                    <input type="radio" id="opcion2" name="opciones" value="opcion2">
+                                    <img src='js/4enlinea/image/water.png' alt="" class="radio-img" >
+                                </div>
+                                
+                                <div>
+                                    <input type="radio" id="opcion3" name="opciones" value="opcion3">
+                                    <img src='js/4enlinea/image/wind.png' alt="" class="radio-img" >
+                                </div>
+                                
+                                <div>
+                                    <input type="radio" id="opcion3" name="opciones" value="opcion3">
+                                    <img src='js/4enlinea/image/earth.png' alt="" class="radio-img" >
+                                </div>  
+                            </div>    
+                        </div>
+                    </div>
+                    <!--<div class="sep"></div>-->
+                    <div class="juego-option-panel" id="modo-juego"></div>
+                    <!--<div class="sep"></div>-->
+                    <div class="juego-option-panel" id="data-jugador2">
+                        <h4>Jugador 2</h4>
+                        <label for="">Nombre</label>
+                        <input type="text">
+                        <label for="">Seleccion la ficha</label>
+                        <div class="radio-group">
+                            <div>
+                                <input type="radio" id="opcion1" name="opciones" value="opcion1">
+                                <!--<label for="opcion1" class="radio-label">Opción 1</label>-->
+                                <img src='js/4enlinea/image/fire.png' alt="" class="radio-img" >
+                            </div>
+                            
+                            <div>
+                                <input type="radio" id="opcion2" name="opciones" value="opcion2">
+                                <img src='js/4enlinea/image/water.png' alt="" class="radio-img" >
+                            </div>
+                            
+                            <div>
+                                <input type="radio" id="opcion3" name="opciones" value="opcion3">
+                                <img src='js/4enlinea/image/wind.png' alt="" class="radio-img" >
+                            </div>
+                            
+                            <div>
+                                <input type="radio" id="opcion3" name="opciones" value="opcion3">
+                                <img src='js/4enlinea/image/earth.png' alt="" class="radio-img" >
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+                <button class="jugar-juego">Jugar</button>
+            </div>
+            
+        </div>
+        <canvas class="canvas hidden"></canvas>
+        
         <!--<div class="juego">
             <button class="jugar">
                 <img src="image/4-en-uno/play-button.png" alt="btn-jugar">

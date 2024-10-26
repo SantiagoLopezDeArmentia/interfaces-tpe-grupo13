@@ -91,7 +91,7 @@ class Juego {
     }
 
 
-    jugar() {
+    cambiarTurnoJugador() {
 
         switch(this.turno) {
             case "Jugador 1":

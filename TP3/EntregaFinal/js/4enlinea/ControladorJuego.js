@@ -1,13 +1,4 @@
 
-let spanNombreJugador = document.querySelector("#nombre-jugador");
-
-
-
-
-
-
-
-
 /* ELEMENTOS DEL JUEGO */
 
 let canvas = document.querySelector(".canvas");
@@ -51,52 +42,20 @@ function dibujarCanvas() {
     const imagenFondo = new Image();
     imagenFondo.src = images.fondoCanvas;
     imagenFondo.onload = function() {
-        // Dibujar la imagen en el canvas
-        //spanNombreJugador.innerHTML = "Turno " + juego.getTurno();
         
         context.drawImage(imagenFondo, 0, 0, canvas.width, canvas.height);
         juego.drawGame()
-        fillText('48px Arial', '#FF8C33', '#23034D', "Turno " + juego.getTurno(), 500, 100);
-        fillText('48px Arial', '#FF8C33', '#23034D', arr1.length, 65, 300);
-        fillText('48px Arial', '#FF8C33', '#23034D', arr2.length, 875, 300);
+        Helper.fillText('48px Arial', '#FF8C33', '#23034D', "Turno " + juego.getTurno(), 500, 100);
+        Helper.fillText('48px Arial', '#FF8C33', '#23034D', arr1.length, 65, 300);
+        Helper.fillText('48px Arial', '#FF8C33', '#23034D', arr2.length, 875, 300);
     };
 }
 
-function fillText(font, fillStyle, strokeStyle, text, posX, posY) {
-    // Configuración del texto
-    context.font = font;
-    context.fillStyle = fillStyle;
-    context.textAlign = 'center';
-    context.textBaseline = 'middle';
-    context.strokeStyle = strokeStyle; // Color del borde
-    context.lineWidth = 3; // Grosor del borde
-    // Escribir texto en el canvas
-    context.fillText(text, posX, posY);
-    context.strokeText(text, posX, posY);
-}
-
-/*function fillText() {
-    // Configuración del texto
-    context.font = '48px Arial';
-    context.fillStyle = '#FF8C33';
-    context.textAlign = 'center';
-    context.textBaseline = 'middle';
-    context.strokeStyle = '#23034D'; // Color del borde
-    context.lineWidth = 3; // Grosor del borde
-    const text = "Turno " + juego.getTurno();
-    // Escribir texto en el canvas
-    context.fillText(text, 500, 100);
-    context.strokeText(text, 500, 100);
-}*/
 
 function onMouseDown(e) {
-    console.log("entre")
     isMouseDown = true;
     lastFichaSelected = null;
-    //let clickFig = Helper.findClickedFigure(e.layerX, e.layerY);
     let clickFig = Helper.findClickedFigure(e.offsetX, e.offsetY);
-    //let clickFig = Helper.findClickedFigure(e.clientX, e.clientY);
-    //let clickFig = Helper.findClickedFigure(e.pageX, e.pageY);
     if(clickFig != null && lastFichaSelected.getJugador() == juego.getTurno()) {
         lastClickedFigure = clickFig;
         lastPositionFigureX = lastClickedFigure.getPosX();
@@ -112,7 +71,6 @@ async function onMouseUp(e) {
     let drawedFigure = false;
     let clickZoneDrop = null;
     
-    //clickZoneDrop = Helper.checkDropZone(e.layerX, e.layerY);
     clickZoneDrop = Helper.checkDropZone(e.offsetX, e.offsetY);
 
     if(clickZoneDrop != null && lastClickedFigure != null) {
@@ -141,7 +99,7 @@ async function onMouseUp(e) {
                 tableroT.buscarDiagonalIzquierda(i, j, lastFichaSelected);
             }, 1000)
 
-            juego.jugar();
+            juego.cambiarTurnoJugador();
         }
 
     }
@@ -164,7 +122,6 @@ async function onMouseUp(e) {
 
 function onMouseMove(e) {
     if (isMouseDown && lastClickedFigure != null) {
-        //lastClickedFigure.setPosition(e.layerX, e.layerY);
         lastClickedFigure.setPosition(e.offsetX, e.offsetY);
         dibujarCanvas();
     }
