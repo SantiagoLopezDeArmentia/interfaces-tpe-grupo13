@@ -128,6 +128,56 @@ function onMouseMove(e) {
 }
 
 
+/** */
+
+document.querySelectorAll('input[name="opciones1"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        const selectedValue = this.value;
+        document.querySelectorAll('input[name="opciones2"]').forEach(radio2 => {
+            if (radio2.value === selectedValue) {
+                radio2.disabled = true;
+            } else {
+                radio2.disabled = false;
+            }
+        });
+    });
+});
+
+
+/**  */
+
+function getSelectedImageSrc(player) {
+    const selectedRadio = document.querySelector(`input[name="opciones${player}"]:checked`);
+    console.log(selectedRadio)
+    if (selectedRadio) {
+        const selectedImage = selectedRadio.nextElementSibling.querySelector('img');
+        return selectedImage ? selectedImage.src : null;
+    }
+    return null;
+}
+
+document.querySelector('.jugar-juego').addEventListener('click', function() {
+    const player1ImageSrc = getSelectedImageSrc(1);
+    const player2ImageSrc = getSelectedImageSrc(2);
+
+    if (player1ImageSrc) {
+        console.log('Jugador 1 seleccionó:', player1ImageSrc);
+    } else {
+        console.log('Jugador 1 no ha seleccionado ninguna imagen.');
+    }
+
+    if (player2ImageSrc) {
+        console.log('Jugador 2 seleccionó:', player2ImageSrc);
+    } else {
+        console.log('Jugador 2 no ha seleccionado ninguna imagen.');
+    }
+});
+
+/** */
+
+
+
+
 
 
 
