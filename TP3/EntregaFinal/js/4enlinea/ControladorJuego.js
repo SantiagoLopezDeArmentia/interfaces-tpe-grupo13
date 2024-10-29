@@ -1,41 +1,46 @@
 
-/* ELEMENTOS DEL JUEGO */
+/* Variables */
+let lastPositionFigureX;
+let lastPositionFigureY;
+let lastFichaSelected;
+let lastClickedFigure = null;
+let isMouseDown = false;
+let velocidad = 0; 
+const gravedad = 2; 
+let player1ImageSrc;
+let player2ImageSrc;
+let nombreJugador1;
+let nombreJugador2;
+let gameOption;
+let gameOptionTime;
+let jugar = false;
+let juegoTerminado = false;
+let tiempoRestante = 10;
 
+/* Obtener elementos html */
+let juegoSel = document.querySelector('.juego-sel');
 let canvas = document.querySelector(".canvas");
 let context = canvas.getContext("2d");
+let btnJugar = document.querySelector('.jugar-juego');
+
 
 canvas.width = configurationsData.canvasWidth;
 canvas.height = configurationsData.canvasHeight;
 canvas.style.border = "1px solid #000";
 
-
-juego = new Juego(context, 4, "Jugador 1", "Jugador 2", 'js/4enlinea/image/fire.png', 'js/4enlinea/image/water.png');
-
-tableroT = juego.getTablero();
-tablero = tableroT.getMatriz();
-zoneDrop = tableroT.getZonaDropeable();
-
-filas = tableroT.getFilas();
-columnas = tableroT.getColumnas();
-
-arr1 = juego.getFichasJug1();
-arr2 = juego.getFichasJug2();
-
-let lastPositionFigureX;
-let lastPositionFigureY;
-let lastFichaSelected;
-
-let lastClickedFigure = null;
-let isMouseDown = false;
-
-let velocidad = 0; // Velocidad vertical
-const gravedad = 2; // Aceleración debida a la gravedad
-
+/* Asignar eventos al canvas */
 canvas.addEventListener('mousedown', onMouseDown, false);
 canvas.addEventListener('mouseup', onMouseUp, false);
 canvas.addEventListener('mousemove', onMouseMove, false);
 
-dibujarCanvas();
+btnJugar.addEventListener('click', eventJugar);
+
+async function eventJugar() {
+    await eventoJugar();
+    juego = new Juego(context, gameOption, nombreJugador1, nombreJugador2, player1ImageSrc, player2ImageSrc);
+    ejecutarJuego(juego);
+    iniciarTemporizador();
+}
 
 /* Dibuja el canvas con la imagen de fondo y luego posiciona el juego por encima */
 function dibujarCanvas() {
@@ -45,14 +50,16 @@ function dibujarCanvas() {
         
         context.drawImage(imagenFondo, 0, 0, canvas.width, canvas.height);
         juego.drawGame()
-        Helper.fillText('48px Arial', '#FF8C33', '#23034D', "Turno " + juego.getTurno(), 500, 100);
-        Helper.fillText('48px Arial', '#FF8C33', '#23034D', arr1.length, 65, 300);
-        Helper.fillText('48px Arial', '#FF8C33', '#23034D', arr2.length, 875, 300);
+        Helper.fillText('58px Arial', '#FF8C33', '#171412', mensajes.msgTurno + juego.getTurno(), configurationsData.turnoPosicionX, configurationsData.turnoPosicionY);
+        Helper.fillText('48px Arial', '#FF8C33', '#23034D', arr1.length, configurationsData.fichaJug1ContadorPosX, configurationsData.fichaJug1ContadorPosY);
+        Helper.fillText('48px Arial', '#FF8C33', '#23034D', arr2.length, configurationsData.fichaJug2ContadorPosX, configurationsData.fichaJug2ContadorPosY);
+        Helper.dibujarTemporizador(tiempoRestante);
     };
 }
 
-
 function onMouseDown(e) {
+    if(juegoTerminado) return;
+
     isMouseDown = true;
     lastFichaSelected = null;
     let clickFig = Helper.findClickedFigure(e.offsetX, e.offsetY);
@@ -67,6 +74,8 @@ function onMouseDown(e) {
 }
 
 async function onMouseUp(e) {
+    if(juegoTerminado) return;
+
     isMouseDown = false;
     let drawedFigure = false;
     let clickZoneDrop = null;
@@ -81,22 +90,22 @@ async function onMouseUp(e) {
         if(i != -1) {
 
             await  Helper.simularGravedad(i,j, lastClickedFigure,0)
+            
             switch(juego.getTurno()) {
-                case "Jugador 1":
+                case nombreJugador1:
                     Helper.asignarFichaTablero(i, j, arr1);
                     break;
-                case "Jugador 2":
+                case nombreJugador2:
                     Helper.asignarFichaTablero(i, j, arr2);
                     break;
             }
-            
-            
+
             drawedFigure = true;
             setTimeout(()=> {
-                tableroT.buscarHorizontal(i, j, lastFichaSelected);
-                tableroT.buscarVertical(i, j, lastFichaSelected);
-                tableroT.buscarDiagonalDerecha(i, j, lastFichaSelected);
-                tableroT.buscarDiagonalIzquierda(i, j, lastFichaSelected);
+                if (Helper.validarGanador(tableroT, i, j, lastFichaSelected)) {
+                    juegoTerminado = true;
+                    Helper.mostrarGanador(lastFichaSelected.getJugador(), mensajes.msgGanador);
+                }
             }, 1000)
 
             juego.cambiarTurnoJugador();
@@ -121,34 +130,31 @@ async function onMouseUp(e) {
 }
 
 function onMouseMove(e) {
+    if(juegoTerminado) return;
+
     if (isMouseDown && lastClickedFigure != null) {
         lastClickedFigure.setPosition(e.offsetX, e.offsetY);
         dibujarCanvas();
     }
 }
 
+function ejecutarJuego(juego) {
+    tableroT = juego.getTablero();
+    tablero = tableroT.getMatriz();
+    zoneDrop = tableroT.getZonaDropeable();
 
-/** */
+    filas = tableroT.getFilas();
+    columnas = tableroT.getColumnas();
 
-document.querySelectorAll('input[name="opciones1"]').forEach(radio => {
-    radio.addEventListener('change', function() {
-        const selectedValue = this.value;
-        document.querySelectorAll('input[name="opciones2"]').forEach(radio2 => {
-            if (radio2.value === selectedValue) {
-                radio2.disabled = true;
-            } else {
-                radio2.disabled = false;
-            }
-        });
-    });
-});
+    arr1 = juego.getFichasJug1();
+    arr2 = juego.getFichasJug2();
 
-
-/**  */
+    dibujarCanvas();
+    
+}
 
 function getSelectedImageSrc(player) {
     const selectedRadio = document.querySelector(`input[name="opciones${player}"]:checked`);
-    console.log(selectedRadio)
     if (selectedRadio) {
         const selectedImage = selectedRadio.nextElementSibling.querySelector('img');
         return selectedImage ? selectedImage.src : null;
@@ -156,24 +162,101 @@ function getSelectedImageSrc(player) {
     return null;
 }
 
-document.querySelector('.jugar-juego').addEventListener('click', function() {
-    const player1ImageSrc = getSelectedImageSrc(1);
-    const player2ImageSrc = getSelectedImageSrc(2);
+function eventoJugar() {
+    return new Promise((resolve) => {
+        player1ImageSrc = getSelectedImageSrc(1);
+        player2ImageSrc = getSelectedImageSrc(2);
 
-    if (player1ImageSrc) {
-        console.log('Jugador 1 seleccionó:', player1ImageSrc);
-    } else {
-        console.log('Jugador 1 no ha seleccionado ninguna imagen.');
-    }
+        if (player1ImageSrc) {
+            console.log('Jugador 1 seleccionó:', player1ImageSrc);
+        } else {
+            console.log('Jugador 1 no ha seleccionado ninguna imagen.');
+        }
 
-    if (player2ImageSrc) {
-        console.log('Jugador 2 seleccionó:', player2ImageSrc);
-    } else {
-        console.log('Jugador 2 no ha seleccionado ninguna imagen.');
-    }
-});
+        if (player2ImageSrc) {
+            console.log('Jugador 2 seleccionó:', player2ImageSrc);
+        } else {
+            console.log('Jugador 2 no ha seleccionado ninguna imagen.');
+        }
 
-/** */
+        nombreJugador1 = document.querySelector('#input-nombre-jugador-1').value;
+        nombreJugador2 = document.querySelector('#input-nombre-jugador-2').value;
+        console.log(nombreJugador1);
+        console.log(nombreJugador2)
+        jugar = true;
+
+        juegoSel.classList.toggle('hidden');
+        canvas.classList.toggle('hidden');  
+
+        // Resuelve la promesa después de realizar todas las acciones necesarias
+        resolve();
+    });
+}
+
+
+configurationsEvents()
+
+
+function configurationsEvents() {
+
+    document.querySelectorAll('input[name="opciones1"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            const selectedValue = this.value;
+            document.querySelectorAll('input[name="opciones2"]').forEach(radio2 => {
+                if (radio2.value === selectedValue) {
+                    radio2.disabled = true;
+                } else {
+                    radio2.disabled = false;
+                }
+            });
+        });
+    });
+    
+
+    document.querySelectorAll('input[name="game-options"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            gameOption = this.value;
+            console.log('Modo de juego seleccionado:', gameOption);
+        });
+    });
+
+    document.querySelectorAll('input[name="game-options-time"]').forEach(radio => {
+        radio.addEventListener('change', function() {
+            gameOptionTime = this.value;
+            console.log('Tiempo de juego seleccionado:', gameOptionTime);
+        });
+    });
+}
+
+
+function iniciarTemporizador() {
+    const intervalo = setInterval(() => {
+        if (juegoTerminado) {
+            clearInterval(intervalo);
+            return;
+        }
+
+        tiempoRestante--;
+        dibujarCanvas();
+
+        if (tiempoRestante <= 0) {
+            clearInterval(intervalo);
+            juegoTerminado = true;
+            Helper.mostrarGanador(null, mensajes.msgSinGanadores);
+        }
+    }, 1000);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

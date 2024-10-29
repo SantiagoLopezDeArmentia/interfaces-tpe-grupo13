@@ -100,11 +100,61 @@ class Helper {
         context.fillStyle = fillStyle;
         context.textAlign = 'center';
         context.textBaseline = 'middle';
-        context.strokeStyle = strokeStyle; // Color del borde
-        context.lineWidth = 3; // Grosor del borde
-        // Escribir texto en el canvas
+        context.strokeStyle = strokeStyle; 
+        context.lineWidth = 3; 
         context.fillText(text, posX, posY);
         context.strokeText(text, posX, posY);
+    }
+
+    static validarGanador(tableroT, i, j, lastFichaSelected) {
+
+        if (tableroT.buscarHorizontal(i, j, lastFichaSelected)) {
+            return true;
+        }
+
+        if (tableroT.buscarVertical(i, j, lastFichaSelected)) {
+            return true;
+        }
+
+        if (tableroT.buscarDiagonalDerecha(i, j, lastFichaSelected)) {
+            return true;
+        }
+
+        if (tableroT.buscarDiagonalIzquierda(i, j, lastFichaSelected)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    static mostrarGanador(ganador, msg) {
+
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        
+        if (ganador) {
+            msg = msg.replace('dato', ganador);
+        }
+
+
+        const imagenFondo = new Image();
+        imagenFondo.src = images.fondoCanvas;
+        imagenFondo.onload = function() {
+            
+            context.drawImage(imagenFondo, 0, 0, canvas.width, canvas.height); //`¡${ganador} ha ganado!`
+            juego.drawGame()
+            Helper.fillText('70px Roboto', '#FF8C33', '#23034D', msg, 500, 100);
+        };
+    }
+
+
+    static dibujarTemporizador(tiempoRestante) {
+        
+        const msg = `Tiempo restante: ${tiempoRestante}s`;
+        const textWidth = context.measureText(msg).width;
+        const x = (canvas.width - textWidth) / 2;
+        const y = 50;
+
+        Helper.fillText('36px Roboto', '#171412', '#171412', msg, 200, y);
     }
 }
 

@@ -17,7 +17,15 @@ configurationsData = {
     jugador2PosicionX: 875,
     jugador2PosicionY: 650,
 
-    fichasDistanciaPosicionY: 15
+    fichasDistanciaPosicionY: 15,
+
+    turnoPosicionX: 475,
+    turnoPosicionY: 150,
+
+    fichaJug1ContadorPosX: 65,
+    fichaJug1ContadorPosY: 300,
+    fichaJug2ContadorPosX: 875,
+    fichaJug2ContadorPosY: 300
 }
 
 images =  {
@@ -35,4 +43,11 @@ colors = {
     colorCircCasillero: 'rgba(255, 255, 120, 0.6)'
 }
 
+
+mensajes = {
+    msgTurno: "Turno ",
+    msgGanador: '¡dato ha ganado!',
+    msgSinGanadores: "Sin ganadores!"
+
+}
 //'rgba(162, 120, 218, 0.8)'

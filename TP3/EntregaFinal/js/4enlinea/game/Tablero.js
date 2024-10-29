@@ -141,13 +141,15 @@ class Tablero {
         
         if (this.buscar(x, y, pieza, 0, 1, contador)) {
             console.log(`${pieza.getJugador()} gano el juego`);
-            return;
+            return true;
         }
 
         if (this.buscar(x, y, pieza, 0, -1, contador)) {
             console.log(`${pieza.getJugador()} gano el juego`);
-            return;
+            return true;
         }
+
+        return false;
     }
 
     /* Verifica si la linea vertical forma al ganador */
@@ -156,9 +158,10 @@ class Tablero {
         
         if(this.buscar(x, y, pieza, 1, 0, data)) {
             console.log(`${pieza.getJugador()} gano el juego`);
-            return;
+            return true;
         }
 
+        return false;
     }
 
     /* Verifica si la linea diagonal derecha superior/izquierda inferior a la pieza forma al ganador */
@@ -167,13 +170,15 @@ class Tablero {
 
         if(this.buscar(x, y, pieza, -1, 1, data)) {
             console.log(`${pieza.getJugador()} gano el juego`);
-            return;
+            return true;
         }
 
         if(this.buscar(x, y, pieza, 1, -1, data)) {
             console.log(`${pieza.getJugador()} gano el juego`);
-            return;
+            return true;
         }
+
+        return false;
     }
 
     /* Verifica si la linea diagonal izquierda superior/derecha inferior a la pieza forma al ganador */
@@ -182,13 +187,15 @@ class Tablero {
 
         if(this.buscar(x, y, pieza, -1, -1, data)) {
             console.log(`${pieza.getJugador()} gano el juego`);
-            return;
+            return true;
         }
 
         if(this.buscar(x, y, pieza, 1, 1, data)) {
             console.log(`${pieza.getJugador()} gano el juego`);
-            return;
+            return true;
         }
+
+        return false;
     }
 
     /* Buscar la posicion para colocar una nueva pieza

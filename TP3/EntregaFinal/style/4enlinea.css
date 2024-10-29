@@ -140,7 +140,7 @@ canvas {
     padding: 10px;
     border: 2px solid var(--primary-color-dark-2);
 }
-#input-nombre-jugador {
+.input-nombre-jugador {
     border-radius: 0;
     max-width: max-content;
     background: none;
@@ -163,11 +163,18 @@ canvas {
 .jugar-juego {
     max-width: 25%;
     width: 920px;
-    height: 75px;
+    height: 60px;
     background-color: var(--third-color-dark-1);
     border-radius: 50px;
     font-size: 24px;
     border: 2px solid var(--primary-color-dark-2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.jugar-juego:active {
+    transform: scale(0.95); /* Efecto de presionar el botón */
+    background-color: var(--third-color-dark-3); /* Cambia el color al presionar */
 }
 
 .juego-menu {

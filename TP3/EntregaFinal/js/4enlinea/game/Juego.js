@@ -93,13 +93,15 @@ class Juego {
 
     cambiarTurnoJugador() {
 
-        switch(this.turno) {
-            case "Jugador 1":
+        
+        switch(String(this.turno)) {
+            case String(this.jugador1):
                 this.turno = this.jugador2;
                 break;
-            case "Jugador 2":
+            case String(this.jugador2):
                 this.turno = this.jugador1;
                 break;
         }
+
     }
 }
