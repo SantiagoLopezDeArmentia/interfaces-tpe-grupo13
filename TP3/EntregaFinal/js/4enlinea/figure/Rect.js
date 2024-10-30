@@ -26,7 +26,7 @@ class Rect extends Figure {
         console.log(this.imageLoaded)
         if (this.imageLoaded) {
             this.context.save();
-            this.context.globalAlpha = 0.5;
+            this.context.globalAlpha = 0.3;
             this.context.drawImage(this.img, this.posX, this.posY, this.width, this.height);
             this.context.restore(); 
         }
@@ -41,7 +41,7 @@ class Rect extends Figure {
         // Si la imagen fue cargada correctamente, dibujarla
         if (this.imageLoaded) {
             this.context.save();
-            this.context.globalAlpha = 0.5;
+            this.context.globalAlpha = 0.3;
             this.context.clip();
             this.context.drawImage(this.img, this.posX, this.posY, this.width, this.height);
             this.context.restore(); 

@@ -40,7 +40,7 @@ images =  {
 colors = {
     zonaDropeableColor: 'rgba(162, 120, 218, 0)',
     colorZonaFichas: 'rgba(255, 255, 240, 0.8)',
-    colorTablero:'rgba(162, 120, 218, 0.8)',
+    colorTablero:'rgba(0, 0, 0, 0.5)',
     colorCircCasillero: 'rgba(255, 255, 120, 0.6)'
 }
 
