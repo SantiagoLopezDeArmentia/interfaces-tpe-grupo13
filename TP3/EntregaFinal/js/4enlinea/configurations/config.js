@@ -20,12 +20,16 @@ configurationsData = {
     fichasDistanciaPosicionY: 15,
 
     turnoPosicionX: 475,
-    turnoPosicionY: 150,
+    turnoPosicionY: 50,
+
+    /*
+    turnoPosicionX: 475,
+    turnoPosicionY: 150,*/
 
     fichaJug1ContadorPosX: 65,
-    fichaJug1ContadorPosY: 300,
+    fichaJug1ContadorPosY: 275,
     fichaJug2ContadorPosX: 875,
-    fichaJug2ContadorPosY: 300
+    fichaJug2ContadorPosY: 275
 }
 
 images =  {
@@ -33,7 +37,8 @@ images =  {
     imagenFichaFuego: 'js/4enlinea/image/fire.png',
     imagenFichaAgua: 'js/4enlinea/image/water.png',
     imagenFichaTierra: 'js/4enlinea/image/earth.png',
-    imagenFichaAire: 'js/4enlinea/image/wind.png'
+    imagenFichaAire: 'js/4enlinea/image/wind.png',
+    imagenFondoTablero: 'js/4enlinea/image/image.png'
 }
 
 colors = {
@@ -49,5 +54,10 @@ mensajes = {
     msgGanador: '¡dato ha ganado!',
     msgSinGanadores: "Sin ganadores!"
 
+}
+
+cantidades = {
+    maxFichasMostrar: 20,
+    timer: 360
 }
 //'rgba(162, 120, 218, 0.8)'

@@ -94,11 +94,24 @@ class Tablero {
 
     /* Dibuja el tablero en la pantalla */
     dibujarTablero() {
+        
         for(let i = 0; i < this.filas; i++) {
             for (let j = 0; j < this.columnas; j++) {
                 this.tablero[i][j].drawCasillero(i, j, this.filas, this.columnas);
             }
         }
+       /*
+       const imageTablero = new Image();
+        imageTablero.src = images.imagenFondoTablero;
+        imageTablero.width = '500px';
+        imageTablero.height = '500px';
+       imageTablero.onload = function () {
+            for(let i = 0; i < this.filas; i++) {
+                for (let j = 0; j < this.columnas; j++) {
+                    this.tablero[i][j].drawCasillero(i, j, this.filas, this.columnas);
+                }
+            }
+       }*/
     }
 
     dibujarZonaDropeable() {
@@ -120,8 +133,7 @@ class Tablero {
 
         x+=x_sum;
         y+=y_sum;
-
-        //console.log(pieza.getJugador())
+        
         if (x < 0 || y < 0 || x == this.filas || y == this.columnas || this.tablero[x][y].getFicha() == null || !(String(this.tablero[x][y].getFicha().getJugador()) == String(pieza.getJugador()))) {
             return false;
         } else {

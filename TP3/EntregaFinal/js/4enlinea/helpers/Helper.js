@@ -1,5 +1,6 @@
 class Helper {
 
+
     /* Determina el tamanio que tendra el circulo */
     static calcularCirculo(posX, posY, width, height) {
         const circ_posX = width/2 + posX;
@@ -101,26 +102,34 @@ class Helper {
         context.textAlign = 'center';
         context.textBaseline = 'middle';
         context.strokeStyle = strokeStyle; 
-        context.lineWidth = 3; 
+        context.lineWidth = 2; 
         context.fillText(text, posX, posY);
         context.strokeText(text, posX, posY);
     }
 
-    static validarGanador(tableroT, i, j, lastFichaSelected) {
+    static validarGanador(tableroT, i, j, lastFichaSelected, arr1, arr2) {
 
+        if (arr1.lenght == 0 && arr2.lenght == 0) {
+            console.log("Se acabaron todas las fichas")
+            return false;
+        }
         if (tableroT.buscarHorizontal(i, j, lastFichaSelected)) {
+            console.log("Gano linea horizontal");
             return true;
         }
 
         if (tableroT.buscarVertical(i, j, lastFichaSelected)) {
+            console.log("Gano linea vertical");
             return true;
         }
 
         if (tableroT.buscarDiagonalDerecha(i, j, lastFichaSelected)) {
+            console.log("Gano linea diagnoal derecha");
             return true;
         }
 
         if (tableroT.buscarDiagonalIzquierda(i, j, lastFichaSelected)) {
+            console.log("Gano linea diagonal inzquierda");
             return true;
         }
 
@@ -140,7 +149,7 @@ class Helper {
         imagenFondo.src = images.fondoCanvas;
         imagenFondo.onload = function() {
             
-            context.drawImage(imagenFondo, 0, 0, canvas.width, canvas.height); //`¡${ganador} ha ganado!`
+            context.drawImage(imagenFondo, 0, 0, canvas.width, canvas.height);
             juego.drawGame()
             Helper.fillText('70px Roboto', '#FF8C33', '#23034D', msg, 500, 100);
         };
@@ -149,219 +158,13 @@ class Helper {
 
     static dibujarTemporizador(tiempoRestante) {
         
-        const msg = `Tiempo restante: ${tiempoRestante}s`;
+        //const msg = `Tiempo restante: ${tiempoRestante}s`;
+        const msg = `${tiempoRestante}s`;
         const textWidth = context.measureText(msg).width;
         const x = (canvas.width - textWidth) / 2;
         const y = 50;
 
-        Helper.fillText('36px Roboto', '#171412', '#171412', msg, 200, y);
+        Helper.fillText('50px Roboto', '#E5D5FA', '#23034D', msg, 75, y);
+        //Helper.fillText('42px Roboto', '#9BF00B', '#23034D', msg, 75, y);
     }
 }
-
-
-
-
-/*
-function simularGravedad(i, j, lastClickedFigure, contador) {
-    console.log("simular gravedad");
-    const posX = tablero[i][j].getCircle().getPosX();
-    const posY = tablero[i][j].getCircle().getPosY();
-
-    let cont = contador;
-    
-    
-    
-    let posYc = lastClickedFigure.getPosY();
-    velocidad += gravedad;
-    posYc += velocidad;
-
-    lastClickedFigure.setPosition(posX, posYc)
-    
-    if ((lastClickedFigure.getPosY() + lastClickedFigure.getRadius()) >= posY) {
-        lastClickedFigure.setPosition(posX, posY);
-        dibujarCanvas();
-        return;
-        /*if(cont==6) {
-            lastClickedFigure.setPosition(posX, posY);
-            dibujarCanvas();
-            return;
-        } else {
-            velocidad *= -0.5
-            cont++;
-        }
-    }
-    
-    dibujarCanvas();
-    setTimeout(()=> {simularGravedad(i,j, lastClickedFigure, cont)},  1);
-}
-/*
-function detenerAnimacion() {
-    cancelAnimationFrame(animationId)
-}*/
-
-/*
-let animationId;
-let velocidad = 0;
-const gravedad = 0.98; 
-
-function simularGravedad(i, j, lastClickedFigure, contador) {
-    console.log("simular gravedad");
-    const posX = tablero[i][j].getCircle().getPosX();
-    const posY = tablero[i][j].getCircle().getPosY();
-
-    let cont = contador;
-    let posYc = lastClickedFigure.getPosY();
-    velocidad += gravedad;
-    posYc += velocidad;
-
-    lastClickedFigure.setPosition(posX, posYc);
-    console.log("contador: " + cont);
-
-    if ((lastClickedFigure.getPosY() + lastClickedFigure.getRadius()) >= posY) {
-        console.log("entre if");
-        if (cont == 6) {
-            lastClickedFigure.setPosition(posX, posY);
-            dibujarCanvas();
-            cancelAnimationFrame(animationId);
-            return;
-        } else {
-            velocidad *= -0.5;
-            cont++;
-        }
-    }
-
-    lastClickedFigure.draw();
-    dibujarCanvas();
-    animationId = requestAnimationFrame(() => simularGravedad(i, j, lastClickedFigure, cont));
-}
-
-function cancelarAnimacion() {
-    cancelAnimationFrame(animationId);
-}*/
-
-/*
-let animationId;
-let velocidad = 0;
-const gravedad = 0.6; // Ajusta según sea necesario
-const amortiguacion = 0.7; // Factor de amortiguación para el rebote
-
-function simularGravedad(i, j, lastClickedFigure, contador) {
-    console.log("simular gravedad");
-    const posX = tablero[i][j].getCircle().getPosX();
-    const posY = tablero[i][j].getCircle().getPosY();
-
-    let cont = contador;
-    let posYc = lastClickedFigure.getPosY();
-    velocidad += gravedad;
-    posYc += velocidad;
-
-    lastClickedFigure.setPosition(posX, posYc);
-    console.log("contador: " + cont);
-
-    if ((lastClickedFigure.getPosY() + lastClickedFigure.getRadius()) >= posY) {
-        console.log("entre if: " + Math.abs(velocidad));
-        if (Math.abs(velocidad) < 0.4) { // Si la velocidad es muy baja, detener la animación
-            lastClickedFigure.setPosition(posX, posY);
-            dibujarCanvas();
-            cancelAnimationFrame(animationId);
-            return;
-        } else {
-            velocidad *= -amortiguacion; // Aplicar amortiguación al rebote
-            cont++;
-        }
-    }
-
-    lastClickedFigure.draw();
-    dibujarCanvas();
-    animationId = requestAnimationFrame(() => simularGravedad(i, j, lastClickedFigure, cont));
-}
-
-function cancelarAnimacion() {
-    cancelAnimationFrame(animationId);
-}*/
-/*
-let animationId;
-let velocidad = 0;
-const gravedad = 0.98; // Ajusta según sea necesario
-const amortiguacion = 0.4; // Factor de amortiguación para el rebote
-const umbralVelocidad = 0.2; // Umbral para considerar la velocidad como baja
-
-function simularGravedad(i, j, lastClickedFigure, contador) {
-    console.log("simular gravedad");
-    const posX = tablero[i][j].getCircle().getPosX();
-    const posY = tablero[i][j].getCircle().getPosY();
-
-    let cont = contador;
-    let posYc = lastClickedFigure.getPosY();
-    velocidad += gravedad;
-    posYc += velocidad;
-
-    lastClickedFigure.setPosition(posX, posYc);
-    console.log("contador: " + cont);
-
-    if ((lastClickedFigure.getPosY() + lastClickedFigure.getRadius()) >= posY) {
-        console.log("entre if");
-        if (Math.abs(velocidad) < umbralVelocidad) { // Si la velocidad es muy baja, detener la animación
-            lastClickedFigure.setPosition(posX, posY);
-            dibujarCanvas();
-            cancelAnimationFrame(animationId);
-            return;
-        } else {
-            lastClickedFigure.setPosition(posX, posY - lastClickedFigure.getRadius());
-            velocidad *= -amortiguacion; // Aplicar amortiguación al rebote
-            cont++;
-        }
-    }
-
-    lastClickedFigure.draw();
-    dibujarCanvas();
-    animationId = requestAnimationFrame(() => simularGravedad(i, j, lastClickedFigure, cont));
-}
-
-function cancelarAnimacion() {
-    cancelAnimationFrame(animationId);
-}
-*/
-
-/*
-let animationId;
-let velocidad = 0;
-const gravedad = 0.98; // Ajusta según sea necesario
-const amortiguacion = 0.7; // Factor de amortiguación para el rebote
-const umbralVelocidad = 0.5; // Umbral para considerar la velocidad como baja
-
-function simularGravedad(i, j, lastClickedFigure, contador) {
-    console.log("simular gravedad");
-    const posX = tablero[i][j].getCircle().getPosX();
-    const posY = tablero[i][j].getCircle().getPosY();
-
-    let cont = contador;
-    let posYc = lastClickedFigure.getPosY();
-    velocidad += gravedad;
-    posYc += velocidad;
-
-    lastClickedFigure.setPosition(posX, posYc);
-    console.log("contador: " + cont);
-
-    if ((lastClickedFigure.getPosY() + lastClickedFigure.getRadius()) >= posY) {
-        console.log("entre if");
-        if (Math.abs(velocidad) < umbralVelocidad) { // Si la velocidad es muy baja, detener la animación
-            lastClickedFigure.setPosition(posX, posY);
-            dibujarCanvas();
-            cancelAnimationFrame(animationId);
-            return;
-        } else {
-            lastClickedFigure.setPosition(posX, posY - lastClickedFigure.getRadius());
-            velocidad *= -amortiguacion; // Aplicar amortiguación al rebote
-            cont++;
-        }
-    }
-
-    //lastClickedFigure.draw();
-    dibujarCanvas();
-    animationId = requestAnimationFrame(() => simularGravedad(i, j, lastClickedFigure, cont));
-}
-
-function cancelarAnimacion() {
-    cancelAnimationFrame(animationId);
-}*/

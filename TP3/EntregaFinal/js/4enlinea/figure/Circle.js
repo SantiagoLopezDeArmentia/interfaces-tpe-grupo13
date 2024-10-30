@@ -49,10 +49,7 @@ class Circle extends Figure {
 
         // Si la imagen fue cargada correctamente, dibujarla
         if (this.imageLoaded) {
-            //this.context.save();
-            //this.context.clip();
             this.context.drawImage(this.img, this.posX-this.radius, this.posY-this.radius, this.radius * 2, this.radius * 2);
-            //this.context.restore();
         }
     }
 

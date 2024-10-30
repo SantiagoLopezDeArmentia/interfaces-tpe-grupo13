@@ -54,13 +54,12 @@ class Juego {
 
     /* Dibujar el juego */
     drawGame() {
-        
         this.tablero.dibujarZonaDropeable();
         this.tablero.dibujarTablero();
-        let rect = new Rect(15, 250, 100, 450, colors.colorZonaFichas, this.context);
+        let rect = new Rect(15, 225, 100, 500, colors.colorZonaFichas, this.context);
         rect.drawRoundRect([18, 18, 18, 18]);
         this.dibujarFichas(this.arrFichasJug1);
-        rect = new Rect(825, 250, 100, 450, colors.colorZonaFichas, this.context);
+        rect = new Rect(825, 225, 100, 500, colors.colorZonaFichas, this.context);
         rect.drawRoundRect([18, 18, 18, 18]);
         this.dibujarFichas(this.arrFichasJug2);
         
@@ -68,9 +67,10 @@ class Juego {
 
     /* Dibujar fichas */
     dibujarFichas(arr) {
+        
         arr.forEach(element => {
-            const circle = element.getCircle();
-            circle.draw();
+                const circle = element.getCircle();
+                circle.draw();
         });
     }
 
@@ -85,15 +85,15 @@ class Juego {
             const height = casilleroData.height;
             const radius = Helper.calcularCirculo(posX, pos_Y, width, height).radius;
             arr.push(new Ficha(jugador, posX, pos_Y, radius, fill, this.context, imagePath));
-            pos_Y = pos_Y - configurationsData.fichasDistanciaPosicionY;
+            //pos_Y = pos_Y - configurationsData.fichasDistanciaPosicionY;
+            if (i<=20) {
+                pos_Y = pos_Y - configurationsData.fichasDistanciaPosicionY;
+            }
         }
         return arr;
     }
 
-
     cambiarTurnoJugador() {
-
-        
         switch(String(this.turno)) {
             case String(this.jugador1):
                 this.turno = this.jugador2;

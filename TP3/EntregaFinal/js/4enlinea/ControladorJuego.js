@@ -15,13 +15,14 @@ let gameOption;
 let gameOptionTime;
 let jugar = false;
 let juegoTerminado = false;
-let tiempoRestante = 10;
+let tiempoRestante = cantidades.timer;
 
 /* Obtener elementos html */
 let juegoSel = document.querySelector('.juego-sel');
 let canvas = document.querySelector(".canvas");
 let context = canvas.getContext("2d");
 let btnJugar = document.querySelector('.jugar-juego');
+const bntReiniciar = document.querySelector(".reiniciar-boton");
 
 
 canvas.width = configurationsData.canvasWidth;
@@ -34,12 +35,15 @@ canvas.addEventListener('mouseup', onMouseUp, false);
 canvas.addEventListener('mousemove', onMouseMove, false);
 
 btnJugar.addEventListener('click', eventJugar);
+bntReiniciar.addEventListener('click', reiniciarJuego);
 
 async function eventJugar() {
     await eventoJugar();
     juego = new Juego(context, gameOption, nombreJugador1, nombreJugador2, player1ImageSrc, player2ImageSrc);
     ejecutarJuego(juego);
-    iniciarTemporizador();
+    if(gameOptionTime=="con-tiempo"){
+        iniciarTemporizador();
+    }
 }
 
 /* Dibuja el canvas con la imagen de fondo y luego posiciona el juego por encima */
@@ -49,11 +53,16 @@ function dibujarCanvas() {
     imagenFondo.onload = function() {
         
         context.drawImage(imagenFondo, 0, 0, canvas.width, canvas.height);
-        juego.drawGame()
-        Helper.fillText('58px Arial', '#FF8C33', '#171412', mensajes.msgTurno + juego.getTurno(), configurationsData.turnoPosicionX, configurationsData.turnoPosicionY);
-        Helper.fillText('48px Arial', '#FF8C33', '#23034D', arr1.length, configurationsData.fichaJug1ContadorPosX, configurationsData.fichaJug1ContadorPosY);
-        Helper.fillText('48px Arial', '#FF8C33', '#23034D', arr2.length, configurationsData.fichaJug2ContadorPosX, configurationsData.fichaJug2ContadorPosY);
-        Helper.dibujarTemporizador(tiempoRestante);
+        juego.drawGame();
+        Helper.fillText('58px Roboto', '#E5D5FA', '#171412', mensajes.msgTurno + juego.getTurno(), configurationsData.turnoPosicionX, configurationsData.turnoPosicionY);
+        //Helper.fillText('58px Roboto', '#FF8C33', '#171412', mensajes.msgTurno + juego.getTurno(), configurationsData.turnoPosicionX, configurationsData.turnoPosicionY);
+        
+        Helper.fillText('48px Roboto', '#FF8C33', '#23034D', arr1.length, configurationsData.fichaJug1ContadorPosX, configurationsData.fichaJug1ContadorPosY);
+        Helper.fillText('48px Roboto', '#FF8C33', '#23034D', arr2.length, configurationsData.fichaJug2ContadorPosX, configurationsData.fichaJug2ContadorPosY);
+        if(gameOptionTime=="con-tiempo") {
+            Helper.dibujarTemporizador(tiempoRestante);
+        }
+        
     };
 }
 
@@ -68,6 +77,7 @@ function onMouseDown(e) {
         lastPositionFigureX = lastClickedFigure.getPosX();
         lastPositionFigureY = lastClickedFigure.getPosY();
         lastClickedFigure.drawBorder();
+        
     }
 
     dibujarCanvas();
@@ -102,7 +112,7 @@ async function onMouseUp(e) {
 
             drawedFigure = true;
             setTimeout(()=> {
-                if (Helper.validarGanador(tableroT, i, j, lastFichaSelected)) {
+                if (Helper.validarGanador(tableroT, i, j, lastFichaSelected, arr1, arr2)) {
                     juegoTerminado = true;
                     Helper.mostrarGanador(lastFichaSelected.getJugador(), mensajes.msgGanador);
                 }
@@ -171,12 +181,14 @@ function eventoJugar() {
             console.log('Jugador 1 seleccionó:', player1ImageSrc);
         } else {
             console.log('Jugador 1 no ha seleccionado ninguna imagen.');
+            return;
         }
 
         if (player2ImageSrc) {
             console.log('Jugador 2 seleccionó:', player2ImageSrc);
         } else {
             console.log('Jugador 2 no ha seleccionado ninguna imagen.');
+            return;
         }
 
         nombreJugador1 = document.querySelector('#input-nombre-jugador-1').value;
@@ -186,7 +198,8 @@ function eventoJugar() {
         jugar = true;
 
         juegoSel.classList.toggle('hidden');
-        canvas.classList.toggle('hidden');  
+        canvas.classList.toggle('hidden');
+        bntReiniciar.classList.toggle('hidden');
 
         // Resuelve la promesa después de realizar todas las acciones necesarias
         resolve();
@@ -247,6 +260,16 @@ function iniciarTemporizador() {
     }, 1000);
 }
 
+
+function reiniciarJuego() {
+    juegoTerminado = false;
+    tiempoRestante = cantidades.timer; 
+    juego = new Juego(context, gameOption, nombreJugador1, nombreJugador2, player1ImageSrc, player2ImageSrc);
+    ejecutarJuego(juego);
+    if(gameOptionTime=="con-tiempo"){
+        iniciarTemporizador();
+    }
+}
 
 
 

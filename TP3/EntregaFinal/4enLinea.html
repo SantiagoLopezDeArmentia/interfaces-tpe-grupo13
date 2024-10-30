@@ -120,128 +120,6 @@
     <div class="container">
         <div class="juego-sel">
             <div class="juego-menu">
-                <!--<div class="juego-types">
-                    <div class="juego-option-panel" id="data-jugador1">
-                        <div class="jugador-div">
-                            <h4>Jugador 1</h4>
-                        </div>
-                        
-                        <div class="jugador-opciones">
-                            <label for="">Nombre</label>
-                            <input type="text" id="input-nombre-jugador">
-                            <label for="">Elige tu elemento</label>
-                            <div class="radio-group">
-                                <div>
-                                    <input type="radio" id="opcion1" name="opciones" value="opcion1">
-                                    <label for="opcion1" class="radio-label">
-                                        <img src='js/4enlinea/image/fire.png' alt="Opción 1" class="radio-img">
-                                    </label>
-                                </div>
-                                
-                                <div>
-                                    <input type="radio" id="opcion2" name="opciones" value="opcion2">
-                                    <label for="opcion2" class="radio-label">
-                                        <img src='js/4enlinea/image/water.png' alt="Opción 2" class="radio-img">
-                                    </label>
-                                </div>
-                                
-                                <div>
-                                    <input type="radio" id="opcion3" name="opciones" value="opcion3">
-                                    <label for="opcion3" class="radio-label">
-                                        <img src='js/4enlinea/image/wind.png' alt="Opción 3" class="radio-img">
-                                    </label>
-                                </div>
-                                
-                                <div>
-                                    <input type="radio" id="opcion4" name="opciones" value="opcion4">
-                                    <label for="opcion4" class="radio-label">
-                                        <img src='js/4enlinea/image/earth.png' alt="Opción 4" class="radio-img">
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="juego-option-panel" id="data-jugador1">
-                        <div class="jugador-div">
-                            <h4>Jugador 1</h4>
-                        </div>
-                        
-                        <div class="jugador-opciones">
-                            <label for="">Nombre</label>
-                            <input type="text">
-                            <label for="">Seleccion la ficha</label>
-                            <div class="radio-group">
-                                <div>
-                                    <input type="radio" id="opcion1" name="opciones" value="opcion1">
-                                    <label for="opcion1" class="radio-label">
-                                        <img src='js/4enlinea/image/fire.png' alt="Opción 1" class="radio-img">
-                                    </label>
-                                </div>
-                                
-                                <div>
-                                    <input type="radio" id="opcion2" name="opciones" value="opcion2">
-                                    <label for="opcion2" class="radio-label">
-                                        <img src='js/4enlinea/image/water.png' alt="Opción 2" class="radio-img">
-                                    </label>
-                                </div>
-                                
-                                <div>
-                                    <input type="radio" id="opcion3" name="opciones" value="opcion3">
-                                    <label for="opcion3" class="radio-label">
-                                        <img src='js/4enlinea/image/wind.png' alt="Opción 3" class="radio-img">
-                                    </label>
-                                </div>
-                                
-                                <div>
-                                    <input type="radio" id="opcion4" name="opciones" value="opcion4">
-                                    <label for="opcion4" class="radio-label">
-                                        <img src='js/4enlinea/image/earth.png' alt="Opción 4" class="radio-img">
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="juego-option-panel" id="data-jugador1">
-                        <div class="jugador-div">
-                            <h4>Jugador 2</h4>
-                        </div>
-                        
-                        <div class="jugador-opciones">
-                            <label for="">Nombre</label>
-                            <input type="text" id="input-nombre-jugador">
-                            <label for="">Elige tu elemento</label>
-                            <div class="radio-group">
-                                <div>
-                                    <input type="radio" id="opcion1" name="opciones" value="opcion1">
-                                    <label for="opcion1" class="radio-label">
-                                        <img src='js/4enlinea/image/fire.png' alt="Opción 1" class="radio-img">
-                                    </label>
-                                </div>
-                                
-                                <div>
-                                    <input type="radio" id="opcion2" name="opciones" value="opcion2">
-                                    <label for="opcion2" class="radio-label">
-                                        <img src='js/4enlinea/image/water.png' alt="Opción 2" class="radio-img">
-                                    </label>
-                                </div>
-                                
-                                <div>
-                                    <input type="radio" id="opcion3" name="opciones" value="opcion3">
-                                    <label for="opcion3" class="radio-label">
-                                        <img src='js/4enlinea/image/wind.png' alt="Opción 3" class="radio-img">
-                                    </label>
-                                </div>
-                                
-                                <div>
-                                    <input type="radio" id="opcion4" name="opciones" value="opcion4">
-                                    <label for="opcion4" class="radio-label">
-                                        <img src='js/4enlinea/image/earth.png' alt="Opción 4" class="radio-img">
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
                 <div class="juego-types">
                     <div class="juego-option-panel" id="data-jugador1">
                         <div class="jugador-div">
@@ -386,15 +264,10 @@
                 <button class="jugar-juego">Jugar</button>
             </div>
         </div>
-
-        <canvas class="canvas hidden"></canvas>
-        
-        <!--<div class="juego">
-            <button class="jugar">
-                <img src="image/4-en-uno/play-button.png" alt="btn-jugar">
-            </button>
-        </div>-->
-
+        <div class="canvas-container">
+            <canvas class="canvas hidden"></canvas>
+            <button class="reiniciar-boton hidden">Reiniciar</button>
+        </div>
         <div class="descripcion">
             <h2>Historia</h2>
             <p class="medio">
