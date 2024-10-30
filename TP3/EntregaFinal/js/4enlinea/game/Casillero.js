@@ -8,7 +8,10 @@ class Casillero {
         this.circulo = null;
         this.ficha = null;
 
-        this.cuadrado = new Rect(posX, posY, width, height, fill, context);
+        let img = new Image();
+        img.src = images.imagenFondoTablero;
+
+        this.cuadrado = new Rect(posX, posY, width, height, fill, context, img);
         const circuloData = Helper.calcularCirculo(posX, posY, width, height);
         this.circulo = new Circle(circuloData.posX, circuloData.posY, circuloData.radius, colors.colorCircCasillero, context, null,'black');   
     }

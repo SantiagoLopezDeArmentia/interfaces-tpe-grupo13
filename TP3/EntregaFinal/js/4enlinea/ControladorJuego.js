@@ -55,7 +55,6 @@ function dibujarCanvas() {
         context.drawImage(imagenFondo, 0, 0, canvas.width, canvas.height);
         juego.drawGame();
         Helper.fillText('58px Roboto', '#E5D5FA', '#171412', mensajes.msgTurno + juego.getTurno(), configurationsData.turnoPosicionX, configurationsData.turnoPosicionY);
-        //Helper.fillText('58px Roboto', '#FF8C33', '#171412', mensajes.msgTurno + juego.getTurno(), configurationsData.turnoPosicionX, configurationsData.turnoPosicionY);
         
         Helper.fillText('48px Roboto', '#FF8C33', '#23034D', arr1.length, configurationsData.fichaJug1ContadorPosX, configurationsData.fichaJug1ContadorPosY);
         Helper.fillText('48px Roboto', '#FF8C33', '#23034D', arr2.length, configurationsData.fichaJug2ContadorPosX, configurationsData.fichaJug2ContadorPosY);

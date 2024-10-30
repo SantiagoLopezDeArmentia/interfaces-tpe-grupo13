@@ -158,13 +158,11 @@ class Helper {
 
     static dibujarTemporizador(tiempoRestante) {
         
-        //const msg = `Tiempo restante: ${tiempoRestante}s`;
         const msg = `${tiempoRestante}s`;
         const textWidth = context.measureText(msg).width;
         const x = (canvas.width - textWidth) / 2;
         const y = 50;
 
         Helper.fillText('50px Roboto', '#E5D5FA', '#23034D', msg, 75, y);
-        //Helper.fillText('42px Roboto', '#9BF00B', '#23034D', msg, 75, y);
     }
 }

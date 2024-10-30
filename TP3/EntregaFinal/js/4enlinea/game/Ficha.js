@@ -3,7 +3,6 @@ class Ficha {
     constructor(jugador, posX, posY, radius, fill, context, imagePath) {
 
         let img = new Image();
-        //img.src = 'image/fire.png';
         img.src = imagePath;
         this.circulo = new Circle(posX, posY, radius, fill, context, img, 'black');
         this.fuiSeleccionado = false;

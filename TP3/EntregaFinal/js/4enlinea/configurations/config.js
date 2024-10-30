@@ -9,7 +9,7 @@ configurationsData = {
     startZonaDropeableY: 0,
     zonaDropeableHeight: 100,
 
-    startTableroPosX: 150,
+    startTableroPosX: 160,
     startTableroPosY: 200,
 
     jugador1PosicionX: 65,
@@ -21,10 +21,6 @@ configurationsData = {
 
     turnoPosicionX: 475,
     turnoPosicionY: 50,
-
-    /*
-    turnoPosicionX: 475,
-    turnoPosicionY: 150,*/
 
     fichaJug1ContadorPosX: 65,
     fichaJug1ContadorPosY: 275,
@@ -38,7 +34,7 @@ images =  {
     imagenFichaAgua: 'js/4enlinea/image/water.png',
     imagenFichaTierra: 'js/4enlinea/image/earth.png',
     imagenFichaAire: 'js/4enlinea/image/wind.png',
-    imagenFondoTablero: 'js/4enlinea/image/image.png'
+    imagenFondoTablero: 'js/4enlinea/image/Designer_.jpeg'
 }
 
 colors = {
@@ -60,4 +56,3 @@ cantidades = {
     maxFichasMostrar: 20,
     timer: 360
 }
-//'rgba(162, 120, 218, 0.8)'

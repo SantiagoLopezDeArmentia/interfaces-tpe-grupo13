@@ -80,11 +80,7 @@ class Tablero {
                 const posY = (configurationsData.startTableroPosY + casilleroData.height*(i)); 
                 const width = casilleroData.width;
                 const height = casilleroData.height;
-                /*if(i==0) {
-                    matriz[i][j] = new Casillero(posX, posY, width, height, 'rgba(0, 0, 0, 0)', context, true);
-                } else {
-                    matriz[i][j] = new Casillero(posX, posY, width, height, 'rgba(162, 120, 218, 0.8)', context);
-                }*/
+                
                 matriz[i][j] = new Casillero(posX, posY, width, height, colors.colorTablero, context);
                 
             }
@@ -100,18 +96,6 @@ class Tablero {
                 this.tablero[i][j].drawCasillero(i, j, this.filas, this.columnas);
             }
         }
-       /*
-       const imageTablero = new Image();
-        imageTablero.src = images.imagenFondoTablero;
-        imageTablero.width = '500px';
-        imageTablero.height = '500px';
-       imageTablero.onload = function () {
-            for(let i = 0; i < this.filas; i++) {
-                for (let j = 0; j < this.columnas; j++) {
-                    this.tablero[i][j].drawCasillero(i, j, this.filas, this.columnas);
-                }
-            }
-       }*/
     }
 
     dibujarZonaDropeable() {

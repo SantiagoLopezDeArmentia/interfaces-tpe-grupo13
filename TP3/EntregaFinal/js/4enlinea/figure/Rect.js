@@ -1,25 +1,51 @@
 class Rect extends Figure {
 
-    constructor(posX, posY, width, height, fill, context) {
+    constructor(posX, posY, width, height, fill, context, imgP = null) {
         super(posX, posY, fill, context);
 
         this.width = width;
         this.height = height
+
+        this.img = imgP;
+
+        /* Si hay imagen, generar carga de la misma. */
+        if (this.img) {
+            this.img.onload = ()=> {
+                this.imageLoaded = true; // Marcar la imagen como cargada
+            };
+            this.img.onerror = ()=> {
+                console.error("Error al cargar la imagen");
+            };
+        }
     }
 
     draw() {
         super.draw();
         this.context.fillRect(this.posX, this.posY, this.width, this.height);
+        // Si la imagen fue cargada correctamente, dibujarla
+        console.log(this.imageLoaded)
+        if (this.imageLoaded) {
+            this.context.save();
+            this.context.globalAlpha = 0.5;
+            this.context.drawImage(this.img, this.posX, this.posY, this.width, this.height);
+            this.context.restore(); 
+        }
     }
 
     drawRoundRect(arr) {
         super.draw();
-        //context.strokeStyle = "l";
-        context.beginPath()
-        context.fillStyle = this.fill;
-        context.roundRect(this.posX, this.posY, this.width, this.height,  arr);
-        //context.stroke()
+        this.context.beginPath()
+        this.context.fillStyle = this.fill;
+        this.context.roundRect(this.posX, this.posY, this.width, this.height,  arr);
         this.context.fill()
+        // Si la imagen fue cargada correctamente, dibujarla
+        if (this.imageLoaded) {
+            this.context.save();
+            this.context.globalAlpha = 0.5;
+            this.context.clip();
+            this.context.drawImage(this.img, this.posX, this.posY, this.width, this.height);
+            this.context.restore(); 
+        }
     }
 
     getWidth() {

@@ -85,7 +85,6 @@ class Juego {
             const height = casilleroData.height;
             const radius = Helper.calcularCirculo(posX, pos_Y, width, height).radius;
             arr.push(new Ficha(jugador, posX, pos_Y, radius, fill, this.context, imagePath));
-            //pos_Y = pos_Y - configurationsData.fichasDistanciaPosicionY;
             if (i<=20) {
                 pos_Y = pos_Y - configurationsData.fichasDistanciaPosicionY;
             }
