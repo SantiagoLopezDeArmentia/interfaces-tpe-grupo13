@@ -11,6 +11,10 @@ class Figure {
         return this.context;
     }
 
+    setContext(ctx) {
+        this.context = ctx;
+    }
+
     setFill(fill) {
         this.fill = fill;
     }

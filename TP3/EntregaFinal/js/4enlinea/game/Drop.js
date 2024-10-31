@@ -17,6 +17,7 @@ class Drop extends Rect {
         return this.numeroColumna;
     }
 
+    
     drawZonaDropeable() {
         super.draw();
     }

@@ -100,9 +100,31 @@ class Tablero {
 
     dibujarZonaDropeable() {
         for (let j = 0; j < this.columnas; j++) {
+           // this.zonaDropeable[j]
             this.zonaDropeable[j].drawZonaDropeable();
-            this.zonaDropeable[j].drawZonaDropeable();
+            //this.zonaDropeable[j].drawZonaDropeable();
         }
+    }
+
+    mostrarZonaDropeable(ok) {
+        for (let j = 0; j < this.columnas; j++) {
+            if (ok) {
+                let drop = this.zonaDropeable[j];
+                let ctx = drop.getContext();
+                let gradient = ctx.createLinearGradient(drop.getPosX(), drop.getPosY(), 0,this.zonaDropeable[j].getHeight());
+                gradient.addColorStop(0, 'rgba(0, 0, 0, 0.5)'); 
+                gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.3)');
+                gradient.addColorStop(1, 'rgba(255, 0, 0, 0)');
+                //ctx.fillStyle = gradient
+                //this.zonaDropeable[j].setContext(ctx)
+                this.zonaDropeable[j].setFill(gradient)
+                //this.zonaDropeable[j].setFill('rgba(0, 0, 0, 0.5)')
+                //this.zonaDropeable[j].setFill(gradient)
+            } else {
+                this.zonaDropeable[j].setFill(colors.zonaDropeableColor)
+            }
+             
+         }
     }
 
     /**

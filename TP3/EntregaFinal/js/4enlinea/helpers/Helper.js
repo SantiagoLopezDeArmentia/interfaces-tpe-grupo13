@@ -95,14 +95,15 @@ class Helper {
         });
     }
 
-    static fillText(font, fillStyle, strokeStyle, text, posX, posY) {
+    static fillText(lineWitdh, font, fillStyle, strokeStyle, text, posX, posY) {
         // Configuración del texto
         context.font = font;
         context.fillStyle = fillStyle;
         context.textAlign = 'center';
         context.textBaseline = 'middle';
         context.strokeStyle = strokeStyle; 
-        context.lineWidth = 2; 
+        //context.lineWidth = 2;
+        context.lineWidth = lineWitdh; 
         context.fillText(text, posX, posY);
         context.strokeText(text, posX, posY);
     }
@@ -151,7 +152,7 @@ class Helper {
             
             context.drawImage(imagenFondo, 0, 0, canvas.width, canvas.height);
             juego.drawGame()
-            Helper.fillText('70px Roboto', '#FF8C33', '#23034D', msg, 500, 100);
+            Helper.fillText(2,'70px Roboto', colors.colorGanadorMsg, colors.colorBordeGanadorMsg, msg, configurationsData.ganadorPosicionX, configurationsData.ganadorPosicionY);
         };
     }
 
@@ -163,6 +164,6 @@ class Helper {
         const x = (canvas.width - textWidth) / 2;
         const y = 50;
 
-        Helper.fillText('50px Roboto', '#E5D5FA', '#23034D', msg, 75, y);
+        Helper.fillText(2,'50px Roboto', '#E5D5FA', '#23034D', msg, 75, y);
     }
 }

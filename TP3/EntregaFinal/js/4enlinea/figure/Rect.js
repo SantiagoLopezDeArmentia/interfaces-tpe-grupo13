@@ -23,7 +23,6 @@ class Rect extends Figure {
         super.draw();
         this.context.fillRect(this.posX, this.posY, this.width, this.height);
         // Si la imagen fue cargada correctamente, dibujarla
-        console.log(this.imageLoaded)
         if (this.imageLoaded) {
             this.context.save();
             this.context.globalAlpha = 0.3;
@@ -46,6 +45,16 @@ class Rect extends Figure {
             this.context.drawImage(this.img, this.posX, this.posY, this.width, this.height);
             this.context.restore(); 
         }
+    }
+
+    drawBorder() {
+        this.context.beginPath();
+        this.context.lineWidth = 6;
+        this.context.strokeStyle = 'rgba(0, 255, 0, 1)';
+        this.context.shadowColor = 'rgba(216, 75, 32, 1)';
+        //this.context.shadowBlur = 3;s
+        this.context.strokeRect(this.posX, this.posY, this.width, this.height);
+        this.context.closePath();
     }
 
     getWidth() {

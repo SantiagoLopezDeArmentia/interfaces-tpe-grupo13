@@ -54,15 +54,28 @@ class Juego {
 
     /* Dibujar el juego */
     drawGame() {
+
         this.tablero.dibujarZonaDropeable();
         this.tablero.dibujarTablero();
-        let rect = new Rect(15, 225, 100, 500, colors.colorZonaFichas, this.context);
-        rect.drawRoundRect([18, 18, 18, 18]);
-        this.dibujarFichas(this.arrFichasJug1);
-        rect = new Rect(825, 225, 100, 500, colors.colorZonaFichas, this.context);
-        rect.drawRoundRect([18, 18, 18, 18]);
-        this.dibujarFichas(this.arrFichasJug2);
+
+        let rectJ1 = new Rect(15, 225, 100, 500, colors.colorZonaFichas, this.context);
+        rectJ1.drawRoundRect([18, 18, 18, 18]);
         
+        this.dibujarFichas(this.arrFichasJug1);
+
+        let rectJ2 = new Rect(825, 225, 100, 500, colors.colorZonaFichas, this.context);
+        rectJ2.drawRoundRect([18, 18, 18, 18]);
+        this.dibujarFichas(this.arrFichasJug2);
+        switch(String(this.turno)) {
+            case String(this.jugador1):
+                this.arrFichasJug1[this.arrFichasJug1.length-1].getCircle().drawBorder();
+                //rectJ1.drawBorder();
+                break;
+            case String(this.jugador2):
+                this.arrFichasJug2[this.arrFichasJug2.length-1].getCircle().drawBorder();
+                //rect2.drawBorder();
+                break;
+        }
     }
 
     /* Dibujar fichas */

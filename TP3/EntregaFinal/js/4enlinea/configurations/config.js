@@ -5,7 +5,7 @@ configurationsData = {
     tableroWidth: 500,
     tableroHeight: 500,
 
-    startZonaDropeableX: 150,
+    startZonaDropeableX: 160,
     startZonaDropeableY: 0,
     zonaDropeableHeight: 100,
 
@@ -21,6 +21,9 @@ configurationsData = {
 
     turnoPosicionX: 475,
     turnoPosicionY: 50,
+
+    ganadorPosicionX: 475,
+    ganadorPosicionY: 50,
 
     fichaJug1ContadorPosX: 65,
     fichaJug1ContadorPosY: 275,
@@ -40,8 +43,15 @@ images =  {
 colors = {
     zonaDropeableColor: 'rgba(162, 120, 218, 0)',
     colorZonaFichas: 'rgba(255, 255, 240, 0.8)',
+    colorZonaFichas: 'rgba(0, 0, 0, 0.7)',
     colorTablero:'rgba(0, 0, 0, 0.5)',
-    colorCircCasillero: 'rgba(255, 255, 120, 0.6)'
+    colorCircCasillero: 'rgba(255, 255, 120, 0.6)',
+
+    colorGanadorMsg: '#E5D5FA',
+    colorBordeGanadorMsg: '#171412',
+    colorTurnoMsg: '#E5D5FA',
+    colorBordeTurnoMsg: '#171412',
+
 }
 
 

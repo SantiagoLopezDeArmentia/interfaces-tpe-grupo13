@@ -135,7 +135,7 @@ canvas {
 
 .jugador-opciones {
     width: 200px;
-    height: 270px;
+    height: 290px;
     border-radius: 10px;
     background-color: rgba(186, 141, 65, 0.7);
     padding: 10px;
@@ -171,7 +171,6 @@ canvas {
     border: 2px solid var(--primary-color-dark-2);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.1s ease;
-    z-index: 100;
 }
 
 .jugar-juego:active {

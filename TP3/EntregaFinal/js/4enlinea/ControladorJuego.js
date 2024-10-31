@@ -54,10 +54,14 @@ function dibujarCanvas() {
         
         context.drawImage(imagenFondo, 0, 0, canvas.width, canvas.height);
         juego.drawGame();
-        Helper.fillText('58px Roboto', '#E5D5FA', '#171412', mensajes.msgTurno + juego.getTurno(), configurationsData.turnoPosicionX, configurationsData.turnoPosicionY);
+        //Helper.fillText('58px Roboto', '#E5D5FA', '#171412', mensajes.msgTurno + juego.getTurno(), configurationsData.turnoPosicionX, configurationsData.turnoPosicionY);
+        Helper.fillText(3,'58px Roboto', colors.colorTurnoMsg, colors.colorBordeTurnoMsg, mensajes.msgTurno + juego.getTurno(), configurationsData.turnoPosicionX, configurationsData.turnoPosicionY);
         
-        Helper.fillText('48px Roboto', '#FF8C33', '#23034D', arr1.length, configurationsData.fichaJug1ContadorPosX, configurationsData.fichaJug1ContadorPosY);
-        Helper.fillText('48px Roboto', '#FF8C33', '#23034D', arr2.length, configurationsData.fichaJug2ContadorPosX, configurationsData.fichaJug2ContadorPosY);
+
+        //Helper.fillText('48px Roboto', '#FF8C33', '#23034D', arr1.length, configurationsData.fichaJug1ContadorPosX, configurationsData.fichaJug1ContadorPosY);
+        Helper.fillText(2,'48px Roboto', '#FF8C33', '#E5D5FA', arr1.length, configurationsData.fichaJug1ContadorPosX, configurationsData.fichaJug1ContadorPosY);
+        
+        Helper.fillText(2,'48px Roboto', '#FF8C33', '#23034D', arr2.length, configurationsData.fichaJug2ContadorPosX, configurationsData.fichaJug2ContadorPosY);
         if(gameOptionTime=="con-tiempo") {
             Helper.dibujarTemporizador(tiempoRestante);
         }
@@ -76,6 +80,7 @@ function onMouseDown(e) {
         lastPositionFigureX = lastClickedFigure.getPosX();
         lastPositionFigureY = lastClickedFigure.getPosY();
         lastClickedFigure.drawBorder();
+        tableroT.mostrarZonaDropeable(true)
         
     }
 
@@ -116,7 +121,7 @@ async function onMouseUp(e) {
                     Helper.mostrarGanador(lastFichaSelected.getJugador(), mensajes.msgGanador);
                 }
             }, 1000)
-
+           
             juego.cambiarTurnoJugador();
         }
 
@@ -134,6 +139,7 @@ async function onMouseUp(e) {
     lastPositionFigureY = null;
     lastClickedFigure = null;
     velocidad = 0;
+    tableroT.mostrarZonaDropeable(false)
     dibujarCanvas();
     
 }
@@ -142,6 +148,9 @@ function onMouseMove(e) {
     if(juegoTerminado) return;
 
     if (isMouseDown && lastClickedFigure != null) {
+        /*lastClickedFigure.setPosition(e.offsetX, e.offsetY);
+        dibujarCanvas();*/
+
         lastClickedFigure.setPosition(e.offsetX, e.offsetY);
         dibujarCanvas();
     }
