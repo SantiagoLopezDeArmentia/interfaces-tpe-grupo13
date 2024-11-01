@@ -18,6 +18,23 @@ class Circle extends Figure {
         }
     }
 
+    setImage(img) {
+        this.img = img;
+
+        if (this.img) {
+            this.img.onload = () => {
+                this.imageLoaded = true; // Marcar la imagen como cargada
+            };
+            this.img.onerror = () => {
+                console.error("Error al cargar la imagen");
+            };
+        }
+    }
+
+    getImage() {
+        return this.img;
+    }
+
     getRadius() {
         return this.radius;
     }

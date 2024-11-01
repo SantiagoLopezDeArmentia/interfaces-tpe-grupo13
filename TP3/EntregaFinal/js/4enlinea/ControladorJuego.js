@@ -143,13 +143,73 @@ async function onMouseUp(e) {
     dibujarCanvas();
     
 }
+/*
+function onMouseMove(e) {
+    if(juegoTerminado) return;
+
+    if (isMouseDown && lastClickedFigure != null) {
+
+        clickZoneDrop = Helper.checkDropZone(e.offsetX, e.offsetY);
+        if(clickZoneDrop != null) {
+            clickZoneDrop.setFill('rgba(0, 0, 0, 0.7)');
+            const j = clickZoneDrop.getNumeroColumna();
+            const i = tableroT.buscarPosicion(j);
+            if(i != -1) {}
+        }
+
+        
+        lastClickedFigure.setPosition(e.offsetX, e.offsetY);
+        dibujarCanvas();
+    }
+}*/
+
+let lastDropZone = null;
+let lastDropCell = null;
 
 function onMouseMove(e) {
     if(juegoTerminado) return;
 
     if (isMouseDown && lastClickedFigure != null) {
-        /*lastClickedFigure.setPosition(e.offsetX, e.offsetY);
-        dibujarCanvas();*/
+
+        let clickZoneDrop = Helper.checkDropZone(e.offsetX, e.offsetY);
+
+        if (clickZoneDrop != null) {
+            // Si hay una zona de drop anterior, restaurar su color original
+            if (lastDropZone && lastDropZone !== clickZoneDrop) {
+                lastDropZone.setGradient(); // Cambia 'color original' al color que deseas restaurar
+            }
+
+            let ctx = clickZoneDrop.getContext();
+            let gradient = ctx.createLinearGradient(clickZoneDrop.getPosX(), clickZoneDrop.getPosY(),
+            clickZoneDrop.getPosX(), clickZoneDrop.getPosY() + clickZoneDrop.getHeight());
+            gradient.addColorStop(0, 'rgba(255, 255, 255, 0.5)'); 
+            gradient.addColorStop(0.5, 'rgba(255, 255, 255, 0.3)');
+            gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+            // Pintar la nueva zona de drop de blanco
+            clickZoneDrop.setFill(gradient); // Blanco
+
+            /*
+            const j = clickZoneDrop.getNumeroColumna();
+            const i = tableroT.buscarPosicion(j);
+
+            if (i != -1) {
+                let casillero = tablero[i][j];
+                casillero.pintarSugerenciaFicha(lastClickedFigure.getImage());
+                lastDropCell = casillero; // Actualizar el último casillero de drop
+            }*/
+
+            // Actualizar la última zona de drop
+            lastDropZone = clickZoneDrop;
+        } else if (lastDropZone) {
+            // Si no hay zona de drop bajo el mouse, restaurar la última zona de drop
+            lastDropZone.setGradient(); // Cambia 'color original' al color que deseas restaurar
+            /*if (lastDropCell) {
+                lastDropCell.clearSugerenciaFicha(); // Restaurar el casillero anterior
+                lastDropCell = null;
+            }*/
+            lastDropZone = null;
+        }
+
 
         lastClickedFigure.setPosition(e.offsetX, e.offsetY);
         dibujarCanvas();
@@ -224,10 +284,35 @@ function configurationsEvents() {
         radio.addEventListener('change', function() {
             const selectedValue = this.value;
             document.querySelectorAll('input[name="opciones2"]').forEach(radio2 => {
+                const label = radio2.nextElementSibling;
+                const img = label.querySelector('img'); 
                 if (radio2.value === selectedValue) {
                     radio2.disabled = true;
+                    label.classList.add('disabled');
+                    img.classList.add('disabled')
                 } else {
                     radio2.disabled = false;
+                    label.classList.remove('disabled');
+                    img.classList.remove('disabled');
+                }
+            });
+        });
+    });
+
+    document.querySelectorAll('input[name="opciones2"]').forEach(radio2 => {
+        radio2.addEventListener('change', function() {
+            const selectedValue = this.value;
+            document.querySelectorAll('input[name="opciones1"]').forEach(radio1 => {
+                const label = radio1.nextElementSibling;
+                const img = label.querySelector('img'); 
+                if (radio1.value === selectedValue) {
+                    radio1.disabled = true;
+                    label.classList.add('disabled');
+                    img.classList.add('disabled')
+                } else {
+                    radio1.disabled = false;
+                    label.classList.remove('disabled');
+                    img.classList.remove('disabled');
                 }
             });
         });

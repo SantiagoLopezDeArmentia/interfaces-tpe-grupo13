@@ -1,0 +1,34 @@
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<script>
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
+
+function drawArrowDown(fromX, fromY, length, lineWidth, fillColor, strokeColor) {
+    const headLength = 20; // Tamaño de la cabeza de la flecha
+    const toX = fromX;
+    const toY = fromY + length;
+
+    // Configurar el grosor de la línea y los colores
+    ctx.lineWidth = lineWidth;
+    ctx.fillStyle = fillColor;
+    ctx.strokeStyle = strokeColor;
+
+    // Dibujar la línea principal
+    ctx.beginPath();
+    ctx.moveTo(fromX, fromY);
+    ctx.lineTo(toX, toY);
+    ctx.stroke();
+
+    // Dibujar la cabeza de la flecha
+    ctx.beginPath();
+    ctx.moveTo(toX, toY);
+    ctx.lineTo(toX - headLength, toY - headLength);
+    ctx.lineTo(toX + headLength, toY - headLength);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+}
+
+// Ejemplo de uso
+drawArrowDown(200, 50, 100, 15, 'yellow', 'black'); // Flecha con interior amarillo y borde negro
+</script>

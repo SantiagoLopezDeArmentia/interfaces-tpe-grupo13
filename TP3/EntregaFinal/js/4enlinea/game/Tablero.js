@@ -54,6 +54,8 @@ class Tablero {
             
             const posX = (configurationsData.startZonaDropeableX + casilleroData.width*(i+1));
             const posY = (configurationsData.startZonaDropeableY + casilleroData.height);
+
+
             zonaDropeable.push(new Drop(posX, posY, casilleroData.width,
                 casilleroData.height, colors.zonaDropeableColor, this.context, i));
         }
@@ -101,31 +103,34 @@ class Tablero {
     dibujarZonaDropeable() {
         for (let j = 0; j < this.columnas; j++) {
            // this.zonaDropeable[j]
+           //this.zonaDropeable[j].setFill(colors.zonaDropeableColor)
             this.zonaDropeable[j].drawZonaDropeable();
             //this.zonaDropeable[j].drawZonaDropeable();
         }
     }
 
+    
     mostrarZonaDropeable(ok) {
         for (let j = 0; j < this.columnas; j++) {
             if (ok) {
-                let drop = this.zonaDropeable[j];
-                let ctx = drop.getContext();
-                let gradient = ctx.createLinearGradient(drop.getPosX(), drop.getPosY(), 0,this.zonaDropeable[j].getHeight());
-                gradient.addColorStop(0, 'rgba(0, 0, 0, 0.5)'); 
-                gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.3)');
-                gradient.addColorStop(1, 'rgba(255, 0, 0, 0)');
-                //ctx.fillStyle = gradient
-                //this.zonaDropeable[j].setContext(ctx)
-                this.zonaDropeable[j].setFill(gradient)
-                //this.zonaDropeable[j].setFill('rgba(0, 0, 0, 0.5)')
-                //this.zonaDropeable[j].setFill(gradient)
+                this.zonaDropeable[j].setGradient()
             } else {
                 this.zonaDropeable[j].setFill(colors.zonaDropeableColor)
             }
-             
-         }
+        }
     }
+
+        /*
+    mostrarZonaDropeable(ok) {
+        for (let j = 0; j < this.columnas; j++) {
+            let drop = this.zonaDropeable[j];
+            if (ok) {
+                drop.startTwinkle();
+            } else {
+                drop.stopTwinkle();
+            }
+        }
+    }*/
 
     /**
      * A continuacion logicas para validar ganador del juego

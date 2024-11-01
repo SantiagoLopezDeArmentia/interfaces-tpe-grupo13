@@ -55,12 +55,6 @@ class Casillero {
     /* Dibujar casillero */
     drawCasillero(i, j, filas, columnas) {
 
-        
-        //this.circulo.getContext().globalCompositeOperation = 'xor';
-        //this.circulo.draw(); /* Dibuja el circulo tradicional */
-        //this.circulo.getContext().globalCompositeOperation = 'source-over';
-
-        //this.cuadrado.getContext().globalCompositeOperation = 'destination-over';
         if(i==0 && j==0) {
             /* Redondea la esquina superior izquierda. */
             this.cuadrado.drawRoundRect([18, 0, 0, 0]); 
@@ -77,16 +71,31 @@ class Casillero {
             /* Dibuja el cuadrado tradicional. */
             this.cuadrado.draw(); 
         }
-        //this.cuadrado.getContext().globalCompositeOperation = 'source-over';
-
-        //this.circulo.getContext().globalCompositeOperation = 'destination-over';
-        //this.circulo.getContext().globalCompositeOperation = 'xor';
         this.circulo.draw(); /* Dibuja el circulo tradicional */
-        //this.circulo.getContext().globalCompositeOperation = 'source-over';
-        //this.circulo.drawBorder(); /* Dibuja el borde al circulo */
 
         if(this.ficha!=null) {
             this.ficha.draw();
         }
+    }
+
+    pintarSugerenciaFicha(img) {
+        
+        let ctx = this.circulo.getContext();
+        ctx.globalAlpha = 0.7;
+        img.onload = () => {
+            ctx.drawImage(img, this.circulo.posX - this.circulo.radius, 
+                this.circulo.posY - this.circulo.radius, this.circulo.radius * 2, this.circulo.radius * 2);
+            ctx.globalAlpha = 1.0; // Restablecer la opacidad
+        };
+        
+    }
+    
+    clearSugerenciaFicha() {
+        let ctx = this.circulo.getContext();
+        ctx.clearRect(this.circulo.posX - this.circulo.radius,
+             this.circulo.posY - this.circulo.radius, this.circulo.radius * 2, this.circulo.radius * 2);
+        // Redibujar el fondo del casillero si es necesario
+        this.circulo.setImage(null)
+        this.circulo.draw(); // O cualquier método que uses para dibujar el fondo original
     }
 }

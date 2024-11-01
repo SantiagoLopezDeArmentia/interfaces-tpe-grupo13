@@ -95,6 +95,32 @@ class Helper {
         });
     }
 
+    static pintarPosCaida(i, j, lastClickedFigure, sePinta) {
+        return new Promise((resolve) => {
+    
+            let circle = tablero[i][j].getCircle();
+            /*const posX = tablero[i][j].getCircle().getPosX();
+            const posY = tablero[i][j].getCircle().getPosY();*/
+    
+            let posYc = lastClickedFigure.getPosY();
+    
+            lastClickedFigure.setPosition(posX, posYc);
+    
+            // Verifica si la figura ha alcanzado la posición final
+            if ((lastClickedFigure.getPosY() + lastClickedFigure.getRadius()) >= posY) {
+                lastClickedFigure.setPosition(posX, posY);
+                dibujarCanvas();
+                resolve(); // Resuelve la promesa cuando la figura llega a su destino
+            } else {
+                dibujarCanvas();
+                // Llama a simularGravedad nuevamente con un pequeño retraso
+                setTimeout(() => {
+                    this.simularGravedad(i, j, lastClickedFigure).then(resolve);
+                }, 1);
+            }
+        });
+    }
+
     static fillText(lineWitdh, font, fillStyle, strokeStyle, text, posX, posY) {
         // Configuración del texto
         context.font = font;
