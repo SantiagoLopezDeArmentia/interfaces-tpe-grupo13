@@ -102,10 +102,7 @@ class Tablero {
 
     dibujarZonaDropeable() {
         for (let j = 0; j < this.columnas; j++) {
-           // this.zonaDropeable[j]
-           //this.zonaDropeable[j].setFill(colors.zonaDropeableColor)
             this.zonaDropeable[j].drawZonaDropeable();
-            //this.zonaDropeable[j].drawZonaDropeable();
         }
     }
 
@@ -119,18 +116,6 @@ class Tablero {
             }
         }
     }
-
-        /*
-    mostrarZonaDropeable(ok) {
-        for (let j = 0; j < this.columnas; j++) {
-            let drop = this.zonaDropeable[j];
-            if (ok) {
-                drop.startTwinkle();
-            } else {
-                drop.stopTwinkle();
-            }
-        }
-    }*/
 
     /**
      * A continuacion logicas para validar ganador del juego

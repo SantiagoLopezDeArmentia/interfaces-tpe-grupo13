@@ -73,11 +73,7 @@ class Circle extends Figure {
     drawBorder() {
         this.context.beginPath();
         this.context.lineWidth = 6;
-        //this.context.strokeStyle = 'rgba(216, 75, 32, 1)';
-        //this.context.strokeStyle = 'rgba(0, 255, 0, 1)';
-        this.context.strokeStyle = '#E5D5FA'
-        //this.context.shadowColor = 'rgba(216, 75, 32, 1)'; // Color de la sombra con transparencia
-        //this.context.shadowBlur = 3;
+        this.context.strokeStyle = colors.colorStrokeTurnoAlert;
         this.context.arc(this.posX, this.posY, this.radius, 0, 2*Math.PI);
         this.context.stroke();
         this.context.closePath();
@@ -93,10 +89,6 @@ class Circle extends Figure {
         this.context.lineWidth = 2;
         this.context.strokeStyle = 'black';
         this.context.stroke();
-        /*this.context.lineWidth = 2;
-        this.context.strokeStyle = 'black';
-        this.context.stroke();
-        this.context.closePath();*/
         this.context.globalCompositeOperation = 'source-over';
     
     }

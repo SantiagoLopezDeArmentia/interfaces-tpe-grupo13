@@ -123,6 +123,7 @@ class Helper {
 
     static fillText(lineWitdh, font, fillStyle, strokeStyle, text, posX, posY) {
         // Configuración del texto
+        //context.clearRect(posX - 100 / 2, posY - 50 / 2, 100, 50);
         context.font = font;
         context.fillStyle = fillStyle;
         context.textAlign = 'center';
@@ -190,6 +191,6 @@ class Helper {
         const x = (canvas.width - textWidth) / 2;
         const y = 50;
 
-        Helper.fillText(2,'50px Roboto', '#E5D5FA', '#23034D', msg, 75, y);
+        Helper.fillText(3,'58px Roboto', '#E5D5FA', colors.colorBordeTurnoMsg, msg, 75, y);
     }
 }

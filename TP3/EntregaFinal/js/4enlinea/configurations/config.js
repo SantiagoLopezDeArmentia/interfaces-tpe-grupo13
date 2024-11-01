@@ -52,6 +52,8 @@ colors = {
     colorTurnoMsg: '#E5D5FA',
     colorBordeTurnoMsg: '#171412',
 
+    colorStrokeTurnoAlert: 'rgba(0, 255, 0, 1)'
+
 }
 
 

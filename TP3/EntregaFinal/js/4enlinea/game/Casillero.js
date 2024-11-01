@@ -77,25 +77,4 @@ class Casillero {
             this.ficha.draw();
         }
     }
-
-    pintarSugerenciaFicha(img) {
-        
-        let ctx = this.circulo.getContext();
-        ctx.globalAlpha = 0.7;
-        img.onload = () => {
-            ctx.drawImage(img, this.circulo.posX - this.circulo.radius, 
-                this.circulo.posY - this.circulo.radius, this.circulo.radius * 2, this.circulo.radius * 2);
-            ctx.globalAlpha = 1.0; // Restablecer la opacidad
-        };
-        
-    }
-    
-    clearSugerenciaFicha() {
-        let ctx = this.circulo.getContext();
-        ctx.clearRect(this.circulo.posX - this.circulo.radius,
-             this.circulo.posY - this.circulo.radius, this.circulo.radius * 2, this.circulo.radius * 2);
-        // Redibujar el fondo del casillero si es necesario
-        this.circulo.setImage(null)
-        this.circulo.draw(); // O cualquier método que uses para dibujar el fondo original
-    }
 }

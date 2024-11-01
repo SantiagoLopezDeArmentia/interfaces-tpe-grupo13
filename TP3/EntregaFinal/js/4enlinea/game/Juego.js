@@ -58,20 +58,32 @@ class Juego {
         this.tablero.dibujarZonaDropeable();
         this.tablero.dibujarTablero();
 
+        //let ctx;
+         
         let rectJ1 = new Rect(15, 225, 100, 500, colors.colorZonaFichas, this.context);
         rectJ1.drawRoundRect([18, 18, 18, 18]);
+        Helper.fillText(2,'52px Roboto', '#FF8C33', '#FF8C33', this.arrFichasJug1.length, configurationsData.fichaJug1ContadorPosX, configurationsData.fichaJug1ContadorPosY);
         
         this.dibujarFichas(this.arrFichasJug1);
 
+        
         let rectJ2 = new Rect(825, 225, 100, 500, colors.colorZonaFichas, this.context);
         rectJ2.drawRoundRect([18, 18, 18, 18]);
+        Helper.fillText(2,'52px Roboto', '#FF8C33', '#FF8C33', this.arrFichasJug2.length, configurationsData.fichaJug2ContadorPosX, configurationsData.fichaJug2ContadorPosY);
+        
+
         this.dibujarFichas(this.arrFichasJug2);
         switch(String(this.turno)) {
             case String(this.jugador1):
+                //Helper.fillText(2,'52px Roboto', '#FF8C33', '#FF8C33', this.arrFichasJug1.length, configurationsData.fichaJug1ContadorPosX, configurationsData.fichaJug1ContadorPosY);
+                Helper.fillText(2,'52px Roboto', colors.colorStrokeTurnoAlert, colors.colorStrokeTurnoAlert, this.arrFichasJug1.length, configurationsData.fichaJug1ContadorPosX, configurationsData.fichaJug1ContadorPosY);
+        
                 this.arrFichasJug1[this.arrFichasJug1.length-1].getCircle().drawBorder();
-                //rectJ1.drawBorder();
                 break;
             case String(this.jugador2):
+                //Helper.fillText(2,'52px Roboto', '#FF8C33', '#FF8C33', this.arrFichasJug2.length, configurationsData.fichaJug2ContadorPosX, configurationsData.fichaJug2ContadorPosY);
+                Helper.fillText(2,'52px Roboto', colors.colorStrokeTurnoAlert, colors.colorStrokeTurnoAlert, this.arrFichasJug2.length, configurationsData.fichaJug2ContadorPosX, configurationsData.fichaJug2ContadorPosY);
+        
                 this.arrFichasJug2[this.arrFichasJug2.length-1].getCircle().drawBorder();
                 //rect2.drawBorder();
                 break;

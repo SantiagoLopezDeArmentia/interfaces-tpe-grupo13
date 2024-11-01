@@ -16,6 +16,8 @@ let gameOptionTime;
 let jugar = false;
 let juegoTerminado = false;
 let tiempoRestante = cantidades.timer;
+let lastDropZone = null;
+let lastDropCell = null;
 
 /* Obtener elementos html */
 let juegoSel = document.querySelector('.juego-sel');
@@ -54,14 +56,9 @@ function dibujarCanvas() {
         
         context.drawImage(imagenFondo, 0, 0, canvas.width, canvas.height);
         juego.drawGame();
-        //Helper.fillText('58px Roboto', '#E5D5FA', '#171412', mensajes.msgTurno + juego.getTurno(), configurationsData.turnoPosicionX, configurationsData.turnoPosicionY);
+        
         Helper.fillText(3,'58px Roboto', colors.colorTurnoMsg, colors.colorBordeTurnoMsg, mensajes.msgTurno + juego.getTurno(), configurationsData.turnoPosicionX, configurationsData.turnoPosicionY);
         
-
-        //Helper.fillText('48px Roboto', '#FF8C33', '#23034D', arr1.length, configurationsData.fichaJug1ContadorPosX, configurationsData.fichaJug1ContadorPosY);
-        Helper.fillText(2,'48px Roboto', '#FF8C33', '#E5D5FA', arr1.length, configurationsData.fichaJug1ContadorPosX, configurationsData.fichaJug1ContadorPosY);
-        
-        Helper.fillText(2,'48px Roboto', '#FF8C33', '#23034D', arr2.length, configurationsData.fichaJug2ContadorPosX, configurationsData.fichaJug2ContadorPosY);
         if(gameOptionTime=="con-tiempo") {
             Helper.dibujarTemporizador(tiempoRestante);
         }
@@ -143,28 +140,6 @@ async function onMouseUp(e) {
     dibujarCanvas();
     
 }
-/*
-function onMouseMove(e) {
-    if(juegoTerminado) return;
-
-    if (isMouseDown && lastClickedFigure != null) {
-
-        clickZoneDrop = Helper.checkDropZone(e.offsetX, e.offsetY);
-        if(clickZoneDrop != null) {
-            clickZoneDrop.setFill('rgba(0, 0, 0, 0.7)');
-            const j = clickZoneDrop.getNumeroColumna();
-            const i = tableroT.buscarPosicion(j);
-            if(i != -1) {}
-        }
-
-        
-        lastClickedFigure.setPosition(e.offsetX, e.offsetY);
-        dibujarCanvas();
-    }
-}*/
-
-let lastDropZone = null;
-let lastDropCell = null;
 
 function onMouseMove(e) {
     if(juegoTerminado) return;
@@ -188,25 +163,11 @@ function onMouseMove(e) {
             // Pintar la nueva zona de drop de blanco
             clickZoneDrop.setFill(gradient); // Blanco
 
-            /*
-            const j = clickZoneDrop.getNumeroColumna();
-            const i = tableroT.buscarPosicion(j);
-
-            if (i != -1) {
-                let casillero = tablero[i][j];
-                casillero.pintarSugerenciaFicha(lastClickedFigure.getImage());
-                lastDropCell = casillero; // Actualizar el último casillero de drop
-            }*/
-
             // Actualizar la última zona de drop
             lastDropZone = clickZoneDrop;
         } else if (lastDropZone) {
             // Si no hay zona de drop bajo el mouse, restaurar la última zona de drop
             lastDropZone.setGradient(); // Cambia 'color original' al color que deseas restaurar
-            /*if (lastDropCell) {
-                lastDropCell.clearSugerenciaFicha(); // Restaurar el casillero anterior
-                lastDropCell = null;
-            }*/
             lastDropZone = null;
         }
 
