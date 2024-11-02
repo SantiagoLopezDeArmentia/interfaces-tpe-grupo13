@@ -57,8 +57,6 @@ class Juego {
 
         this.tablero.dibujarZonaDropeable();
         this.tablero.dibujarTablero();
-
-        //let ctx;
          
         let rectJ1 = new Rect(15, 225, 100, 500, colors.colorZonaFichas, this.context);
         rectJ1.drawRoundRect([18, 18, 18, 18]);

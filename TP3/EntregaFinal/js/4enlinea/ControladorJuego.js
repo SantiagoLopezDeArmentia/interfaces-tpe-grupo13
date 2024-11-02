@@ -25,11 +25,13 @@ let canvas = document.querySelector(".canvas");
 let context = canvas.getContext("2d");
 let btnJugar = document.querySelector('.jugar-juego');
 const bntReiniciar = document.querySelector(".reiniciar-boton");
+const btnNuevoJuego = document.querySelector(".nuevo-juego-boton");
+const canvasContainer = document.querySelector('.canvas-container');
 
 
 canvas.width = configurationsData.canvasWidth;
 canvas.height = configurationsData.canvasHeight;
-canvas.style.border = "1px solid #000";
+//canvas.style.border = "1px solid #000";
 
 /* Asignar eventos al canvas */
 canvas.addEventListener('mousedown', onMouseDown, false);
@@ -200,7 +202,7 @@ function getSelectedImageSrc(player) {
     }
     return null;
 }
-
+/*
 function eventoJugar() {
     return new Promise((resolve) => {
         player1ImageSrc = getSelectedImageSrc(1);
@@ -229,11 +231,81 @@ function eventoJugar() {
         juegoSel.classList.toggle('hidden');
         canvas.classList.toggle('hidden');
         bntReiniciar.classList.toggle('hidden');
+        btnNuevoJuego.classList.toggle('hidden');
+
+        // Resuelve la promesa después de realizar todas las acciones necesarias
+        resolve();
+    });
+}*/
+
+function eventoJugar() {
+    return new Promise((resolve, reject) => {
+        player1ImageSrc = getSelectedImageSrc(1);
+        player2ImageSrc = getSelectedImageSrc(2);
+
+        nombreJugador1 = document.querySelector('#input-nombre-jugador-1').value;
+        nombreJugador2 = document.querySelector('#input-nombre-jugador-2').value;
+
+        if (!player1ImageSrc) {
+            console.log('Jugador 1 no ha seleccionado ninguna imagen.');
+            alert('Jugador 1 debe seleccionar una imagen.');
+            return reject('Jugador 1 debe seleccionar una imagen.');
+        }
+
+        if (!player2ImageSrc) {
+            console.log('Jugador 2 no ha seleccionado ninguna imagen.');
+            alert('Jugador 2 debe seleccionar una imagen.');
+            return reject('Jugador 2 debe seleccionar una imagen.');
+        }
+
+        if (!nombreJugador1) {
+            console.log('Jugador 1 no ha ingresado un nombre.');
+            alert('Jugador 1 debe ingresar un nombre.');
+            return reject('Jugador 1 debe ingresar un nombre.');
+        }
+
+        if (!nombreJugador2) {
+            console.log('Jugador 2 no ha ingresado un nombre.');
+            alert('Jugador 2 debe ingresar un nombre.');
+            return reject('Jugador 2 debe ingresar un nombre.');
+        }
+
+        if (nombreJugador1 === nombreJugador2) {
+            console.log('Los nombres de los jugadores no pueden ser iguales.');
+            alert('Los nombres de los jugadores no pueden ser iguales.');
+            return reject('Los nombres de los jugadores no pueden ser iguales.');
+        }
+
+        if (!gameOption) {
+            console.log('Se debe seleccionar un modo de juego');
+            alert('Se debe seleccionar un modo de juego');
+            return reject('Se debe seleccionar un modo de juego');
+        }
+
+        if (!gameOptionTime) {
+            console.log('Se debe elegir el modo de tiempo del juego.');
+            alert('Se debe elegir el modo de tiempo del juego.');
+            return reject('Se debe elegir el modo de tiempo del juego.');
+        }
+
+        console.log('Jugador 1 seleccionó:', player1ImageSrc);
+        console.log('Jugador 2 seleccionó:', player2ImageSrc);
+        console.log('Nombre Jugador 1:', nombreJugador1);
+        console.log('Nombre Jugador 2:', nombreJugador2);
+
+        jugar = true;
+
+        juegoSel.classList.toggle('hidden');
+        canvasContainer.classList.toggle('hidden');
+        /*canvas.classList.toggle('hidden');
+        bntReiniciar.classList.toggle('hidden');
+        btnNuevoJuego.classList.toggle('hidden');*/
 
         // Resuelve la promesa después de realizar todas las acciones necesarias
         resolve();
     });
 }
+
 
 
 configurationsEvents()
@@ -321,9 +393,12 @@ function reiniciarJuego() {
     juego = new Juego(context, gameOption, nombreJugador1, nombreJugador2, player1ImageSrc, player2ImageSrc);
     ejecutarJuego(juego);
     if(gameOptionTime=="con-tiempo"){
+        clearInterval(intervalo);
         iniciarTemporizador();
     }
 }
+
+
 
 
 

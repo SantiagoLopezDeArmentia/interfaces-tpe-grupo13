@@ -68,23 +68,28 @@
                 2px -2px 0 var(--secondary-color); /* Sombra negra arriba a la derecha */
 }
 
+/*
 .container {
-    position: relative; /* Permite el posicionamiento absoluto de los elementos hijos */
-}
+    position: relative; 
+}*/
 
+/*
 canvas {
-    display: absolute; /* Elimina el espacio en blanco debajo del canvas */
-}
+    display: absolute;
+}*/
 
 .juego-sel{
     background-color: rgba(34, 30, 30, 0.3);
-    max-width: 70%;
-    width: 920px;
-    height: 745px;
+    /*max-width: 100%;*/
+    width: 940px;
+    height: 765px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    left: 50px;
 }
+
 
 .hidden {
     display: none;
@@ -292,17 +297,54 @@ input[type="radio"]:checked + .option-label-tiempo {
     transform: scale(1.1); /* Efecto visual para la opción seleccionada */
 }
 
-.reiniciar-boton {
+.container-buttons {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     top: 10px;
     right: 10px;
-    padding: 10px 20px;
+}
+
+.nuevo-juego-boton {
+    /*position: absolute;
+    top: 65px;
+    right: 10px;*/
+    padding: 0; /* Eliminar el padding para que la imagen ocupe todo el botón */
+    background-color: #28a745;
+    color: white;
+    border: 1px solid 'black';
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 8px;
+    width: 105px; /* Ajusta el ancho del botón */
+    height: 25px; /* Ajusta la altura del botón */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reiniciar-boton {
+    margin-top: 2px;
+    padding: 0; /* Eliminar el padding para que la imagen ocupe todo el botón */
     background-color: #FF8C33;
     color: white;
-    border: none;
+    border: 1px solid 'black';
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 8px;
+    width: 105px; /* Ajusta el ancho del botón */
+    height: 25px; /* Ajusta la altura del botón */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reiniciar-boton img, .nuevo-juego-boton img {
+    width: 30px; /* La imagen ocupará todo el ancho del botón */
+    height: 30px; /* La imagen ocupará todo el alto del botón */
+    object-fit: cover; /* Ajusta la imagen para que cubra el botón sin distorsionarse */
+    border-radius: 8px; /* Mantener el borde redondeado */
 }
 
 .canvas-container {
@@ -322,5 +364,9 @@ input[type="radio"]:checked + .option-label-tiempo {
 
 .disabled img {
     filter: grayscale(100%);
+}
+
+.hidden {
+    display: none;
 }
 
