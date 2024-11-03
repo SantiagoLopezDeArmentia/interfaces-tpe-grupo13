@@ -366,6 +366,7 @@ function reiniciarJuego() {
 
 function nuevoJuego() {
     const baseUrl = window.location.origin;
-    window.location.href = `${baseUrl}/EntregaFinal/4enlinea.html`;
+    console.log(baseUrl)
+    window.location.href = `${baseUrl}/interfaces-tpe-grupo13/TP3/EntregaFinal/4enlinea.html`;
 
 }
