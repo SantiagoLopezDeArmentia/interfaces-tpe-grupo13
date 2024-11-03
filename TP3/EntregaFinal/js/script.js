@@ -35,10 +35,15 @@ btnSearch.addEventListener('click', () =>{
 
 /* ######## Funcionalidad menu ######### */
 
+hamburgerMenu.addEventListener('click', (event) => {
+    event.stopPropagation();
+    menu.classList.toggle('show');
+});
 
-hamburgerMenu.addEventListener('click', () => {
-  
-  menu.classList.toggle('show');
+document.addEventListener('click', (event) => {
+    if (!menu.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+        menu.classList.remove('show');
+    }
 });
 
 
@@ -61,10 +66,42 @@ if (cerrarBtn) {
 }
 
 if(btnIniSesion){ 
-  btnIniSesion.addEventListener('click',() =>{
-    window.location.href = "index.html";
+  btnIniSesion.addEventListener('click',(event) =>{
+    const loginForm = document.querySelector(".login-form");
+    const emailInput = document.querySelector("#input-email");
+    const passwordInput = document.querySelector("#input-password");
+
+    //loginForm.addEventListener("submit", function(event) {
+      if (emailInput.value == "" || passwordInput.value == "") {
+        console.log("entre")
+          event.preventDefault(); // Evita el envío del formulario
+          //alert("Por favor, completa todos los campos.");
+      } else {
+          // Permite el envío del formulario y la navegación
+          console.log("navegar")
+          window.location.href = "index.html";
+      }
+    //});
+    //window.location.href = "index.html";
   });
 }
+/*
+document.addEventListener("DOMContentLoaded", function() {
+  const loginForm = document.querySelector(".login-form");
+  const emailInput = document.querySelector("#input-email");
+    const passwordInput = document.querySelector("#input-password");
+
+  loginForm.addEventListener("submit", function(event) {
+    if (emailInput.value === "" || passwordInput.value === "") {
+        event.preventDefault(); // Evita el envío del formulario
+        alert("Por favor, completa todos los campos.");
+    } else {
+        // Permite el envío del formulario y la navegación
+        console.log("navegar")
+        window.location.href = "index.html";
+    }
+  });
+});*/
 
 /* ######## Manejo del carousel ######### */
 
@@ -235,6 +272,7 @@ function efectoRebote(track) {
 }
 
 /* Barra de carga del home */
+/*
 document.addEventListener("DOMContentLoaded", function() {
   const spinnerContainer = document.getElementById("loading-spinner-container");
   const progressCircle = document.querySelector(".foreground");
@@ -247,4 +285,29 @@ document.addEventListener("DOMContentLoaded", function() {
     spinnerContainer.style.display = "none";
     document.getElementById("home-content").style.display = "block";
   }, 5300); // 3 segundos más un pequeño margen
+});*/
+
+document.addEventListener("DOMContentLoaded", function() {
+  const spinnerContainer = document.getElementById("loading-spinner-container");
+  const progressCircle = document.querySelector(".foreground");
+  const percentage = document.querySelector("#porcentaje");
+
+  let progress = 0;
+  const totalDuration = 5000; // Duración total de la animación en milisegundos
+  const intervalDuration = totalDuration / 100; // Duración del intervalo para cada 1%
+
+  const interval = setInterval(() => {
+      progress += 1;
+      percentage.textContent = `${progress}%`;
+      progressCircle.style.transition = `stroke-dashoffset ${intervalDuration}ms linear`;
+      progressCircle.style.strokeDashoffset = 283 - (283 * progress / 100);
+
+      if (progress >= 100) {
+          clearInterval(interval);
+          setTimeout(() => {
+              spinnerContainer.style.display = "none";
+              document.getElementById("home-content").style.display = "block";
+          }, 500); // Pequeño margen después de alcanzar el 100%
+      }
+  }, intervalDuration); // Ajusta el intervalo según sea necesario
 });

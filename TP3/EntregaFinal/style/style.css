@@ -103,8 +103,7 @@ body {
   }
   
   #progress-circle .foreground {
-    stroke: var(--secondary-color-light-2); /* Color del progreso */
-    stroke: var(--primary-color-dark-2); /* Color del progreso */
+    stroke: var(--third-color-dark-2); /* Color del progreso */
     stroke-dasharray: 283; /* Perímetro del círculo */
     stroke-dashoffset: 283; /* Comienza vacío */
     transition: stroke-dashoffset 5s linear; /* Transición progresiva */
@@ -626,6 +625,7 @@ input::placeholder{
     list-style-type: none;
     padding: 0;
     margin: 0;
+    cursor: pointer;
 }
 .item-menu img{
     margin:0;
@@ -1017,10 +1017,8 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
     width: 20%;
     display: flex;
     flex-direction: column;
-    /*justify-content: space-evenly;*/
     align-items: flex-start;
     margin-right: 0px;
-    /*padding:5px;*/
 }
 
 .descripcion h2{
@@ -1223,15 +1221,22 @@ transform: translateX(30px); /* Mueve ligeramente para el efecto de rebote en el
 
 /* --------------------------------------------FORMULARIO REGISTRO-------------------*/
 #id-popover{
+    
     top: 50%;
     left: 40%;
-    background:#ffffff;
+    background: var(--background-color-1-light-1);
     padding: 1%;
-    color: var(--secondary-color-light-2);  
+    color: var(--secondary-color-light-2);
+    color: var(--background-color-1);
+    border-radius: 8px;
+    width: max-content;
+    height: max-content;
+    overflow: hidden;
 }
 
 #id-popover p{
     color: var(--secondary-color-light-2);
+    color: white;
 }
 
 #id-popover::backdrop{
@@ -1855,4 +1860,11 @@ font-style: italic;
 font-family: "Roboto", sans-serif;
 font-weight: 900;
 font-style: italic;
+}
+
+#porcentaje {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
 }
