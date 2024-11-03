@@ -18,6 +18,7 @@ let juegoTerminado = false;
 let tiempoRestante = cantidades.timer;
 let lastDropZone = null;
 let lastDropCell = null;
+let intervalo;
 
 /* Obtener elementos html */
 let juegoSel = document.querySelector('.juego-sel');
@@ -47,6 +48,8 @@ async function eventJugar() {
     juego = new Juego(context, gameOption, nombreJugador1, nombreJugador2, player1ImageSrc, player2ImageSrc);
     ejecutarJuego(juego);
     if(gameOptionTime=="con-tiempo"){
+        clearInterval(intervalo)
+        tiempoRestante = cantidades.timer;
         iniciarTemporizador();
     }
 }
@@ -263,9 +266,6 @@ function eventoJugar() {
 
         juegoSel.classList.toggle('hidden');
         canvasContainer.classList.toggle('hidden');
-        /*canvas.classList.toggle('hidden');
-        bntReiniciar.classList.toggle('hidden');
-        btnNuevoJuego.classList.toggle('hidden');*/
 
         // Resuelve la promesa después de realizar todas las acciones necesarias
         resolve();
@@ -335,7 +335,7 @@ function configurationsEvents() {
 
 
 function iniciarTemporizador() {
-    const intervalo = setInterval(() => {
+    intervalo = setInterval(() => {
         if (juegoTerminado) {
             clearInterval(intervalo);
             return;
@@ -364,9 +364,58 @@ function reiniciarJuego() {
     }
 }
 
-function nuevoJuego() {
-    const baseUrl = window.location.origin;
-    console.log(baseUrl)
-    window.location.href = `${baseUrl}/interfaces-tpe-grupo13/TP3/EntregaFinal/4enlinea.html`;
 
+function nuevoJuego() {
+    // Reiniciar todas las variables del juego
+    lastPositionFigureX = null;
+    lastPositionFigureY = null;
+    lastFichaSelected = null;
+    lastClickedFigure = null;
+    isMouseDown = false;
+    velocidad = 0;
+    jugar = false;
+    juegoTerminado = false;
+    lastDropZone = null;
+    lastDropCell = null;
+
+    resetForm()
+
+    // Limpiar el canvas
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Mostrar el panel de menú de juego
+    juegoSel.classList.toggle('hidden');
+    canvasContainer.classList.toggle('hidden');
+
+    clearInterval(temporizador);
+    tiempoRestante = cantidades.timer;
+
+
+}
+
+function resetForm() {
+    // Restablecer los campos de texto
+    document.getElementById('input-nombre-jugador-1').value = '';
+    document.getElementById('input-nombre-jugador-2').value = '';
+
+    // Restablecer los botones de radio
+    const radioButtons = document.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach(radio => {
+        radio.checked = false;
+    });
+   
+
+    document.querySelectorAll('input[name="opciones1"]').forEach(radio1 => {
+        const label = radio1.nextElementSibling;
+        const img = label.querySelector('img'); 
+            label.classList.remove('disabled');
+            img.classList.remove('disabled');
+    });
+
+    document.querySelectorAll('input[name="opciones2"]').forEach(radio2 => {
+        const label = radio2.nextElementSibling;
+        const img = label.querySelector('img'); 
+            label.classList.remove('disabled');
+            img.classList.remove('disabled');
+    });
 }
