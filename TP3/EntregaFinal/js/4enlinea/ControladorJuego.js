@@ -365,6 +365,7 @@ function reiniciarJuego() {
 }
 
 function nuevoJuego() {
-    window.location.href = './4enlinea.html';
+    const baseUrl = window.location.origin;
+    window.location.href = `${baseUrl}/EntregaFinal/4enlinea.html`;
 
 }
