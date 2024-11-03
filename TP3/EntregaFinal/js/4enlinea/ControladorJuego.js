@@ -40,6 +40,7 @@ canvas.addEventListener('mousemove', onMouseMove, false);
 
 btnJugar.addEventListener('click', eventJugar);
 bntReiniciar.addEventListener('click', reiniciarJuego);
+btnNuevoJuego.addEventListener('click', nuevoJuego);
 
 async function eventJugar() {
     await eventoJugar();
@@ -119,7 +120,7 @@ async function onMouseUp(e) {
                     juegoTerminado = true;
                     Helper.mostrarGanador(lastFichaSelected.getJugador(), mensajes.msgGanador);
                 }
-            }, 1000)
+            }, 500)
            
             juego.cambiarTurnoJugador();
         }
@@ -202,41 +203,6 @@ function getSelectedImageSrc(player) {
     }
     return null;
 }
-/*
-function eventoJugar() {
-    return new Promise((resolve) => {
-        player1ImageSrc = getSelectedImageSrc(1);
-        player2ImageSrc = getSelectedImageSrc(2);
-
-        if (player1ImageSrc) {
-            console.log('Jugador 1 seleccionó:', player1ImageSrc);
-        } else {
-            console.log('Jugador 1 no ha seleccionado ninguna imagen.');
-            return;
-        }
-
-        if (player2ImageSrc) {
-            console.log('Jugador 2 seleccionó:', player2ImageSrc);
-        } else {
-            console.log('Jugador 2 no ha seleccionado ninguna imagen.');
-            return;
-        }
-
-        nombreJugador1 = document.querySelector('#input-nombre-jugador-1').value;
-        nombreJugador2 = document.querySelector('#input-nombre-jugador-2').value;
-        console.log(nombreJugador1);
-        console.log(nombreJugador2)
-        jugar = true;
-
-        juegoSel.classList.toggle('hidden');
-        canvas.classList.toggle('hidden');
-        bntReiniciar.classList.toggle('hidden');
-        btnNuevoJuego.classList.toggle('hidden');
-
-        // Resuelve la promesa después de realizar todas las acciones necesarias
-        resolve();
-    });
-}*/
 
 function eventoJugar() {
     return new Promise((resolve, reject) => {
@@ -398,21 +364,7 @@ function reiniciarJuego() {
     }
 }
 
+function nuevoJuego() {
+    window.location.href = './4enlinea.html';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
