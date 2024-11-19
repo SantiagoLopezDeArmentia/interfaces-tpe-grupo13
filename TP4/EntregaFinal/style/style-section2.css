@@ -1,0 +1,153 @@
+.sct-2-la-app-mas-divertida div {
+    /*position: absolute;*/
+    padding: 0;
+}
+
+.sct-2-la-app-mas-divertida h2 {
+
+    margin: 0;
+    padding: 0;
+    width: 508px;
+    height: 132px;
+
+    font-family: "Lato";
+    font-weight: 600;
+    font-style: normal;
+    font-size: 47px;
+    color: #1B428F;
+    letter-spacing: 0;
+    line-height: 94.5%;
+    left: 100px;
+    top: 60px;
+}
+
+.game-description {
+    margin: 0;
+    padding: 0;
+    width: 690px;
+    height: 154px;
+
+    font-family: "Lato";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #1B428F;
+
+    letter-spacing: 0;
+    line-height: auto;
+
+    left: 100px;
+    top: 214px;
+}
+
+.sct2-layer2 {
+    background-image: url("../images/section-2-pj5.png");
+    width: 490px;
+    height: 1259px;
+    top: -90px;
+    left: 787px;
+    overflow-x: hidden;
+}
+
+.sct2-layer1 {
+    width: 518.38px;
+    height: 266.35px;
+    border: 29px solid #1B5F99;
+    border-radius: 77px;
+
+    top: 340px;
+    left: 236px;
+}
+
+.sct2-layer1 div {
+    width: 100%;
+    width: 518px;
+    height: 100%;
+    background: url("../images/section-2-carr-group.png");
+    border-radius: 50px;
+    animation:moveCards 20s steps(4) infinite;
+ }
+
+.sct2-layer3 {
+    background-image: url("../images/section-2-pj4.png");
+    width: 602px;
+    height: 603px;
+    top: 540px;
+    left: 48px;
+}
+
+.sction2-cards {
+    position: absolute;
+    width: 314.96px;
+    height: 284.69px;
+    border: 9px solid #1B5F99;
+    border-radius: 41px;
+
+    top: 1223px;
+    box-shadow: 5px 4px 0px 0px #02187E; 
+}
+
+.s2-card1 {
+    background: url('../images/section2-img-card-1-bottom.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 315px;
+    height: 284px;
+    left: 100px;
+}
+.s2-card2 {
+    background: url('../images/section2-img-card-2-bottom.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 315px;
+    height: 284px;
+    left: 474.69px;
+}
+
+.s2-card3 {
+    background: url('../images/section2-img-card-3-bottom.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 315px;
+    height: 284px;
+    right: 100px;
+}
+
+.s2-cardtext  {
+    position: absolute;
+    font-family: "Lato";
+    font-size: 20px;
+    color: black;
+    width: 333px;
+    height: 218px;
+
+    top: 1551px;
+}
+
+#s2-card-1-txt {
+    
+    left: 100px;
+}
+
+#s2-card-2-txt {
+    
+    left: 474.69px;
+}
+
+#s2-card-3-txt {
+    
+    right: 100px;
+}
+.overflow-container {
+    overflow-x: none;
+    overflow-y: visible;
+    /*position: relative;*/
+}
+
+@keyframes moveCards {
+    /* Partimos de la primera viñeta del sprite sheet */
+    0% { background-position:0}
+    /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
+    100% { background-position:-2072px}
+    /*100% { background-position:-2419px }*/
+  }

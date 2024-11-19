@@ -1,0 +1,46 @@
+.sct-5-mira-el-video {
+
+}
+
+.sct-5-mira-el-video h1 {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 802px;
+    height: 171px;
+    font-family: "Lato";
+    font-weight: 600;
+    font-size: 60px;
+    color: white;
+    top: 309px;
+    left: 100px;
+    line-height: 94.5%;
+    letter-spacing: 0;
+    text-align: start;
+}
+
+.section5-container-video {
+    position: absolute;
+    border: white solid 29px;
+    width: 746px;
+    height: 394px;
+    border-radius: 50px;
+    top:526px;
+    left: 100px;
+}
+
+.section5-container-video iframe{
+    width: 746px;
+    height: 394px;
+    border-radius: 20px;
+}
+
+.section5-pj3 {
+    position: absolute;
+    background-image: url("../images/section5-pj-3.png");
+    width: 549px;
+    height: 989px;
+
+    top: 352px;
+    left: 725px;
+}

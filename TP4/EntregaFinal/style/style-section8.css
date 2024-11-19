@@ -1,0 +1,156 @@
+.sct-8-pre-footer img{ 
+    margin: 0;
+    padding: 0;
+}
+
+.sct-8-pre-footer form {
+    margin: 0;
+    padding: 0;
+}
+
+.section8-model-gif-2 img{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+
+    width: 480px;
+    height: 480px;
+    bottom: 42px;
+    left: 80px;
+}
+
+.section8-model-gif-3 img{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+
+    width: 480px;
+    height: 509px;
+    bottom: 50px;
+    left: 420px;
+}
+
+.section8-model-gif-7 img{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 500px;
+    height: 997px;
+    top:600px;
+    left: 830px;
+
+}
+
+.section8-titulo {
+    position: absolute;
+
+    font-family: 'Lato';
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 94.5%;
+
+
+    width: 866px;
+    height: 171px;
+
+    top: 190px;
+    left: 100px;
+}
+
+.sectio8-ingresa-email {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 550px;
+    height: 82px;
+    top: 450px;
+    left: 100px;
+
+    font-family: 'Lato';
+    background-color: #ECECEC;
+
+    border-radius: 77px 0 0 77px ;
+    border-top: 9px white solid;
+    border-bottom: 9px white solid;
+    border-left: 9px white solid;
+    border-right: #ffffff 0px solid;
+    box-shadow: 5px 5px 0 0 #02197d; 
+}
+
+.sectio8-ingresa-email::placeholder {
+    padding-left: 15px;
+}
+
+
+.section8-btn-suscribirse {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 218px;
+    height: 100px;
+    top: 450px;
+    left: 659px;
+
+    font-family: 'Lato';
+    letter-spacing: 11%;
+    line-height: 94.5%;
+    font-size: 20px;
+    font-weight: 800;
+
+    background-color: #83C252;
+    color: #ffffff;
+    border-radius: 0 77px 77px 0;
+
+    border: 9px white solid;
+
+    box-shadow: 4px 5px 0px 0px #02197d;
+    -webkit-text-stroke: 1px #ffffff;
+}
+
+.section8-texto {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 578px;
+    height: 75px;
+
+    top: 600px;
+    left: 100px;
+    font-family: 'Lato';
+    letter-spacing: 0%;
+    line-height: 94.5%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.section8-texto span {
+    text-decoration: underline;
+}
+
+.section8-img-clasificacion {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 231px;
+    height: 145px;
+
+    top: 700px;
+    left: 100px;
+}
+
+.section8-nubes {
+    background-image: url('../images/section8-nubes.png');
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 460px;
+
+    width: 1280px;
+    height: 100%;
+    animation: scroll 30s infinite linear;
+}
+
+@keyframes scroll {
+    0% {background-position-x: 0px;}
+    100% {background-position-x: -1280px;}
+}

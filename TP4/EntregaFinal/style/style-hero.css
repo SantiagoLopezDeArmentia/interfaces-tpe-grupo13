@@ -1,0 +1,152 @@
+.layer {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+
+    transition: transform 0.5s ease-out;
+}
+
+.hero-layer1 {
+    background-image: url('../images/arbusto-mediano-1.png');
+    background-repeat: no-repeat;
+    width: 192px;
+    height: 64px;
+    top: 630.458px;
+    left: 1028.46px;
+}
+
+.hero-layer13 {
+    background-image: url('../images/hero-arbol-chico.png');
+    background-repeat: no-repeat;
+    width: 278px;
+    height: 430.85px;
+    top: 278.377px;
+    left: 1080.97px;
+}
+
+.hero-layer2 {
+    background-image: url('../images/hero-icono-pj-3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 175px;
+    height: 385px;
+
+    top: 342px;
+    left: 724px;
+}
+
+.hero-layer3 {
+    background-image: url('../images/hero-icono-pj-2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 197px;
+    height: 270px;
+
+    top: 407px;
+    left: 561px;
+}
+
+.hero-layer4 {
+    background-image: url('../images/arbusto-grande.png');
+    background-repeat: no-repeat;
+    width: 245px;
+    height: 108px;
+    top: 662.97px;
+    left: 1080.97px;
+}
+
+.hero-layer5 {
+    background-image: url('../images/hero-piedra-medianac.png');
+    background-repeat: no-repeat;
+    width: 67px;
+    height: 57px;
+    top: 737.497px;
+    left: 1035.193px; 
+}
+
+.hero-layer6 {
+    background-image: url('../images/hero-piedra-mediana.png');
+    background-repeat: no-repeat;
+    width: 114px;
+    height: 75px;
+    top: 737.497px;
+    left: 1072.218px; 
+}
+
+.hero-layer7 {
+    background-image: url('../images/hero-icono-pj-1.png');
+    background-repeat: no-repeat;
+    width: 275px;
+    height: 340px;
+    top: 490px;
+    left: 423px; 
+}
+
+.hero-layer8 {
+    background-image: url('../images/hero-piedra-chica.png');
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 35px;
+    top: 786.64px;
+    left: 1042.598px; 
+}
+
+.hero-layer9 {
+    background-image: url('../images/hero-arbusto-grande-2.png');
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 115px;
+    top: 717.974px;
+    left: 161.383px; 
+}
+
+.hero-layer10 {
+    background-image: url('../images/hero-arbol-grande.png');
+    background-repeat: no-repeat;
+    width: 560px;
+    height: 867.75px;
+    top: -1px;
+    left: -153px; 
+}
+
+.hero-layer11 {
+    background-image: url('../images/hero-piedra-grande.png');
+    background-repeat: no-repeat;
+    width: 146px;
+    height: 79px;
+    top: 793.372px;
+    left: 129.069px; 
+}
+
+.hero-layer12 {
+    background-image: url('../images/hero-arbusto-chico.png');
+    background-repeat: no-repeat;
+    width: 156px;
+    height: 103px;
+    top: 821.646px;
+    left: 197.062px; 
+}
+
+.hero-layer14 {
+    background-image: url('../images/hero-arbol-mediano.png');
+    background-repeat: no-repeat;
+    width: 434.21px;
+    height: 672.52px;
+    top: 106.711px;
+    left: 881.03px; 
+}
+
+.hero-layer15 {
+    background-image: url('../images/hero-logo-grande.png');
+    background-repeat: no-repeat;
+    width: 560px;
+    height: 320px;
+    top: 55px;
+    left: 360px; 
+}
+
+
+

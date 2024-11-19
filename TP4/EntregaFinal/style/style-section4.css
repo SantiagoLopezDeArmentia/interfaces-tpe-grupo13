@@ -1,0 +1,188 @@
+.sct-4-mas-amigos-mas-diversion {
+    padding: 0;
+    margin: 0;
+}
+
+.sct-4-mas-amigos-mas-diversion h1 {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 900px;
+    height: 153px;
+    font-family: "Lato";
+    font-weight: 500;
+    font-size: 61.14px;
+    color: black;
+    top: 174px;
+    left: 100px;
+    line-height: 110%;
+    letter-spacing: 0;
+    text-align: start;
+}
+
+
+
+.section4-set-parrafos {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 467px;
+    height: 300px;
+
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    top: 333px;
+    right: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.section4-set-parrafos::-webkit-scrollbar{
+    display: none; /*para chrome*/
+    -ms-overflow-style: none;  /* Para Internet Explorer y Edge */
+    scrollbar-width: none;  /* Para Firefox */
+}
+
+.section4-set-parrafos h4 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0;
+    font-family: "Lato";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+.section4-set-parrafos p {
+    margin: 0;
+    padding: 0;
+    padding-top: 15px;
+    margin-bottom: 267px;
+    font-family: "Lato";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.section4-set-imagenes {
+    padding: 10px;
+    position: absolute;
+    height: 436px;
+    max-width: 485px;
+    width: 485px;
+    height: 514px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: scroll;
+
+    top: 242px;
+    left: 160px;
+}
+
+.section4-set-imagenes::-webkit-scrollbar{
+    display: none; /*para chrome*/
+    -ms-overflow-style: none;  /* Para Internet Explorer y Edge */
+    scrollbar-width: none;  /* Para Firefox */
+}
+
+.section4-set-imagenes div {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    position: absolute;
+
+    opacity: 0;               /* Inicialmente, todas las imágenes son completamente visibles */
+    transform: scale(1);      /* Comienzan con su tamaño normal */
+    visibility: visible;      /* Son visibles desde el principio */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transiciones suaves */
+}
+
+.section4-set-imagenes .hide {
+    opacity: 0;               /* Se desvanece la imagen */
+    transform: scale(0);      /* Se achica la imagen */
+    visibility: hidden;       /* La imagen se vuelve invisible */
+  }
+  
+  /* Estilo para las imágenes que tienen la clase 'show' */
+  .section4-set-imagenes .show {
+    opacity: 1;              /* Cuando tienen la clase 'show', las imágenes son visibles */
+    transform: scale(1);   /* Se muestran con el tamaño original (zoom-in) */
+    visibility: visible;     /* Las imágenes se hacen visibles */
+  }
+
+.efecto-img {
+    scale: 1.3;
+    transition: scale .3s ease, display .3s allow-discrete;
+}
+
+.section4-img-0 {
+    background-image: url('../images/section3-img-0.png');
+    width: 293px;
+    height: 436px;
+}
+
+.section4-img-1 {
+    background-image: url('../images/section3-img-1.png');
+    width: 379px;
+    height: 509px;
+}
+
+.section4-img-2 {
+    background-image: url('../images/section3-img-2.png');
+    width: 266px;
+    height: 479px;
+}
+
+.section4-img-3 {
+    background-image: url('../images/section3-img-3.png');
+    width: 187px;
+    height: 497px;
+}
+
+.section4-img-4 {
+    background-image: url('../images/section3-img-4.png');
+    width: 475px;
+    height: 488px;
+}
+
+.section4-img-5 {
+    background-image: url('../images/section3-img-5.png');
+    width: 231px;
+    height: 509px;
+}
+
+.section4-img-6 {
+    background-image: url('../images/section3-img-6.png');
+    width: 338px;
+    height: 514px;
+}
+
+.section4-img-7 {
+    background-image: url('../images/section3-img-7.png');
+    width: 134px;
+    height: 482px;
+}
+
+.section4-img-8 {
+    background-image: url('../images/section3-img-8.png');
+    width: 437px;
+    height: 499px;
+}
+
+.section4-img-9 {
+    background-image: url('../images/section3-img-9.png');
+    width: 485px;
+    height: 509px;
+}
+
+.section4-img-10 {
+    background-image: url('../images/section3-img-10.png');
+    width: 359px;
+    height: 488px;
+}

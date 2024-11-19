@@ -1,0 +1,215 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.body {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    width: 1280px;
+    height: 103px;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+}
+/*
+.vertical-gradient {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 209, 213, 1) 0%,
+      rgba(0, 209, 213, 0.56) 88%,
+      rgba(0, 209, 213, 0) 100%
+    );
+}*/
+
+section {
+    padding: 0;
+    width: 1280px;
+    /*padding-left: 100px;
+    padding-right: 100px;*/
+    /*overflow-x: hidden;*/
+    position: relative;
+    /*overflow-y: hidden;*/
+
+    background-repeat: no-repeat;
+    
+    z-index: 1;
+}
+
+.sct-1-hero {
+    background-image: url("../images/fondo-section1.png");
+    height: 959px;
+
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+.sct-2-la-app-mas-divertida {
+   background-image: url("../images/fondo-section2.png");
+   height: 1788px;
+}
+
+.sct-3-descargar-hoy {
+    background-image: url("../images/fondo-section3.png");
+    background-repeat: no-repeat;
+    height: 1157px;
+}
+
+.sct-4-mas-amigos-mas-diversion {
+  height: 980px;
+  background-repeat: no-repeat;
+}
+
+.sct-5-mira-el-video  {
+    background-image: url("../images/fondo-section5.png");
+    background-repeat: no-repeat;
+    height: 1443.83px;
+}
+
+.sct-6-experimenta-efectos-3d {
+    height: 1034px;
+    background-color: white;
+}
+
+.sct-7-ver-todos-los-personajes {
+    background-image: url("../images/fondo-section7.png");
+    background-repeat: no-repeat;
+    height: 729px;
+}
+
+.sct-8-pre-footer {
+    /*background-image: url("../images/section8-cesped.png"), url("../images/fondo-section8.png");*/
+    background: url("../images/section8-cesped.png") no-repeat bottom, url("../images/fondo-section8.png") no-repeat bottom;
+    
+    /*background-repeat: no-repeat;*/
+    height: 1575px;
+}
+
+.footer-consolas-disponibles {
+    height: 80px;
+    background-color: #242424;
+    text-align: center;
+}
+
+
+
+footer {
+    height: 515px;
+    background-color: #5E5E5D;
+}
+
+.footer-text p{
+    margin: 0;
+    padding: 0;
+    margin-left: 100px;
+    margin-top: 42px;
+    width: 820px;
+    max-height: 361px;
+    height: 361px;
+}
+
+.footer-text p{
+    color: white;
+    text-align: left;
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+    letter-spacing: 11%;
+    line-height: 94.5%;
+    overflow-wrap: break-word;
+}
+
+
+.btn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: black !important;
+}
+
+
+/* jasjdjasdasd */
+
+.btn-hamburger-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /*width: 30px;
+    height: 30px;*/
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    /*box-sizing: border-box;*/
+    top:16px;
+    left: 96px;
+    
+}
+  
+.line {
+    width: 34px;
+    height: 4px;
+    background-color: #F39E46;
+    transition: all 0.3s ease;
+    border-radius: 111px;
+    border: white solid 4px;
+    box-shadow: 5px 4px 0px 0px #02187E; /* Sombra sólida sin difuminarse */
+}
+
+.btn-header-comprar {
+
+    font-size:  20px;
+    font-family:'Lato';
+    font-weight: 900;
+    font-style: bold;
+
+    width: 216px;
+    height: 66px;
+    background-color: #83C252;
+    color: #ffffff;
+
+    border-radius: 111px;
+    border: 8px solid #ffffff;
+
+    box-shadow: 5px 4px 0px 0px #02187E; /* Sombra sólida sin difuminarse */
+    
+    -webkit-text-stroke: 1px #ffffff; /* Borde (stroke) de 1px */
+    position: absolute; /* O 'fixed' si el botón debe estar fijo en la pantalla*/
+    left: 972px;  /* Ajusta el valor a las coordenadas X de Figma */
+    top: 12px;   /* Ajusta el valor a las coordenadas Y de Figma */
+    z-index: 2;   /*Asegúrate de que el botón se muestre por encima de otros elementos */
+    padding: 0px;
+}
+  
+.btn-hamburger-menu.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+  
+  .btn-hamburger-menu.active .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .btn-hamburger-menu.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  

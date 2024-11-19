@@ -1,0 +1,59 @@
+.sct-6-experimenta-efectos-3d {
+
+}
+
+.sct-6-experimenta-efectos-3d h1 {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 746px;
+    height: 285px;
+    font-family: "Lato";
+    font-weight: 600;
+    font-size: 60px;
+    color: #9D2121;
+    top: 220px;
+    left: 100px;
+    line-height: 94.5%;
+    letter-spacing: 0;
+    text-align: start;
+}
+
+.sct-6-experimenta-efectos-3d p {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 467px;
+    height: 190px;
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 20px;
+    color: black;
+    top: 548px;
+    left: 100px;
+    line-height: 94.5%;
+    letter-spacing: 0;
+    text-align: start;
+}
+
+.section6-model-3d {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 667px;
+    height: 973px;
+/*
+    width: 800px;
+    height: 1000px;*/
+    right: 100px;
+    right: 0;
+    z-index: 5;
+
+}
+
+#reveal {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
