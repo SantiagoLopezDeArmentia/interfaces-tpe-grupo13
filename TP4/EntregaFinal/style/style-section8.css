@@ -154,3 +154,53 @@
     0% {background-position-x: 0px;}
     100% {background-position-x: -1280px;}
 }
+
+.section8-sprite1 {
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    background: url("../images/1conejo.png");
+    background-size: cover;
+    border-radius: 50px;
+    animation:moveCardsS81 0.6s steps(3) infinite;
+    top: 1450px;
+    left: 775px;
+ }
+
+ @keyframes moveCardsS81 {
+    0% { background-position:0}
+    100% { background-position:-360px}
+}
+
+
+.section8-sprite2 {
+    position: absolute;
+    width: 45px;
+    height: 54px;
+    background: url("../images/conejoposta.png");  
+    border-radius: 50px;
+    animation: moveCardsS82 0.4s steps(8) infinite;
+    top: 1320px;
+    left: 100px;
+}
+
+@keyframes moveCardsS82 {
+    0% { background-position:0}
+    100% { background-position:-360px}
+}
+
+.section8-sprite3 {
+    position: absolute;
+    width: 200px;
+    height: 140px;
+    background: url("../images/arquero-desentonador.png");  
+    border-radius: 50px;
+    animation: moveCardsS83 0.4s steps(4) infinite;
+    top: 1425px;
+    left: 50px;
+}
+
+@keyframes moveCardsS83 {
+    0% { background-position:0}
+    100% { background-position:-800px}
+}

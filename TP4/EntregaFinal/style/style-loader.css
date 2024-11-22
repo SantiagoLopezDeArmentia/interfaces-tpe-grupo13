@@ -1,0 +1,123 @@
+/* Estilos para el loader */
+/*body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}*/
+
+.loader-container {
+    position: absolute;
+    top: 0;
+    width: 1280px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*overflow: hidden;*/
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+}
+
+.images-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*flex-wrap: wrap;*/
+}
+
+.loader-image {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    animation: fadeInOut 10s infinite;
+    opacity: 0;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    10% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    40% {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+/* Animaciones para las imágenes */
+.loader-image:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loader-image:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.loader-image:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.loader-image:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.loader-image:nth-child(5) {
+    animation-delay: 4s;
+}
+
+.loader-image:nth-child(6) {
+    animation-delay: 5s;
+}
+
+.loader-image:nth-child(7) {
+    animation-delay: 6s;
+}
+
+.loader-image:nth-child(8) {
+    animation-delay: 7s;
+}
+
+.loader-image:nth-child(9) {
+    animation-delay: 8s;
+}
+
+.loader-image:nth-child(10) {
+    animation-delay: 9s;
+}
+.loader-image:nth-child(11) {
+    animation-delay: 10s;
+}
+
+/* Barra de carga */
+.loader {
+    position: relative;
+    width: 80%;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    animation: loadingBar 10s infinite;
+}
+
+@keyframes loadingBar {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}

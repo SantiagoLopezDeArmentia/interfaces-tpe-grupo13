@@ -1,5 +1,4 @@
 .sct-2-la-app-mas-divertida div {
-    /*position: absolute;*/
     padding: 0;
 }
 
@@ -76,14 +75,29 @@
     left: 48px;
 }
 
-.sction2-cards {
+.section-2-card-container-f {
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+    width: 1223px;
+    top: 1800px;
     position: absolute;
+}
+
+.section-2-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: center;
+    width: 314.96px;
+    height: 805px;
+}
+
+.sction2-cards {
     width: 314.96px;
     height: 284.69px;
     border: 9px solid #1B5F99;
     border-radius: 41px;
-
-    top: 1223px;
     box-shadow: 5px 4px 0px 0px #02187E; 
 }
 
@@ -93,7 +107,6 @@
     background-position: center;
     width: 315px;
     height: 284px;
-    left: 100px;
 }
 .s2-card2 {
     background: url('../images/section2-img-card-2-bottom.png');
@@ -101,7 +114,6 @@
     background-position: center;
     width: 315px;
     height: 284px;
-    left: 474.69px;
 }
 
 .s2-card3 {
@@ -110,38 +122,19 @@
     background-position: center;
     width: 315px;
     height: 284px;
-    right: 100px;
 }
 
 .s2-cardtext  {
-    position: absolute;
     font-family: "Lato";
     font-size: 20px;
     color: black;
     width: 333px;
     height: 218px;
-
-    top: 1551px;
 }
 
-#s2-card-1-txt {
-    
-    left: 100px;
-}
-
-#s2-card-2-txt {
-    
-    left: 474.69px;
-}
-
-#s2-card-3-txt {
-    
-    right: 100px;
-}
 .overflow-container {
     overflow-x: none;
     overflow-y: visible;
-    /*position: relative;*/
 }
 
 @keyframes moveCards {
@@ -150,4 +143,42 @@
     /* El tamaño total de ancho del sprite. Es negativo para que no "camine" hacia atrás */
     100% { background-position:-2072px}
     /*100% { background-position:-2419px }*/
-  }
+}
+
+
+.section-2-card-container-f {
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+    width: 1223px;
+    position: absolute;
+    top: 1223px;
+}
+
+.section-2-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: center;
+    width: 314.96px;
+    height: 805px;
+    opacity: 0; /* Comienza invisible */
+    transform: translateY(50px); /* Comienza abajo */
+    transition: opacity 1s ease, transform 1s ease; /* Animación suave */
+}
+
+.sction2-cards {
+    width: 314.96px;
+    height: 284.69px;
+    border: 9px solid #1B5F99;
+    border-radius: 41px;
+    box-shadow: 5px 4px 0px 0px #02187E; 
+}
+
+.app-title, .app-description {
+    transition: transform 0.1s ease;
+}
+.photo-frame, .blue-character, .green-character {
+    position: absolute;
+    transition: transform 0.1s ease;
+}

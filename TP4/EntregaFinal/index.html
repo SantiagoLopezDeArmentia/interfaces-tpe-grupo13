@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="style/style-section4.css">
     <link rel="stylesheet" href="style/style-section5.css">
     <link rel="stylesheet" href="style/style-section6.css">
+    <link rel="stylesheet" href="style/style-section7.css">
     <link rel="stylesheet" href="style/style-section8.css">
+    <link rel="stylesheet" href="style/style-loader.css">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
@@ -20,7 +22,28 @@
 </head>
 <body>
     <div class="body">
-        <header class="vertical-gradient">
+
+        <!-- Contenedor del Loader -->
+        <div class="loader-container">
+            <!-- Imágenes que aparecerán y desaparecerán -->
+            <div class="images-container">
+                <img class="loader-image" src="./images/section3-img-0.png" alt="Image 1">
+                <img class="loader-image" src="./images/section3-img-1.png" alt="Image 2">
+                <img class="loader-image" src="./images/section3-img-2.png" alt="Image 3">
+                <img class="loader-image" src="./images/section3-img-3.png" alt="Image 4">
+                <img class="loader-image" src="./images/section3-img-4.png" alt="Image 5">
+                <img class="loader-image" src="./images/section3-img-5.png" alt="Image 6">
+                <img class="loader-image" src="./images/section3-img-6.png" alt="Image 7">
+                <img class="loader-image" src="./images/section3-img-7.png" alt="Image 8">
+                <img class="loader-image" src="./images/section3-img-8.png" alt="Image 9">
+                <img class="loader-image" src="./images/section3-img-9.png" alt="Image 10">
+                <img class="loader-image" src="./images/section3-img-10.png" alt="Image 10">
+            </div>
+            <!-- Loader (barra de carga o indicador de progreso) -->
+            <div class="loader"></div>
+        </div>
+
+        <header class="">
             <div>
                 <button class="btn-hamburger-menu" id="hamburger-menu">
                     <span class="line"></span>
@@ -28,31 +51,47 @@
                     <span class="line"></span>
                 </button>
 
+                <div id="logo-container">
+                    <img src="images/hero-logo-grande.png" id="logo" alt="">
+                </div>
+
                 <button class="btn-header-comprar">COMPRAR</button>
             </div> 
         </header>
-        
-        <!--<section class="sct-1-hero">
-            <div class="layer hero-layer1"></div> 
-            <div class="layer hero-layer13"></div>
-            <div class="layer hero-layer2"></div> 
-            <div class="layer hero-layer3"></div> 
-            <div class="layer hero-layer4"></div> 
-            <div class="layer hero-layer14"></div>
-            <div class="layer hero-layer5"></div>
-            <div class="layer hero-layer6"></div>
-            <div class="layer hero-layer7"></div>
-            <div class="layer hero-layer8"></div>
-            <div class="layer hero-layer9"></div>
-            <div class="layer hero-layer10"></div>
-            <div class="layer hero-layer11"></div>
-            <div class="layer hero-layer12"></div>
 
-            <div class="layer hero-layer15"></div>
-            
-        </section>-->
+        <nav id="menu" class="menu">
+    
+            <div class="container-menu">
+                <div class="item-menu">
+                    <div class="menu-img-container"></div>
+                    <li><a>Perfil</a></li>
+                </div>
+                <div class="item-menu">
+                    <div class="menu-img-container"></div>
+                    <li><a>Recomendados</a></li>
+                </div>
+                <div class="item-menu">
+                    <div class="menu-img-container"></div>
+                    <li><a>Recientes</a></li>
+                </div>
+                <div class="item-menu">
+                    <div class="menu-img-container"></div>
+                    <li><a>Tendencias</a></li>
+                </div>
+            </div>
+        </nav>
+
         <section class="sct-1-hero">
             <div class="layer hero-layer1" data-speed="10"></div>
+            <div class="layer hero-layer16" data-speed="10">
+              <!--  <img src="images/sombra-pj.png" alt="">-->
+            </div>
+            <div class="layer hero-layer17" data-speed="10">
+                <!--  <img src="images/sombra-pj.png" alt="">-->
+            </div>
+            <div class="layer hero-layer18" data-speed="10">
+                <!--  <img src="images/sombra-pj.png" alt="">-->
+            </div>
             <div class="layer hero-layer13" data-speed="15"></div>
             <div class="layer hero-layer2" data-speed="20"></div>
             <div class="layer hero-layer3" data-speed="25"></div>
@@ -66,57 +105,61 @@
             <div class="layer hero-layer10" data-speed="65"></div>
             <div class="layer hero-layer11" data-speed="70"></div>
             <div class="layer hero-layer12" data-speed="75"></div>
-            <div class="layer hero-layer15" data-speed="80"></div>
+           <!-- <div class="layer hero-layer15" data-speed="80"></div>-->
         </section>
         <section class="sct-2-la-app-mas-divertida">
             <!--<div class="overflow-container">-->
-                <h2 class="layer">La app más divertida y educativa y para niños de 3 años</h2>
-                <p class="layer game-description">Numberblocks World es una divertida aplicación de vídeo a la carta y 
+                <h2 class="layer app-title"  >La app más divertida y educativa y para niños de 3 años</h2>
+                <p class="layer game-description app-description">Numberblocks World es una divertida aplicación de vídeo a la carta y 
                     juegos por suscripción dirigida a niños a partir de 3 años, con un grupo de
                     edad principal de 4 a 6 años, creada por el equipo de Alphablocks Ltd. y 
                     Blue Zoo Animations Studio, ganador de un premio BAFTA.
                 </p>
 
-                <div class="layer sct2-layer1">
+                <div class="layer sct2-layer1 photo-frame">
                     <div></div>
                 </div> <!--cuadrado con imagenes-->
-                <div class="layer sct2-layer2"></div> <!--munieco azul grande-->
-                <div class="layer sct2-layer3"></div>
+                <div class="layer sct2-layer2 blue-character"></div> <!--munieco azul grande-->
+                <div class="layer sct2-layer3 green-character"></div>
 
-                <div class="sction2-cards s2-card1"></div>
-                <div class="sction2-cards s2-card2"></div>
-                <div class="sction2-cards s2-card3"></div>
-                <p class="s2-cardtext" id="s2-card-1-txt">
-                    Los niños descubrirán lo divertido que puede ser aprender matemáticas.
-                     A través de personajes animados y desafíos interactivos, podrán sumar,
-                      restar y entender conceptos básicos de manera fácil y entretenida.
-                     ¡Cada número cobra vida para hacer que las matemáticas sean emocionantes!
-                </p>
-
-                <p class="s2-cardtext" id="s2-card-2-txt">
-                    Con NumberBlocks, los niños encontrarán emocionantes retos en cada nivel,
-                     diseñados para hacer que el aprendizaje sea tan divertido como un juego.
-                      ¡Cada desafío es una nueva aventura matemática!
-                    Diviértete e invita a tus amigos, desafíalos y gana premios.
-                </p>
-
-                <p class="s2-cardtext" id="s2-card-3-txt">
-                    Entrena a UNO y Comparte lo que Aprendes!
-                    <br>En NumberBlocks, deberás enseñar a UNO cada lección que aprendas, 
-                    ayudándolo a crecer y superar nuevos desafíos matemáticos. 
-                    ¡Conviértete en su mejor guía! Se su mejor amigo y diviértete con él.
-                </p>
-                <!--<div class="">
-                    <div class="sction2-cards s2-card1"></div>
-                    <div class="sction2-cards s2-card2"></div>
-                    <div class="sction2-cards s2-card3"></div>
-                </div>-->
-            <!--</div>-->
+                <div class="section-2-card-container-f">
+                    <div class="section-2-card-container">
+                        <div class="sction2-cards s2-card1"></div>
+                        <p class="s2-cardtext" id="s2-card-1-txt">
+                            Los niños descubrirán lo divertido que puede ser aprender matemáticas.
+                            A través de personajes animados y desafíos interactivos, podrán sumar,
+                            restar y entender conceptos básicos de manera fácil y entretenida.
+                            ¡Cada número cobra vida para hacer que las matemáticas sean emocionantes!
+                        </p>
+                    </div>
+                    <div class="section-2-card-container">
+                        <div class="sction2-cards s2-card2"></div>
+                        <p class="s2-cardtext" id="s2-card-2-txt">
+                            Con NumberBlocks, los niños encontrarán emocionantes retos en cada nivel,
+                            diseñados para hacer que el aprendizaje sea tan divertido como un juego.
+                            ¡Cada desafío es una nueva aventura matemática!
+                            Diviértete e invita a tus amigos, desafíalos y gana premios.
+                        </p>
+                    </div>
+                    <div class="section-2-card-container">
+                        <div class="sction2-cards s2-card3"></div>
+                        <p class="s2-cardtext" id="s2-card-3-txt">
+                            Entrena a UNO y Comparte lo que Aprendes!
+                            <br>En NumberBlocks, deberás enseñar a UNO cada lección que aprendas,
+                            ayudándolo a crecer y superar nuevos desafíos matemáticos.
+                            ¡Conviértete en su mejor guía! Se su mejor amigo y diviértete con él.
+                        </p>
+                    </div>
+                </div>
         </section>
         <section class="sct-3-descargar-hoy">
             <h1>Descubre el juego que convierte las <span>Matemáticas</span>  en diversión</h1>
             <button class="btn-section3">!Descarga NumberBlocks hoy!</button>
-            <div class="layer sct3-layer1" id="parallax"></div>
+            <!--<div class="layer sct3-layer1" id="parallax1"></div>-->
+            <div class="layer sct3-layer1 parallax-container" >
+                <img src="images//section-3-img-all-pjs.png" alt="" class="parallax-image">
+            </div>
+           
         </section>
         <section class="sct-4-mas-amigos-mas-diversion">
             <h1>Más amigos, más diversión!</h1>
@@ -175,15 +218,19 @@
                     <h4>El Desafío del Doble</h4>
                     <p class="section4-p">Descubre qué sucede cuando multiplicas un NumberBlock por dos. Ayuda a UNO a duplicar números y ver cómo crecen rápidamente. ¡Una manera emocionante de aprender el concepto de "el doble" y multiplicación básica!</p>
                 </div>
+                <div class="section4-parrafo11">
+                    <h4>Aventura de Divisiones</h4>
+                    <p class="section4-p">Haz que UNO se junte con otros personajes para ver cómo los números crecen en equipo. Los niños aprenderán cómo las sumas se construyen cuando se unen varios bloques, ¡formando un número mayor cada vez!</p>
+                </div>
             </div>
         </section>
         <section class="sct-5-mira-el-video">
-            <div>
+            <div class="section-5-container">
                 <h1>Mira el video y descubre el sorprendente mundo de los NumberBlocks!</h1>
-                <div class="section5-container-video">
+                <div class="section5-container-video section5-move" data-speed="8">
                     <iframe src="https://www.youtube.com/embed/0YKa9DQYdRg?si=ngnyC6aF9x01jlPN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <div class="section5-pj3"></div>
+                <div class="section5-pj3 section5-move" data-speed="5"></div>
             </div>
         </section>
         <section class="sct-6-experimenta-efectos-3d">
@@ -201,7 +248,22 @@
                 </div>
             </div>
         </section>
-        <section class="sct-7-ver-todos-los-personajes"></section>
+        <section class="sct-7-ver-todos-los-personajes">
+            <div class="sct-7-top">
+                <div class="section7-pers section7-pers-1"><img src="./images/imagenes-cuadrado/section7-pj-1.png" alt=""></div>
+                <div class="section7-pers section7-pers-2"><img src="./images/imagenes-cuadrado/section7-pj-2.png" alt=""></div>
+                <div class="section7-pers section7-pers-3"><img src="./images/imagenes-cuadrado/section7-pj-3.png" alt=""></div>
+                <div class="section7-pers section7-pers-4"><img src="./images/imagenes-cuadrado/section7-pj-4.png" alt=""></div>
+                <div class="section7-pers section7-pers-5"><img src="./images/imagenes-cuadrado/section7-pj-5.png" alt=""></div>
+            </div>
+            <div class="sct-7-bottom">
+                <div class="section7-pers section7-pers-6"><img src="./images/imagenes-cuadrado/section7-pj-6.png" alt=""></div>
+                <div class="section7-pers section7-pers-7"><img src="./images/imagenes-cuadrado/section7-pj-7.png" alt=""></div>
+                <div class="section7-pers section7-pers-8"><img src="./images/imagenes-cuadrado/section7-pj-8.png" alt=""></div>
+                <div class="section7-pers section7-pers-9"><img src="./images/imagenes-cuadrado/section7-pj-9.png" alt=""></div>
+                <div class="section7-pers section7-pers-10"><img src="./images/imagenes-cuadrado/section7-pj-10.png" alt=""></div>
+            </div>
+        </section>
         <section class="sct-8-pre-footer">
             <div>
                 <div class="section8-nubes"></div>
@@ -212,6 +274,9 @@
                 </form>
                 <p class="section8-texto">Al inscribirse en nuestra lista de correo, nos autoriza a ponernos en contacto con usted para enviarle ofertas y actualizaciones de marketing por correo electrónico, y también acepta nuestra <span>Política de privacidad</span> y las <span>Condiciones del servicio.</span></span></p>
                 <img src="./images/section8-clasificacion.png" alt="" class="section8-img-clasificacion">
+                <div class="section8-sprite1" ></div>
+                <div class="section8-sprite2" ></div>
+                <div class="section8-sprite3" ></div>
             </div>
             <div>
                 <div class="section8-model-gif-2">
@@ -245,12 +310,13 @@
                     One, and Xbox Series X are trademarks of the Microsoft group of 
                     companies.Nintendo Switch is a trademark of NintendoEPIC GAMES and the EPIC STORE LOGO are trademarks or registered trademarks of EPIC GAMES INC.©2023 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.The ESRB rating icons are registered trademarks of the Entertainment Software Association.
                 </p>
-                <a href="">COOKIE POLICY PRIVACY POLICY</a>
+                <p class="subrayado"><span>COOKIE POLICY</span> <span>PRIVACY POLICY</span></p>
+                <img src="images/redesSociales.png" class="redes" alt="">
             </div>
             
         </footer>
     </div>
-    <script src="/script/script.js"></script>
+    <script src="script/script.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </body>
 </html>

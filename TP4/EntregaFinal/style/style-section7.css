@@ -1,0 +1,27 @@
+.sct-7-ver-todos-los-personajes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sct-7-top, .sct-7-bottom {
+    display: flex;
+    justify-content: space-between;
+    height: 349;
+}
+
+  
+.section7-pers {
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+}
+
+.section7-pers:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+    z-index: 10;
+    box-shadow: -10px -10px 15px rgba(0, 0, 0, 0.6);
+    filter: brightness(1.2); /* Aumentar el brillo */
+}

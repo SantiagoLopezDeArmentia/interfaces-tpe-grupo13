@@ -10,6 +10,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
+    
 }
 
 .body {
@@ -27,8 +28,13 @@ header {
     z-index: 10000;
     position: fixed;
     top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    transition: height 0.3s ease; /* Transición para el header */
 }
-/*
+
 .vertical-gradient {
     background: linear-gradient(
       to bottom,
@@ -36,16 +42,12 @@ header {
       rgba(0, 209, 213, 0.56) 88%,
       rgba(0, 209, 213, 0) 100%
     );
-}*/
+}
 
 section {
     padding: 0;
     width: 1280px;
-    /*padding-left: 100px;
-    padding-right: 100px;*/
-    /*overflow-x: hidden;*/
     position: relative;
-    /*overflow-y: hidden;*/
 
     background-repeat: no-repeat;
     
@@ -92,13 +94,11 @@ section {
     background-image: url("../images/fondo-section7.png");
     background-repeat: no-repeat;
     height: 729px;
+
 }
 
 .sct-8-pre-footer {
-    /*background-image: url("../images/section8-cesped.png"), url("../images/fondo-section8.png");*/
     background: url("../images/section8-cesped.png") no-repeat bottom, url("../images/fondo-section8.png") no-repeat bottom;
-    
-    /*background-repeat: no-repeat;*/
     height: 1575px;
 }
 
@@ -115,7 +115,15 @@ footer {
     background-color: #5E5E5D;
 }
 
-.footer-text p{
+.footer-text{
+    position: relative;
+    width: 820px;
+    height: 361px;
+    left:100px;
+    
+}
+
+/*.footer-text p{
     margin: 0;
     padding: 0;
     margin-left: 100px;
@@ -123,7 +131,7 @@ footer {
     width: 820px;
     max-height: 361px;
     height: 361px;
-}
+}*/
 
 .footer-text p{
     color: white;
@@ -137,6 +145,17 @@ footer {
     overflow-wrap: break-word;
 }
 
+.subrayado span{
+    text-decoration: underline;
+    text-underline-offset: 4px; /* Ajusta el valor para la separación */
+}
+
+.redes{
+    position: relative;
+    
+    top: 10px;
+}
+
 
 .btn {
     cursor: pointer;
@@ -146,21 +165,16 @@ footer {
 }
 
 
-/* jasjdjasdasd */
-
 .btn-hamburger-menu {
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /*width: 30px;
-    height: 30px;*/
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
     margin: 0;
-    /*box-sizing: border-box;*/
     top:16px;
     left: 96px;
     
@@ -175,7 +189,24 @@ footer {
     border: white solid 4px;
     box-shadow: 5px 4px 0px 0px #02187E; /* Sombra sólida sin difuminarse */
 }
+#logo-container {
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 560px;
+    height: 320px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+#logo {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
 .btn-header-comprar {
 
     font-size:  20px;
@@ -199,17 +230,149 @@ footer {
     top: 12px;   /* Ajusta el valor a las coordenadas Y de Figma */
     z-index: 2;   /*Asegúrate de que el botón se muestre por encima de otros elementos */
     padding: 0px;
+    transition: color 0.3s ease-in-out;
+}
+.btn-header-comprar:hover{
+    -webkit-text-stroke: 1px #83C252;; /* Borde (stroke) de 1px */ 
+    color: #83C252;
+    border-color:none;
+    background-color: #ffffff;
+}
+
+
+.btn-header-comprar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 52px;
+    border: 5px solid transparent; /* Inicialmente el borde es transparente */
+    box-sizing: border-box; /* Para incluir el borde en el tamaño del botón */
+    pointer-events: none; /* Evitar que el pseudo-elemento interfiera con los eventos del botón */
 }
   
+.btn-header-comprar:hover::before {
+    opacity: 1;
+    animation: drawLineAround 2s linear forwards; /* Cambiar el nombre de la animación y su duración */
+}
+
+@keyframes drawLineAround {
+    0% {
+        border-color: transparent;
+        clip-path: polygon(0 0, 0 0, 0 0, 0 0); /* Comienza vacío */
+    }
+    25% {
+        border-color: var(--secondary-color); /* Color de la línea */
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Parte superior */
+    }
+    50% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%); /* Lateral derecho */
+    }
+    75% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Parte inferior */
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Completo */
+    }
+}
+
+.btn-header-comprar:hover::after {
+    animation: disappearLine 1s linear forwards 2s; /* Añade delay para que espere a que termine drawLineAround */
+}
+
+@keyframes disappearLine {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Completo */
+    }
+    100% {
+        clip-path: polygon(0 0, 0 0, 0 0, 0 0); /* Termina vacío */
+    }
+}
+
+/* Estilos cuando el botón es activado (hamburguesa se convierte en X) */
 .btn-hamburger-menu.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: translateY(9px) rotate(47deg); /* Primera línea se mueve y rota */
 }
-  
-  .btn-hamburger-menu.active .line:nth-child(2) {
+
+.btn-hamburger-menu.active .line:nth-child(2) {
+    opacity: 0; /* La línea del medio desaparece */
+}
+
+.btn-hamburger-menu.active .line:nth-child(3) {
+    transform: translateY(-14px)  rotate(-45deg); /* Tercera línea se mueve y rota */
+}
+
+/* Efecto loco en la transición del hamburguesa a la X */
+.btn-hamburger-menu.active {
+    box-shadow: none; /* Elimina la sombra cuando está activo (en la X) */
+    animation: crazyTransform 0.5s ease-in-out forwards; /* Efecto loco de transformación */
+}
+
+.btn-hamburger-menu.active .line{
+    box-shadow: none; /* Elimina la sombra cuando está activo (en la X) */
+}
+
+/* Efecto loco de transición */
+@keyframes crazyTransform {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        transform: rotate(10deg) scale(1.2); /* Ligeramente rotado y agrandado */
+    }
+    50% {
+        transform: rotate(-10deg) scale(0.8); /* Gira más y achica */
+    }
+    75% {
+        transform: rotate(5deg) scale(1.1); /* Se endereza un poco y agranda */
+    }
+    100% {
+        transform: rotate(0deg) scale(1); /* Vuelve a la posición normal */
+    }
+}
+
+.menu {
+    top: 103px;
+    bottom: 0;
+    margin: 0;
+    background-color: var(--background-color-2);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease, opacity 0.3s ease-in-out;
+    padding-top: 0px;
+    padding-right: 0px;
+    z-index: 999;
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    overflow: hidden;
     opacity: 0;
-  }
-  
-  .btn-hamburger-menu.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-  
+}
+
+.menu.show {
+    transform: translateX(50%);
+    opacity: 1;
+}
+
+.item-menu li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item-menu {
+    background-color: #1B428F;
+    color: white;
+    font-family: 'Lato';
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #F39E46;
+    border-radius: 50px;
+    margin-bottom: 3px;
+    text-align: center;
+    padding: 5px;
+}
+

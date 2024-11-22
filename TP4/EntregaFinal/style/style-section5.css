@@ -27,6 +27,8 @@
     border-radius: 50px;
     top:526px;
     left: 100px;
+    transform: translateY(800px);
+    transition: transform 1s ease-out;
 }
 
 .section5-container-video iframe{
@@ -43,4 +45,6 @@
 
     top: 352px;
     left: 725px;
+    transform: translateY(800px);
+    transition: transform 1.7s ease-out;
 }

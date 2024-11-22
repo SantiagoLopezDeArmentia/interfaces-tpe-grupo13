@@ -15,7 +15,55 @@
     top: 630.458px;
     left: 1028.46px;
 }
-
+.hero-layer16 {
+    margin: 0;
+    padding: 10px;
+   background-image: url('../images/sombra-pj.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 43px;
+    top: 740px;  /*762*/
+    left: 505px; /*494*/
+}
+.hero-layer17 {
+    margin: 0;
+    padding: 10px;
+   background-image: url('../images/sombra-pj.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 43px;
+    top: 700px;
+    left: 618px;
+}
+.hero-layer18 {
+    margin: 0;
+    padding: 10px;
+   background-image: url('../images/sombra-pj.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 43px;
+    top: 670px;
+    left: 714px;
+}
+/*.sombra-pj{
+    width:140px ;
+    height:33px ;
+} */
 .hero-layer13 {
     background-image: url('../images/hero-arbol-chico.png');
     background-repeat: no-repeat;
@@ -35,6 +83,7 @@
 
     top: 342px;
     left: 724px;
+ 
 }
 
 .hero-layer3 {
@@ -47,6 +96,8 @@
 
     top: 407px;
     left: 561px;
+   
+
 }
 
 .hero-layer4 {
@@ -83,6 +134,7 @@
     height: 340px;
     top: 490px;
     left: 423px; 
+   
 }
 
 .hero-layer8 {

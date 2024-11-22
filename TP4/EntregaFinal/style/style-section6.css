@@ -1,6 +1,3 @@
-.sct-6-experimenta-efectos-3d {
-
-}
 
 .sct-6-experimenta-efectos-3d h1 {
     position: absolute;
@@ -42,9 +39,6 @@
     margin: 0;
     width: 667px;
     height: 973px;
-/*
-    width: 800px;
-    height: 1000px;*/
     right: 100px;
     right: 0;
     z-index: 5;
